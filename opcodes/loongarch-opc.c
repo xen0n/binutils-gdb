@@ -21,7 +21,7 @@
 #include <stddef.h>
 #include "opcode/loongarch.h"
 
-struct loongarch_ASEs_option LARCH_opts = 
+struct loongarch_ASEs_option LARCH_opts =
 {
   .ase_test = 0,
   .ase_fix = 0,
@@ -49,7 +49,7 @@ loongarch_insn_length (insn_t insn)
   return insn ? 4 : 4; /* eliminate warning */
 }
 
-const char *const loongarch_r_normal_name[32] = 
+const char *const loongarch_r_normal_name[32] =
 {
   "$r0",  "$r1",  "$r2",  "$r3",  "$r4",  "$r5",  "$r6",  "$r7",
   "$r8",  "$r9",  "$r10", "$r11", "$r12", "$r13", "$r14", "$r15",
@@ -57,7 +57,7 @@ const char *const loongarch_r_normal_name[32] =
   "$r24", "$r25", "$r26", "$r27", "$r28", "$r29", "$r30", "$r31",
 };
 
-const char *const loongarch_r_lp64_name[32] = 
+const char *const loongarch_r_lp64_name[32] =
 {
   "$zero", "$ra", "$tp", "$sp", "$a0", "$a1", "$a2", "$a3",
   "$a4",   "$a5", "$a6", "$a7", "$t0", "$t1", "$t2", "$t3",
@@ -65,13 +65,13 @@ const char *const loongarch_r_lp64_name[32] =
   "$s1",   "$s2", "$s3", "$s4", "$s5", "$s6", "$s7", "$s8",
 };
 
-const char *const loongarch_r_lp64_name1[32] = 
+const char *const loongarch_r_lp64_name1[32] =
 {
   "", "", "", "", "$v0", "$v1", "", "", "", "", "", "", "", "", "", "",
   "", "", "", "", "",    "",    "", "", "", "", "", "", "", "", "", "",
 };
 
-const char *const loongarch_f_normal_name[32] = 
+const char *const loongarch_f_normal_name[32] =
 {
   "$f0",  "$f1",  "$f2",  "$f3",  "$f4",  "$f5",  "$f6",  "$f7",
   "$f8",  "$f9",  "$f10", "$f11", "$f12", "$f13", "$f14", "$f15",
@@ -79,7 +79,7 @@ const char *const loongarch_f_normal_name[32] =
   "$f24", "$f25", "$f26", "$f27", "$f28", "$f29", "$f30", "$f31",
 };
 
-const char *const loongarch_f_lp64_name[32] = 
+const char *const loongarch_f_lp64_name[32] =
 {
   "$fa0", "$fa1", "$fa2",  "$fa3",  "$fa4",  "$fa5",  "$fa6",  "$fa7",
   "$ft0", "$ft1", "$ft2",  "$ft3",  "$ft4",  "$ft5",  "$ft6",  "$ft7",
@@ -87,18 +87,18 @@ const char *const loongarch_f_lp64_name[32] =
   "$fs0", "$fs1", "$fs2",  "$fs3",  "$fs4",  "$fs5",  "$fs6",  "$fs7",
 };
 
-const char *const loongarch_f_lp64_name1[32] = 
+const char *const loongarch_f_lp64_name1[32] =
 {
   "$fv0", "$fv1", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
   "",     "",     "", "", "", "", "", "", "", "", "", "", "", "", "", "",
 };
 
-const char *const loongarch_c_normal_name[8] = 
+const char *const loongarch_c_normal_name[8] =
 {
   "$fcc0", "$fcc1", "$fcc2", "$fcc3", "$fcc4", "$fcc5", "$fcc6", "$fcc7",
 };
 
-const char *const loongarch_cr_normal_name[4] = 
+const char *const loongarch_cr_normal_name[4] =
 {
   "$scr0",
   "$scr1",
@@ -106,7 +106,7 @@ const char *const loongarch_cr_normal_name[4] =
   "$scr3",
 };
 
-const char *const loongarch_v_normal_name[32] = 
+const char *const loongarch_v_normal_name[32] =
 {
   "$vr0",  "$vr1",  "$vr2",  "$vr3",  "$vr4",  "$vr5",  "$vr6",  "$vr7",
   "$vr8",  "$vr9",  "$vr10", "$vr11", "$vr12", "$vr13", "$vr14", "$vr15",
@@ -114,7 +114,7 @@ const char *const loongarch_v_normal_name[32] =
   "$vr24", "$vr25", "$vr26", "$vr27", "$vr28", "$vr29", "$vr30", "$vr31",
 };
 
-const char *const loongarch_x_normal_name[32] = 
+const char *const loongarch_x_normal_name[32] =
 {
   "$xr0",  "$xr1",  "$xr2",  "$xr3",  "$xr4",  "$xr5",  "$xr6",  "$xr7",
   "$xr8",  "$xr9",  "$xr10", "$xr11", "$xr12", "$xr13", "$xr14", "$xr15",
@@ -122,7 +122,7 @@ const char *const loongarch_x_normal_name[32] =
   "$xr24", "$xr25", "$xr26", "$xr27", "$xr28", "$xr29", "$xr30", "$xr31",
 };
 
-static struct loongarch_opcode loongarch_macro_opcodes[] = 
+static struct loongarch_opcode loongarch_macro_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   {0, 0, "li.w", "r,sc", "%f", 0, 0, 0},
@@ -278,7 +278,7 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_fix_opcodes[] = 
+static struct loongarch_opcode loongarch_fix_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x00001000, 0xfffffc00, "clo.w", "r0:5,r5:5", 0, 0, 0, 0 },
@@ -377,7 +377,7 @@ static struct loongarch_opcode loongarch_fix_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_float_opcodes[] = 
+static struct loongarch_opcode loongarch_float_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x01008000, 0xffff8000, "fadd.s", "f0:5,f5:5,f10:5", 0, 0, 0, 0 },
@@ -459,7 +459,7 @@ static struct loongarch_opcode loongarch_float_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_lmm_opcodes[] = 
+static struct loongarch_opcode loongarch_lmm_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x02000000, 0xffc00000, "slti", "r0:5,r5:5,s10:12", 0, 0, 0, 0 },
@@ -481,7 +481,7 @@ static struct loongarch_opcode loongarch_lmm_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_privilege_opcodes[] = 
+static struct loongarch_opcode loongarch_privilege_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x04000000, 0xff0003e0, "csrrd", "r0:5,u10:14", 0, 0, 0, 0 },
@@ -510,7 +510,7 @@ static struct loongarch_opcode loongarch_privilege_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_4opt_opcodes[] = 
+static struct loongarch_opcode loongarch_4opt_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x08100000, 0xfff00000, "fmadd.s", "f0:5,f5:5,f10:5,f15:5", 0, 0, 0, 0 },
@@ -577,7 +577,7 @@ static struct loongarch_opcode loongarch_4opt_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_load_store_opcodes[] = 
+static struct loongarch_opcode loongarch_load_store_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0x20000000, 0xff000000, "ll.w", "r0:5,r5:5,s10:14<<2", 0, 0, 0, 0 },
@@ -721,7 +721,7 @@ static struct loongarch_opcode loongarch_load_store_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-static struct loongarch_opcode loongarch_jmp_opcodes[] = 
+static struct loongarch_opcode loongarch_jmp_opcodes[] =
 {
   /* match,    mask,       name, format, macro, include, exclude, pinfo */
   { 0, 0, "bltz", "r,la", "bltz %1,%%pcrel(%2)", 0, 0, 0 },
@@ -769,7 +769,7 @@ static struct loongarch_opcode loongarch_jmp_opcodes[] =
   { 0 } /* Terminate the list.  */
 };
 
-struct loongarch_ase loongarch_ASEs[] = 
+struct loongarch_ase loongarch_ASEs[] =
 {
   { &LARCH_opts.ase_fix, loongarch_macro_opcodes, 0, 0, { 0 }, 0, 0 },
   { &LARCH_opts.ase_fix, loongarch_lmm_opcodes, 0, 0, { 0 }, 0, 0 },
