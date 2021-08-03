@@ -108,6 +108,8 @@ enum options
   OPTION_LA_GLOBAL_WITH_PCREL,
   OPTION_LA_GLOBAL_WITH_ABS,
 
+  OPTION_SYNTAX,
+
   OPTION_END_OF_ENUM,
 };
 
@@ -120,6 +122,8 @@ struct option md_longopts[] =
   { "mla-local-with-abs", no_argument, NULL, OPTION_LA_LOCAL_WITH_ABS },
   { "mla-global-with-pcrel", no_argument, NULL, OPTION_LA_GLOBAL_WITH_PCREL },
   { "mla-global-with-abs", no_argument, NULL, OPTION_LA_GLOBAL_WITH_ABS },
+
+  { "msyntax", required_argument, NULL, OPTION_SYNTAX },
 
   { NULL, no_argument, NULL, 0 }
 };
@@ -154,6 +158,14 @@ md_parse_option (int c, const char *arg)
       break;
     case OPTION_LA_GLOBAL_WITH_ABS:
       LARCH_opts.la_global_with_abs = 1;
+      break;
+    case OPTION_SYNTAX:
+      if (strcasecmp (arg, "vendor") == 0)
+	LARCH_opts.use_community_syntax = 0;
+      else if (strcasecmp (arg, "community") == 0)
+	LARCH_opts.use_community_syntax = 1;
+      else
+	as_fatal (_("invalid -msyntax= option: `%s'"), arg);
       break;
     case OPTION_IGNORE:
       break;
@@ -338,7 +350,13 @@ s_dtprel (int bytes)
   demand_empty_rest_of_line ();
 }
 
-static const pseudo_typeS loongarch_pseudo_table[] = 
+static void
+s_community_syntax (int enabled)
+{
+	LARCH_opts.use_community_syntax = enabled;
+}
+
+static const pseudo_typeS loongarch_pseudo_table[] =
 {
   { "align", s_loongarch_align, -4 },
   { "dword", cons, 8 },
@@ -346,6 +364,8 @@ static const pseudo_typeS loongarch_pseudo_table[] =
   { "half", cons, 2 },
   { "dtprelword", s_dtprel, 4 },
   { "dtpreldword", s_dtprel, 8 },
+  { "community_syntax", s_community_syntax, 1 },
+  { "vendor_syntax", s_community_syntax, 0 },
   { NULL, NULL, 0 },
 };
 

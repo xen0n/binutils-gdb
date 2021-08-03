@@ -206,6 +206,8 @@ Maybe need
 
     int abi_is_lp32;
     int abi_is_lp64;
+
+    int use_community_syntax;
   } LARCH_opts;
 
   extern size_t loongarch_insn_length (insn_t insn);

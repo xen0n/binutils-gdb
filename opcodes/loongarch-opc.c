@@ -39,6 +39,8 @@ struct loongarch_ASEs_option LARCH_opts =
 
   .abi_is_lp32 = 0,
   .abi_is_lp64 = 0,
+
+  .use_community_syntax = 0,
 };
 
 size_t
