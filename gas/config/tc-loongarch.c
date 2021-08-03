@@ -640,8 +640,22 @@ get_loongarch_opcode (struct loongarch_cl_insn *insn)
             str_hash_insert (ase->name_hash_entry, it->name, (void *) it, 0);
         }
 
+      if (LARCH_opts.use_community_syntax && !ase->community_name_hash_entry)
+        {
+          ase->community_name_hash_entry = str_htab_create ();
+          for (it = ase->opcodes; it->name; it++)
+            if (it->community_name)
+              str_hash_insert (ase->community_name_hash_entry,
+                               it->community_name, (void *) it, 0);
+        }
+
       if ((it = str_hash_find (ase->name_hash_entry, insn->name)) == NULL)
-        continue;
+        {
+          if (!LARCH_opts.use_community_syntax)
+            continue;
+          if ((it = str_hash_find (ase->community_name_hash_entry, insn->name)) == NULL)
+            continue;
+        }
 
       do
         {
@@ -651,7 +665,8 @@ get_loongarch_opcode (struct loongarch_cl_insn *insn)
           insn->arg_num = 0;
           insn->reloc_num = 0;
           insn->insn_bin = loongarch_foreach_args (
-            it->format, insn->arg_strs,
+            (LARCH_opts.use_community_syntax && it->community_format) ? it->community_format : it->format,
+            insn->arg_strs,
             loongarch_args_parser_can_match_arg_helper, insn);
           if (insn->all_match && !(it->include && !*it->include) &&
               !(it->exclude && *it->exclude))
@@ -661,7 +676,7 @@ get_loongarch_opcode (struct loongarch_cl_insn *insn)
             }
           it++;
         }
-      while (it->name && strcasecmp (it->name, insn->name) == 0);
+      while (it->name && strcasecmp (LARCH_opts.use_community_syntax ? it->community_name : it->name, insn->name) == 0);
     }
 }
 
@@ -692,7 +707,19 @@ check_this_insn_before_appending (struct loongarch_cl_insn *ip)
             (ip->insn_bin & 0xff800000) == 0x00800000))
     {
       /* for bstr(ins|pick).[wd] */
-      if (ip->args[2] < ip->args[3])
+      int msb, lsb;
+      if (LARCH_opts.use_community_syntax)
+        {
+          lsb = ip->args[2];
+          msb = ip->args[3];
+        }
+      else
+        {
+          msb = ip->args[2];
+          lsb = ip->args[3];
+        }
+
+      if (msb < lsb)
         as_fatal (_ ("bstr(ins|pick).[wd] require msbd >= lsbd"));
     }
   else if (ip->insn->mask != 0 && (ip->insn_bin & 0xfe0003c0) == 0x04000000 &&

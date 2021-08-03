@@ -141,6 +141,7 @@ Maybe need
 
     /* for GAS to create hash table. */
     struct htab *name_hash_entry;
+    struct htab *community_name_hash_entry;
   };
 
   extern int is_unsigned (const char *);
