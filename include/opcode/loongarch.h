@@ -37,6 +37,11 @@ extern "C"
 #define LARCH_INSN_OPC(insn) ((insn & 0xf0000000) >> 28)
     const char *const name;
 
+    /* The instruction name as given by the
+     * https://github.com/loongson-community/loongarch-opcodes repo.
+     * NULL if the name is identical to the manual version.  */
+    const char *const community_name;
+
     /*
      ACTUAL PARAMETER:
 
@@ -101,6 +106,11 @@ dec2 : [1-9][0-9]?
 
 */
     const char *const format;
+
+    /* The same as above, but adhering to the format and ordering as specified
+     * by the https://github.com/loongson-community/loongarch-opcodes repo.
+     * NULL if the two syntaxes have the same format. */
+    const char *const community_format;
 
     /*
 MACRO: Indicate how a macro instruction expand for assembling.
