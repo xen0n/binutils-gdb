@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: bug-binutils@gnu.org\n"
-"POT-Creation-Date: 2021-07-07 09:03+0100\n"
+"POT-Creation-Date: 2021-09-05 14:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -889,267 +889,267 @@ msgstr ""
 #. assembly might get the section type wrong; Even high
 #. profile projects like glibc have done so in the past.
 #. So don't error in this case.
-#: config/obj-elf.c:797
+#: config/obj-elf.c:813
 #, c-format
 msgid "ignoring changed section type for %s"
 msgstr ""
 
 #. Do error when assembly isn't self-consistent.
-#: config/obj-elf.c:800
+#: config/obj-elf.c:816
 #, c-format
 msgid "changed section type for %s"
 msgstr ""
 
-#: config/obj-elf.c:815
+#: config/obj-elf.c:831
 #, c-format
 msgid "ignoring changed section attributes for %s"
 msgstr ""
 
-#: config/obj-elf.c:817
+#: config/obj-elf.c:833
 #, c-format
 msgid "changed section attributes for %s"
 msgstr ""
 
-#: config/obj-elf.c:825
+#: config/obj-elf.c:841
 #, c-format
 msgid "changed section entity size for %s"
 msgstr ""
 
-#: config/obj-elf.c:896
+#: config/obj-elf.c:912
 msgid "unrecognized .section attribute: want a,e,o,w,x,M,S,G,T or number"
 msgstr ""
 
-#: config/obj-elf.c:980
+#: config/obj-elf.c:996
 msgid "extraneous characters at end of numeric section type"
 msgstr ""
 
-#: config/obj-elf.c:986 read.c:3010
+#: config/obj-elf.c:1002 read.c:3010
 msgid "unrecognized section type"
 msgstr ""
 
-#: config/obj-elf.c:1018
+#: config/obj-elf.c:1034
 msgid "unrecognized section attribute"
 msgstr ""
 
-#: config/obj-elf.c:1049 config/tc-alpha.c:4206
+#: config/obj-elf.c:1065 config/tc-alpha.c:4206
 msgid "missing name"
 msgstr ""
 
-#: config/obj-elf.c:1092
+#: config/obj-elf.c:1108
 msgid "group name not parseable"
 msgstr ""
 
-#: config/obj-elf.c:1098
+#: config/obj-elf.c:1114
 #, c-format
 msgid "section %s already has a group (%s)"
 msgstr ""
 
-#: config/obj-elf.c:1153
+#: config/obj-elf.c:1169
 #, c-format
 msgid "section name '%s' already defined as another symbol"
 msgstr ""
 
-#: config/obj-elf.c:1245
+#: config/obj-elf.c:1261
 msgid "invalid merge entity size"
 msgstr ""
 
-#: config/obj-elf.c:1252
+#: config/obj-elf.c:1268
 msgid "entity size for SHF_MERGE not specified"
 msgstr ""
 
-#: config/obj-elf.c:1280
+#: config/obj-elf.c:1296
 msgid "? section flag ignored with G present"
 msgstr ""
 
-#: config/obj-elf.c:1305
+#: config/obj-elf.c:1321
 msgid "group name for SHF_GROUP not specified"
 msgstr ""
 
-#: config/obj-elf.c:1331
+#: config/obj-elf.c:1347
 #, c-format
 msgid "unsupported mbind section info: %s"
 msgstr ""
 
-#: config/obj-elf.c:1384
+#: config/obj-elf.c:1400
 #, c-format
 msgid "unsupported section id: %s"
 msgstr ""
 
-#: config/obj-elf.c:1409
+#: config/obj-elf.c:1425
 msgid "character following name is not '#'"
 msgstr ""
 
-#: config/obj-elf.c:1436
+#: config/obj-elf.c:1452
 #, c-format
 msgid "SHF_ALLOC isn't set for GNU_MBIND section: %s"
 msgstr ""
 
-#: config/obj-elf.c:1443
+#: config/obj-elf.c:1459
 #, c-format
 msgid "%s section is supported only by GNU and FreeBSD targets"
 msgstr ""
 
-#: config/obj-elf.c:1584
+#: config/obj-elf.c:1600
 msgid ".previous without corresponding .section; ignored"
 msgstr ""
 
-#: config/obj-elf.c:1610
+#: config/obj-elf.c:1626
 msgid ".popsection without corresponding .pushsection; ignored"
 msgstr ""
 
-#: config/obj-elf.c:1654 config/obj-elf.c:1749
+#: config/obj-elf.c:1670 config/obj-elf.c:1765
 #, c-format
 msgid "missing version name in `%s' for symbol `%s'"
 msgstr ""
 
-#: config/obj-elf.c:1673
+#: config/obj-elf.c:1689
 #, c-format
 msgid "only one version name with `@@@' is allowed for symbol `%s'"
 msgstr ""
 
-#: config/obj-elf.c:1681
+#: config/obj-elf.c:1697
 #, c-format
 msgid "invalid version name '%s' for symbol `%s'"
 msgstr ""
 
-#: config/obj-elf.c:1723
+#: config/obj-elf.c:1739
 msgid "expected comma after name in .symver"
 msgstr ""
 
-#: config/obj-elf.c:1740 config/obj-elf.c:2644
+#: config/obj-elf.c:1756 config/obj-elf.c:2660
 #, c-format
 msgid "`%s' can't be versioned to common symbol '%s'"
 msgstr ""
 
-#: config/obj-elf.c:1817
+#: config/obj-elf.c:1833
 #, c-format
 msgid "expected `%s' to have already been set for .vtable_inherit"
 msgstr ""
 
-#: config/obj-elf.c:1827
+#: config/obj-elf.c:1843
 msgid "expected comma after name in .vtable_inherit"
 msgstr ""
 
-#: config/obj-elf.c:1888
+#: config/obj-elf.c:1904
 msgid "expected comma after name in .vtable_entry"
 msgstr ""
 
-#: config/obj-elf.c:2027
+#: config/obj-elf.c:2043
 #, c-format
 msgid "Attribute name not recognised: %s"
 msgstr ""
 
-#: config/obj-elf.c:2044
+#: config/obj-elf.c:2060
 msgid "expected numeric constant"
 msgstr ""
 
-#: config/obj-elf.c:2053 config/tc-arm.c:7048
+#: config/obj-elf.c:2069 config/tc-arm.c:7048
 msgid "expected comma"
 msgstr ""
 
-#: config/obj-elf.c:2086
+#: config/obj-elf.c:2102
 msgid "bad string constant"
 msgstr ""
 
-#: config/obj-elf.c:2090
+#: config/obj-elf.c:2106
 msgid "expected <tag> , <value>"
 msgstr ""
 
-#: config/obj-elf.c:2223
+#: config/obj-elf.c:2239
 msgid "expected quoted string"
 msgstr ""
 
-#: config/obj-elf.c:2243
+#: config/obj-elf.c:2259
 #, c-format
 msgid "expected comma after name `%s' in .size directive"
 msgstr ""
 
-#: config/obj-elf.c:2252
+#: config/obj-elf.c:2268
 msgid "missing expression in .size directive"
 msgstr ""
 
-#: config/obj-elf.c:2372
+#: config/obj-elf.c:2388
 #, c-format
 msgid "symbol '%s' is already defined"
 msgstr ""
 
-#: config/obj-elf.c:2392
+#: config/obj-elf.c:2408
 #, c-format
 msgid "symbol type \"%s\" is supported only by GNU and FreeBSD targets"
 msgstr ""
 
-#: config/obj-elf.c:2396
+#: config/obj-elf.c:2412
 #, c-format
 msgid "symbol type \"%s\" is not supported by MIPS targets"
 msgstr ""
 
-#: config/obj-elf.c:2408
+#: config/obj-elf.c:2424
 #, c-format
 msgid "symbol type \"%s\" is supported only by GNU targets"
 msgstr ""
 
-#: config/obj-elf.c:2418
+#: config/obj-elf.c:2434
 #, c-format
 msgid "unrecognized symbol type \"%s\""
 msgstr ""
 
-#: config/obj-elf.c:2439
+#: config/obj-elf.c:2455
 #, c-format
 msgid "cannot change type of common symbol '%s'"
 msgstr ""
 
-#: config/obj-elf.c:2451
+#: config/obj-elf.c:2467
 #, c-format
 msgid "symbol '%s' already has its type set"
 msgstr ""
 
-#: config/obj-elf.c:2617 config/obj-elf.c:2620
+#: config/obj-elf.c:2633 config/obj-elf.c:2636
 #, c-format
 msgid ".size expression for %s does not evaluate to a constant"
 msgstr ""
 
-#: config/obj-elf.c:2716 ecoff.c:3578
+#: config/obj-elf.c:2732 ecoff.c:3578
 #, c-format
 msgid "symbol `%s' can not be both weak and common"
 msgstr ""
 
-#: config/obj-elf.c:2751
+#: config/obj-elf.c:2767
 #, c-format
 msgid "undefined linked-to symbol `%s' on section `%s'"
 msgstr ""
 
-#: config/obj-elf.c:2829
+#: config/obj-elf.c:2845
 #, c-format
 msgid "assuming all members of group `%s' are COMDAT"
 msgstr ""
 
-#: config/obj-elf.c:2841
+#: config/obj-elf.c:2857
 #, c-format
 msgid "can't create group: %s"
 msgstr ""
 
-#: config/obj-elf.c:2918
+#: config/obj-elf.c:2934
 #, c-format
 msgid ""
 "invalid attempt to declare external version name as default in symbol `%s'"
 msgstr ""
 
-#: config/obj-elf.c:2928
+#: config/obj-elf.c:2944
 #, c-format
 msgid "multiple versions [`%s'|`%s'] for symbol `%s'"
 msgstr ""
 
-#: config/obj-elf.c:3020
+#: config/obj-elf.c:3036
 #, c-format
 msgid "failed to set up debugging information: %s"
 msgstr ""
 
-#: config/obj-elf.c:3040
+#: config/obj-elf.c:3056
 #, c-format
 msgid "can't start writing .mdebug section: %s"
 msgstr ""
 
-#: config/obj-elf.c:3048
+#: config/obj-elf.c:3064
 #, c-format
 msgid "could not write .mdebug section: %s"
 msgstr ""
@@ -10026,6 +10026,125 @@ msgstr ""
 msgid "missing `.end'"
 msgstr ""
 
+#: config/tc-loongarch.c:218
+msgid "we can specify only ONE abi"
+msgstr ""
+
+#: config/tc-loongarch.c:260
+#, c-format
+msgid "insn name: %s\tformat: %s\tsyntax error"
+msgstr ""
+
+#: config/tc-loongarch.c:263
+#, c-format
+msgid ""
+"insn name: %s\n"
+"format: %s\n"
+"we want macro but macro is NULL"
+msgstr ""
+
+#: config/tc-loongarch.c:269
+#, c-format
+msgid ""
+"insn name: %s\n"
+"format: %s\n"
+"macro: %s\tsyntax error"
+msgstr ""
+
+#: config/tc-loongarch.c:327
+#, c-format
+msgid "Unsupported use of %s"
+msgstr ""
+
+#: config/tc-loongarch.c:404
+msgid "internal error: we have no internal label yet"
+msgstr ""
+
+#: config/tc-loongarch.c:437
+msgid "This label shouldn't be with addend."
+msgstr ""
+
+#: config/tc-loongarch.c:477
+msgid "expr too huge"
+msgstr ""
+
+#: config/tc-loongarch.c:504
+#, c-format
+msgid ""
+"not support reloc bit-field\n"
+"fmt: %c%c %s\n"
+"args: %s"
+msgstr ""
+
+#: config/tc-loongarch.c:552
+msgid "unknown escape"
+msgstr ""
+
+#: config/tc-loongarch.c:579
+#, c-format
+msgid "require imm low %d bit is 0."
+msgstr ""
+
+#. How to do after we detect overflow.
+#: config/tc-loongarch.c:591
+#, c-format
+msgid ""
+"Immediate overflow.\n"
+"format: %c%c%s\n"
+"arg: %s"
+msgstr ""
+
+#: config/tc-loongarch.c:671
+msgid "AMO insns require rd != base && rd != rt when rd isn't $r0"
+msgstr ""
+
+#: config/tc-loongarch.c:682
+msgid "bstr(ins|pick).[wd] require msbd >= lsbd"
+msgstr ""
+
+#: config/tc-loongarch.c:687
+msgid "csrxchg require rj != $r0 && rj != $r1"
+msgstr ""
+
+#: config/tc-loongarch.c:734
+#, c-format
+msgid "no HOWTO loong relocation number %d"
+msgstr ""
+
+#: config/tc-loongarch.c:742
+msgid "Internal error: not support relax now"
+msgstr ""
+
+#: config/tc-loongarch.c:771
+#, c-format
+msgid "li overflow: hi32:0x%x lo32:0x%x"
+msgstr ""
+
+#: config/tc-loongarch.c:776
+msgid "we can't li.d on 32bit-arch"
+msgstr ""
+
+#: config/tc-loongarch.c:869
+#, c-format
+msgid "no match insn: %s\t%s"
+msgstr ""
+
+#: config/tc-loongarch.c:939 config/tc-loongarch.c:945
+msgid "Relocation against a constant"
+msgstr ""
+
+#: config/tc-loongarch.c:1150 config/tc-riscv.c:3499
+#, c-format
+msgid "cannot represent %s relocation in object file"
+msgstr ""
+
+#: config/tc-loongarch.c:1188
+#, c-format
+msgid ""
+"\t\t      LoongArch options:\n"
+"\t\t      "
+msgstr ""
+
 #: config/tc-m32c.c:141
 #, c-format
 msgid " M32C specific command line options:\n"
@@ -15602,11 +15721,6 @@ msgstr ""
 #: config/tc-riscv.c:3324
 #, c-format
 msgid "unrecognized .option directive: %s\n"
-msgstr ""
-
-#: config/tc-riscv.c:3499
-#, c-format
-msgid "cannot represent %s relocation in object file"
 msgstr ""
 
 #: config/tc-riscv.c:3640
