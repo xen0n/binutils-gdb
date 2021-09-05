@@ -40,16 +40,16 @@ get_loongarch_opcode_by_binfmt (insn_t insn)
       if (!ase->opc_htab_inited)
 	{
 	  for (it = ase->opcodes; it->mask; it++)
-	    if (!ase->opc_htab[LARCH_INSN_OPC (it->match)]
+	    if (!ase->opc_htab[LOONG_INSN_OPC (it->match)]
 		&& it->macro == NULL)
-	      ase->opc_htab[LARCH_INSN_OPC (it->match)] = it;
+	      ase->opc_htab[LOONG_INSN_OPC (it->match)] = it;
 	  for (i = 0; i < 16; i++)
 	    if (!ase->opc_htab[i])
 	      ase->opc_htab[i] = it;
 	  ase->opc_htab_inited = 1;
 	}
 
-      it = ase->opc_htab[LARCH_INSN_OPC (insn)];
+      it = ase->opc_htab[LOONG_INSN_OPC (insn)];
       for (; it->name; it++)
 	if ((insn & it->mask) == it->match && it->mask
 	    && !(it->include && !*it->include)
@@ -69,10 +69,10 @@ static const char *const *loongarch_x_disname = NULL;
 static void
 set_default_loongarch_dis_options (void)
 {
-  LARCH_opts.ase_fix = 1;
-  LARCH_opts.ase_float = 1;
-  LARCH_opts.ase_128vec = 1;
-  LARCH_opts.ase_256vec = 1;
+  LOONG_opts.ase_fix = 1;
+  LOONG_opts.ase_float = 1;
+  LOONG_opts.ase_128vec = 1;
+  LOONG_opts.ase_256vec = 1;
 
   loongarch_r_disname = loongarch_r_lp64_name;
   loongarch_f_disname = loongarch_f_lp64_name;

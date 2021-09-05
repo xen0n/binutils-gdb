@@ -21,7 +21,7 @@
 #include <stddef.h>
 #include "opcode/loongarch.h"
 
-struct loongarch_ASEs_option LARCH_opts =
+struct loongarch_ASEs_option LOONG_opts =
 {
   .ase_fix = 0,
   .ase_float = 0,
@@ -127,19 +127,19 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
   { 0, 0, "la", "r,la", "la.global %1,%2", 0, 0, 0 },
 
   { 0, 0, "la.global", "r,la", "la.pcrel %1,%2",
-    &LARCH_opts.la_global_with_pcrel, 0, 0 },
+    &LOONG_opts.la_global_with_pcrel, 0, 0 },
   { 0, 0, "la.global", "r,r,la", "la.pcrel %1,%2,%3",
-    &LARCH_opts.la_global_with_pcrel, 0, 0 },
-  { 0, 0, "la.global", "r,la", "la.abs %1,%2", &LARCH_opts.la_global_with_abs,
+    &LOONG_opts.la_global_with_pcrel, 0, 0 },
+  { 0, 0, "la.global", "r,la", "la.abs %1,%2", &LOONG_opts.la_global_with_abs,
     0, 0 },
   { 0, 0, "la.global", "r,r,la", "la.abs %1,%3",
-    &LARCH_opts.la_global_with_abs, 0, 0 },
+    &LOONG_opts.la_global_with_abs, 0, 0 },
   { 0, 0, "la.global", "r,l", "la.got %1,%2", 0, 0, 0 },
   { 0, 0, "la.global", "r,r,l", "la.got %1,%2,%3", 0, 0, 0 },
 
-  { 0, 0, "la.local", "r,la", "la.abs %1,%2", &LARCH_opts.la_local_with_abs, 0,
+  { 0, 0, "la.local", "r,la", "la.abs %1,%2", &LOONG_opts.la_local_with_abs, 0,
     0 },
-  { 0, 0, "la.local", "r,r,la", "la.abs %1,%3", &LARCH_opts.la_local_with_abs,
+  { 0, 0, "la.local", "r,r,la", "la.abs %1,%3", &LOONG_opts.la_local_with_abs,
     0, 0 },
   { 0, 0, "la.local", "r,la", "la.pcrel %1,%2", 0, 0, 0 },
   { 0, 0, "la.local", "r,r,la", "la.pcrel %1,%2,%3", 0, 0, 0 },
@@ -147,44 +147,44 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
   { 0, 0, "la.abs", "r,la",
     "lu12i.w %1,%%abs(%2)>>12;"
     "ori %1,%1,%%abs(%2)&0xfff;",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
   { 0, 0, "la.abs", "r,la",
     "lu12i.w %1,%%abs(%2)<<32>>44;"
     "ori %1,%1,%%abs(%2)&0xfff;"
     "lu32i.d %1,%%abs(%2)<<12>>44;"
     "lu52i.d %1,%1,%%abs(%2)>>52;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.pcrel", "r,la",
     "pcaddu12i %1,%%pcrel(%2+0x800)<<32>>44;"
     "addi.w %1,%1,%%pcrel(%2+4)-(%%pcrel(%2+4+0x800)>>12<<12);",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
 
   { 0, 0, "la.pcrel", "r,la",
     "pcaddu12i %1,%%pcrel(%2+0x800)>>12;"
     "addi.d %1,%1,%%pcrel(%2+4)-(%%pcrel(%2+4+0x800)>>12<<12);",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
   { 0, 0, "la.pcrel", "r,r,la",
     "pcaddu12i %1,(%%pcrel(%3)-(%%pcrel(%3+0x80000000)>>32<<32))<<32>>44;"
     "ori %2,$r0,(%%pcrel(%3+4)-(%%pcrel(%3+4+0x80000000)>>32<<32))&0xfff;"
     "lu32i.d %2,%%pcrel(%3+8+0x80000000)<<12>>44;"
     "lu52i.d %2,%2,%%pcrel(%3+12+0x80000000)>>52;"
     "add.d %1,%1,%2;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.got", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%gprel(%2))<<32>>44;"
     "ld.w "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%gprel(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%gprel(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
 
   { 0, 0, "la.got", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%gprel(%2))>>12;"
     "ld.d "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%gprel(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%gprel(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
   { 0, 0, "la.got", "r,r,l",
     "pcaddu12i "
     "%1,(%%pcrel(_GLOBAL_OFFSET_TABLE_)+%%gprel(%3)-((%%pcrel(_GLOBAL_OFFSET_"
@@ -197,36 +197,36 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
     "lu52i.d "
     "%2,%2,(%%pcrel(_GLOBAL_OFFSET_TABLE_+12+0x80000000)+%%gprel(%3))>>52;"
     "ldx.d %1,%1,%2;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.tls.le", "r,la",
     "lu12i.w %1,%%tprel(%2)>>12;"
     "ori %1,%1,%%tprel(%2)&0xfff",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
   /* { 0, 0, "la.tls.le", "r,la",
   * "lu12i.w %1,%%tprel(%2)>>12;"
   * "ori %1,%1,%%tprel(%2)&0xfff"
-  * , &LARCH_opts.addrwidth_is_64, 0, 0}, */
+  * , &LOONG_opts.addrwidth_is_64, 0, 0}, */
   { 0, 0, "la.tls.le", "r,la",
     "lu12i.w %1,%%tprel(%2)<<32>>44;"
     "ori %1,%1,%%tprel(%2)&0xfff;"
     "lu32i.d %1,%%tprel(%2)<<12>>44;"
     "lu52i.d %1,%1,%%tprel(%2)>>52;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.tls.ie", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%tlsgot(%2))<<32>>44;"
     "ld.w "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%tlsgot(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%tlsgot(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
 
   { 0, 0, "la.tls.ie", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%tlsgot(%2))>>12;"
     "ld.d "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%tlsgot(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%tlsgot(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
   { 0, 0, "la.tls.ie", "r,r,l",
     "pcaddu12i "
     "%1,(%%pcrel(_GLOBAL_OFFSET_TABLE_)+%%tlsgot(%3)-((%%pcrel(_GLOBAL_OFFSET_"
@@ -239,25 +239,25 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
     "lu52i.d "
     "%2,%2,(%%pcrel(_GLOBAL_OFFSET_TABLE_+12+0x80000000)+%%tlsgot(%3))>>52;"
     "ldx.d %1,%1,%2;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.tls.ld", "r,l", "la.tls.gd %1,%2", 0, 0, 0 },
   { 0, 0, "la.tls.ld", "r,r,l", "la.tls.gd %1,%2,%3",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0, 0, "la.tls.gd", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%tlsgd(%2))<<32>>44;"
     "addi.w "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%tlsgd(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%tlsgd(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_32, 0, 0 },
+    &LOONG_opts.addrwidth_is_32, 0, 0 },
 
   { 0, 0, "la.tls.gd", "r,l",
     "pcaddu12i %1,(%%pcrel(_GLOBAL_OFFSET_TABLE_+0x800)+%%tlsgd(%2))>>12;"
     "addi.d "
     "%1,%1,%%pcrel(_GLOBAL_OFFSET_TABLE_+4)+%%tlsgd(%2)-((%%pcrel(_GLOBAL_"
     "OFFSET_TABLE_+4+0x800)+%%tlsgd(%2))>>12<<12);",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
   { 0, 0, "la.tls.gd", "r,r,l",
     "pcaddu12i "
     "%1,(%%pcrel(_GLOBAL_OFFSET_TABLE_)+%%tlsgd(%3)-((%%pcrel(_GLOBAL_OFFSET_"
@@ -270,7 +270,7 @@ static struct loongarch_opcode loongarch_macro_opcodes[] =
     "lu52i.d "
     "%2,%2,(%%pcrel(_GLOBAL_OFFSET_TABLE_+12+0x80000000)+%%tlsgd(%3))>>52;"
     "add.d %1,%1,%2;",
-    &LARCH_opts.addrwidth_is_64, 0, 0 },
+    &LOONG_opts.addrwidth_is_64, 0, 0 },
 
   { 0 } /* Terminate the list.  */
 };
@@ -769,14 +769,14 @@ static struct loongarch_opcode loongarch_jmp_opcodes[] =
 
 struct loongarch_ase loongarch_ASEs[] =
 {
-  { &LARCH_opts.ase_fix, loongarch_macro_opcodes,	0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_fix, loongarch_lmm_opcodes,		0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_fix, loongarch_privilege_opcodes,	0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_fix, loongarch_jmp_opcodes,		0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_fix, loongarch_load_store_opcodes,	0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_fix, loongarch_fix_opcodes,		0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_float, loongarch_4opt_opcodes,	0, 0, { 0 }, 0, 0 },
-  { &LARCH_opts.ase_float, loongarch_float_opcodes,	0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_macro_opcodes,	0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_lmm_opcodes,		0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_privilege_opcodes,	0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_jmp_opcodes,		0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_load_store_opcodes,	0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_fix, loongarch_fix_opcodes,		0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_float, loongarch_4opt_opcodes,	0, 0, { 0 }, 0, 0 },
+  { &LOONG_opts.ase_float, loongarch_float_opcodes,	0, 0, { 0 }, 0, 0 },
 
   { 0 },
 };
