@@ -798,7 +798,8 @@ EXTRA_as_new_SOURCES = $(CFILES) $(HFILES) $(TARGET_CPU_CFILES) \
 	$(OBJ_FORMAT_CFILES) $(OBJ_FORMAT_HFILES) \
 	$(CONFIG_ATOF_CFILES) $(MULTI_CFILES) config/m68k-parse.y \
 	config/bfin-parse.y config/bfin-lex.l config/rl78-parse.y \
-	config/rx-parse.y config/loongarch-parse.y
+	config/rx-parse.y config/loongarch-parse.y \
+	config/loongarch-lex.l
 EXPECT = expect
 RUNTEST = runtest
 RUNTESTFLAGS = 
@@ -1093,6 +1094,8 @@ config/rx-parse.$(OBJEXT): config/$(am__dirstamp) \
 	config/$(DEPDIR)/$(am__dirstamp)
 config/loongarch-parse.$(OBJEXT): config/$(am__dirstamp) \
 	config/$(DEPDIR)/$(am__dirstamp)
+config/loongarch-lex.$(OBJEXT): config/$(am__dirstamp) \
+	config/$(DEPDIR)/$(am__dirstamp)
 
 as-new$(EXEEXT): $(as_new_OBJECTS) $(as_new_DEPENDENCIES) $(EXTRA_as_new_DEPENDENCIES) 
 	@rm -f as-new$(EXEEXT)
@@ -1154,6 +1157,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/e-i386coff.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/e-i386elf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/e-mipself.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/loongarch-lex.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/loongarch-parse.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/m68k-parse.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@config/$(DEPDIR)/obj-aout.Po@am__quote@
@@ -1462,6 +1466,7 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 	-rm -f config/bfin-lex.c
 	-rm -f config/bfin-parse.c
+	-rm -f config/loongarch-lex.c
 	-rm -f config/loongarch-parse.c
 	-rm -f config/m68k-parse.c
 	-rm -f config/rl78-parse.c
@@ -1612,7 +1617,6 @@ config/rx-parse.c: $(srcdir)/config/rx-parse.y
 	$(SHELL) $(YLWRAP) $(srcdir)/config/rx-parse.y y.tab.c $@ y.tab.h config/rx-parse.h -- $(YACCCOMPILE) -d ;
 config/rx-parse.h: config/rx-parse.c
 	@true
-
 config/loongarch-parse.c: $(srcdir)/config/loongarch-parse.y
 	$(SHELL) $(YLWRAP) $(srcdir)/config/loongarch-parse.y y.tab.c $@ y.tab.h config/loongarch-parse.h -- $(YACCCOMPILE) -d ;
 config/loongarch-parse.h: config/loongarch-parse.c
