@@ -1386,35 +1386,35 @@ loongarch_elf_size_dynamic_sections (bfd *output_bfd,
 }
 
 #define LOONG_LD_STACK_DEPTH 16
-static int64_t larch_opc_stack[LOONG_LD_STACK_DEPTH];
-static size_t larch_stack_top = 0;
+static int64_t loongarch_opc_stack[LOONG_LD_STACK_DEPTH];
+static size_t loongarch_stack_top = 0;
 
 static bfd_reloc_status_type
 loongarch_push (int64_t val)
 {
-  if (LOONG_LD_STACK_DEPTH <= larch_stack_top)
+  if (LOONG_LD_STACK_DEPTH <= loongarch_stack_top)
     return bfd_reloc_outofrange;
-  larch_opc_stack[larch_stack_top++] = val;
+  loongarch_opc_stack[loongarch_stack_top++] = val;
   return bfd_reloc_ok;
 }
 
 static bfd_reloc_status_type
 loongarch_pop (int64_t *val)
 {
-  if (larch_stack_top == 0)
+  if (loongarch_stack_top == 0)
     return bfd_reloc_outofrange;
   BFD_ASSERT (val);
-  *val = larch_opc_stack[--larch_stack_top];
+  *val = loongarch_opc_stack[--loongarch_stack_top];
   return bfd_reloc_ok;
 }
 
 static bfd_reloc_status_type
 loongarch_top (int64_t *val)
 {
-  if (larch_stack_top == 0)
+  if (loongarch_stack_top == 0)
     return bfd_reloc_outofrange;
   BFD_ASSERT (val);
-  *val = larch_opc_stack[larch_stack_top - 1];
+  *val = loongarch_opc_stack[loongarch_stack_top - 1];
   return bfd_reloc_ok;
 }
 
@@ -1731,9 +1731,9 @@ static struct
   struct elf_link_hash_entry *h;
   bfd_vma addend;
   int64_t top_then;
-} larch_reloc_queue[LOONG_RECENT_RELOC_QUEUE_LENGTH];
-static size_t larch_reloc_queue_head = 0;
-static size_t larch_reloc_queue_tail = 0;
+} loongarch_reloc_queue[LOONG_RECENT_RELOC_QUEUE_LENGTH];
+static size_t loongarch_reloc_queue_head = 0;
+static size_t loongarch_reloc_queue_tail = 0;
 
 static const char *
 loongarch_sym_name (bfd *input_bfd, struct elf_link_hash_entry *h,
@@ -1756,61 +1756,61 @@ loongarch_record_one_reloc (bfd *abfd, asection *section, int r_type,
 			    bfd_vma r_offset, Elf_Internal_Sym *sym,
 			    struct elf_link_hash_entry *h, bfd_vma addend)
 {
-  if ((larch_reloc_queue_head == 0
-      && larch_reloc_queue_tail == LOONG_RECENT_RELOC_QUEUE_LENGTH - 1)
-      || (larch_reloc_queue_head == larch_reloc_queue_tail + 1))
-    larch_reloc_queue_head =
-      (larch_reloc_queue_head + 1) % LOONG_RECENT_RELOC_QUEUE_LENGTH;
-  larch_reloc_queue[larch_reloc_queue_tail].bfd = abfd;
-  larch_reloc_queue[larch_reloc_queue_tail].section = section;
-  larch_reloc_queue[larch_reloc_queue_tail].r_offset = r_offset;
-  larch_reloc_queue[larch_reloc_queue_tail].r_type = r_type;
-  larch_reloc_queue[larch_reloc_queue_tail].sym = sym;
-  larch_reloc_queue[larch_reloc_queue_tail].h = h;
-  larch_reloc_queue[larch_reloc_queue_tail].addend = addend;
-  loongarch_top (&larch_reloc_queue[larch_reloc_queue_tail].top_then);
-  larch_reloc_queue_tail =
-    (larch_reloc_queue_tail + 1) % LOONG_RECENT_RELOC_QUEUE_LENGTH;
+  if ((loongarch_reloc_queue_head == 0
+      && loongarch_reloc_queue_tail == LOONG_RECENT_RELOC_QUEUE_LENGTH - 1)
+      || (loongarch_reloc_queue_head == loongarch_reloc_queue_tail + 1))
+    loongarch_reloc_queue_head =
+      (loongarch_reloc_queue_head + 1) % LOONG_RECENT_RELOC_QUEUE_LENGTH;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].bfd = abfd;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].section = section;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].r_offset = r_offset;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].r_type = r_type;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].sym = sym;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].h = h;
+  loongarch_reloc_queue[loongarch_reloc_queue_tail].addend = addend;
+  loongarch_top (&loongarch_reloc_queue[loongarch_reloc_queue_tail].top_then);
+  loongarch_reloc_queue_tail =
+    (loongarch_reloc_queue_tail + 1) % LOONG_RECENT_RELOC_QUEUE_LENGTH;
 }
 
 static void
 loongarch_dump_reloc_record (void (*p) (const char *fmt, ...))
 {
-  size_t i = larch_reloc_queue_head;
+  size_t i = loongarch_reloc_queue_head;
   bfd *a_bfd = NULL;
   asection *section = NULL;
   bfd_vma r_offset = 0;
   int inited = 0;
   p ("Dump relocate record:\n");
   p ("stack top\t\trelocation name\t\tsymbol");
-  while (i != larch_reloc_queue_tail)
+  while (i != loongarch_reloc_queue_tail)
     {
-      if (a_bfd != larch_reloc_queue[i].bfd
-	  || section != larch_reloc_queue[i].section
-	  || r_offset != larch_reloc_queue[i].r_offset)
+      if (a_bfd != loongarch_reloc_queue[i].bfd
+	  || section != loongarch_reloc_queue[i].section
+	  || r_offset != loongarch_reloc_queue[i].r_offset)
 	{
-	  a_bfd = larch_reloc_queue[i].bfd;
-	  section = larch_reloc_queue[i].section;
-	  r_offset = larch_reloc_queue[i].r_offset;
-	  p ("\nat %pB(%pA+0x%v):\n", larch_reloc_queue[i].bfd,
-	     larch_reloc_queue[i].section, larch_reloc_queue[i].r_offset);
+	  a_bfd = loongarch_reloc_queue[i].bfd;
+	  section = loongarch_reloc_queue[i].section;
+	  r_offset = loongarch_reloc_queue[i].r_offset;
+	  p ("\nat %pB(%pA+0x%v):\n", loongarch_reloc_queue[i].bfd,
+	     loongarch_reloc_queue[i].section, loongarch_reloc_queue[i].r_offset);
 	}
 
       if (!inited)
 	inited = 1, p ("...\n");
 
       reloc_howto_type *howto =
-	loongarch_elf_rtype_to_howto (larch_reloc_queue[i].r_type);
-      p ("0x%V %s\t`%s'", (bfd_vma) larch_reloc_queue[i].top_then,
+	loongarch_elf_rtype_to_howto (loongarch_reloc_queue[i].r_type);
+      p ("0x%V %s\t`%s'", (bfd_vma) loongarch_reloc_queue[i].top_then,
 	 howto ? howto->name : "<unknown reloc>",
-	 loongarch_sym_name (larch_reloc_queue[i].bfd, larch_reloc_queue[i].h,
-			     larch_reloc_queue[i].sym));
+	 loongarch_sym_name (loongarch_reloc_queue[i].bfd, loongarch_reloc_queue[i].h,
+			     loongarch_reloc_queue[i].sym));
 
-      long addend = larch_reloc_queue[i].addend;
+      long addend = loongarch_reloc_queue[i].addend;
       if (addend < 0)
 	p (" - %ld", -addend);
       else if (0 < addend)
-	p (" + %ld(0x%v)", addend, larch_reloc_queue[i].addend);
+	p (" + %ld(0x%v)", addend, loongarch_reloc_queue[i].addend);
 
       p ("\n");
       i = (i + 1) % LOONG_RECENT_RELOC_QUEUE_LENGTH;
