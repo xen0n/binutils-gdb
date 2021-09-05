@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: bug-binutils@gnu.org\n"
-"POT-Creation-Date: 2021-07-03 15:09+0100\n"
+"POT-Creation-Date: 2021-09-05 14:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "%P: symbol `%pT' missing from main hash table\n"
 msgstr ""
 
-#: ldcref.c:517 ldcref.c:628 ldmain.c:1302 ldmisc.c:336 pe-dll.c:737
+#: ldcref.c:517 ldcref.c:628 ldmain.c:1304 ldmisc.c:336 pe-dll.c:737
 #: pe-dll.c:1315 pe-dll.c:1436 pe-dll.c:1562 earm_wince_pe.c:1486
 #: earm_wince_pe.c:1693 earmpe.c:1486 earmpe.c:1693 ei386pe.c:1486
 #: ei386pe.c:1693 ei386pe_posix.c:1486 ei386pe_posix.c:1693 ei386pep.c:1475
@@ -64,7 +64,7 @@ msgstr ""
 msgid "%F%P: %pB: could not read symbols: %E\n"
 msgstr ""
 
-#: ldcref.c:690 ldcref.c:697 ldmain.c:1364 ldmain.c:1371
+#: ldcref.c:690 ldcref.c:697 ldmain.c:1366 ldmain.c:1373
 msgid "%F%P: %pB: could not read relocs: %E\n"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgstr ""
 msgid "%F%P:%pS / by zero\n"
 msgstr ""
 
-#: ldexp.c:737 ldlang.c:3982 ldmain.c:1269 earm_wince_pe.c:1804 earmpe.c:1804
+#: ldexp.c:737 ldlang.c:3982 ldmain.c:1271 earm_wince_pe.c:1804 earmpe.c:1804
 #: ei386pe.c:1804 ei386pe_posix.c:1804 ei386pep.c:1699 emcorepe.c:1804
 #: eshpe.c:1804
 msgid "%F%P: bfd_link_hash_lookup failed: %E\n"
@@ -374,15 +374,15 @@ msgstr ""
 msgid "%P: cannot find %s inside %s\n"
 msgstr ""
 
-#: ldfile.c:477 ldmain.c:1449
+#: ldfile.c:477 ldmain.c:1451
 msgid "%P: About to run error handling script '%s' with arguments: '%s' '%s'\n"
 msgstr ""
 
-#: ldfile.c:481 ldmain.c:1453
+#: ldfile.c:481 ldmain.c:1455
 msgid "error handling script"
 msgstr ""
 
-#: ldfile.c:487 ldmain.c:1459
+#: ldfile.c:487 ldmain.c:1461
 msgid "%P: Failed to run error handling script '%s', reason: "
 msgstr ""
 
@@ -852,231 +852,231 @@ msgstr ""
 msgid "%X%P: can't set BFD default target to `%s': %E\n"
 msgstr ""
 
-#: ldmain.c:403
+#: ldmain.c:405
 msgid "built in linker script"
 msgstr ""
 
-#: ldmain.c:413
+#: ldmain.c:415
 msgid "using external linker script:"
 msgstr ""
 
-#: ldmain.c:415
+#: ldmain.c:417
 msgid "using internal linker script:"
 msgstr ""
 
-#: ldmain.c:462
+#: ldmain.c:464
 msgid "%F%P: --no-define-common may not be used without -shared\n"
 msgstr ""
 
-#: ldmain.c:468
+#: ldmain.c:470
 msgid "%F%P: no input files\n"
 msgstr ""
 
-#: ldmain.c:472
+#: ldmain.c:474
 msgid "%P: mode %s\n"
 msgstr ""
 
-#: ldmain.c:488 ends32belf.c:427 ends32belf16m.c:427 ends32belf_linux.c:560
+#: ldmain.c:490 ends32belf.c:427 ends32belf16m.c:427 ends32belf_linux.c:560
 #: ends32elf.c:427 ends32elf16m.c:427 ends32elf_linux.c:560
 msgid "%F%P: cannot open map file %s: %E\n"
 msgstr ""
 
-#: ldmain.c:541
+#: ldmain.c:543
 msgid "%P: link errors found, deleting executable `%s'\n"
 msgstr ""
 
-#: ldmain.c:550
+#: ldmain.c:552
 msgid "%F%P: %pB: final close failed: %E\n"
 msgstr ""
 
-#: ldmain.c:577
+#: ldmain.c:579
 msgid "%F%P: unable to open for source of copy `%s'\n"
 msgstr ""
 
-#: ldmain.c:580
+#: ldmain.c:582
 msgid "%F%P: unable to open for destination of copy `%s'\n"
 msgstr ""
 
-#: ldmain.c:587
+#: ldmain.c:589
 msgid "%P: error writing file `%s'\n"
 msgstr ""
 
-#: ldmain.c:592 pe-dll.c:1965
+#: ldmain.c:594 pe-dll.c:1965
 #, c-format
 msgid "%P: error closing file `%s'\n"
 msgstr ""
 
-#: ldmain.c:606
+#: ldmain.c:608
 #, c-format
 msgid "%s: total time in link: %ld.%06ld\n"
 msgstr ""
 
-#: ldmain.c:693
+#: ldmain.c:695
 msgid "%F%P: missing argument to -m\n"
 msgstr ""
 
-#: ldmain.c:747 ldmain.c:764 ldmain.c:784 ldmain.c:816 pe-dll.c:1396
+#: ldmain.c:749 ldmain.c:766 ldmain.c:786 ldmain.c:818 pe-dll.c:1396
 msgid "%F%P: bfd_hash_table_init failed: %E\n"
 msgstr ""
 
-#: ldmain.c:751 ldmain.c:768 ldmain.c:788
+#: ldmain.c:753 ldmain.c:770 ldmain.c:790
 msgid "%F%P: bfd_hash_lookup failed: %E\n"
 msgstr ""
 
-#: ldmain.c:802
+#: ldmain.c:804
 msgid "%X%P: error: duplicate retain-symbols-file\n"
 msgstr ""
 
-#: ldmain.c:846
+#: ldmain.c:848
 msgid "%F%P: bfd_hash_lookup for insertion failed: %E\n"
 msgstr ""
 
-#: ldmain.c:851
+#: ldmain.c:853
 msgid "%P: `-retain-symbols-file' overrides `-s' and `-S'\n"
 msgstr ""
 
-#: ldmain.c:967
+#: ldmain.c:969
 msgid ""
 "Archive member included to satisfy reference by file (symbol)\n"
 "\n"
 msgstr ""
 
-#: ldmain.c:1077
+#: ldmain.c:1079
 msgid "%P: %C: warning: multiple definition of `%pT'"
 msgstr ""
 
-#: ldmain.c:1080
+#: ldmain.c:1082
 msgid "%X%P: %C: multiple definition of `%pT'"
 msgstr ""
 
-#: ldmain.c:1083
+#: ldmain.c:1085
 msgid "; %D: first defined here"
 msgstr ""
 
-#: ldmain.c:1088
+#: ldmain.c:1090
 msgid "%P: disabling relaxation; it will not work with multiple definitions\n"
 msgstr ""
 
-#: ldmain.c:1141
+#: ldmain.c:1143
 msgid "%P: %pB: warning: definition of `%pT' overriding common from %pB\n"
 msgstr ""
 
-#: ldmain.c:1145
+#: ldmain.c:1147
 msgid "%P: %pB: warning: definition of `%pT' overriding common\n"
 msgstr ""
 
-#: ldmain.c:1154
+#: ldmain.c:1156
 msgid "%P: %pB: warning: common of `%pT' overridden by definition from %pB\n"
 msgstr ""
 
-#: ldmain.c:1158
+#: ldmain.c:1160
 msgid "%P: %pB: warning: common of `%pT' overridden by definition\n"
 msgstr ""
 
-#: ldmain.c:1167
+#: ldmain.c:1169
 msgid ""
 "%P: %pB: warning: common of `%pT' overridden by larger common from %pB\n"
 msgstr ""
 
-#: ldmain.c:1171
+#: ldmain.c:1173
 msgid "%P: %pB: warning: common of `%pT' overridden by larger common\n"
 msgstr ""
 
-#: ldmain.c:1178
+#: ldmain.c:1180
 msgid "%P: %pB: warning: common of `%pT' overriding smaller common from %pB\n"
 msgstr ""
 
-#: ldmain.c:1182
+#: ldmain.c:1184
 msgid "%P: %pB: warning: common of `%pT' overriding smaller common\n"
 msgstr ""
 
-#: ldmain.c:1189
+#: ldmain.c:1191
 msgid "%P: %pB and %pB: warning: multiple common of `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1192
+#: ldmain.c:1194
 msgid "%P: %pB: warning: multiple common of `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1211 ldmain.c:1247
+#: ldmain.c:1213 ldmain.c:1249
 msgid "%P: warning: global constructor %s used\n"
 msgstr ""
 
-#: ldmain.c:1257
+#: ldmain.c:1259
 msgid "%F%P: BFD backend error: BFD_RELOC_CTOR unsupported\n"
 msgstr ""
 
 #. We found a reloc for the symbol we are looking for.
-#: ldmain.c:1329 ldmain.c:1331 ldmain.c:1333 ldmain.c:1341 ldmain.c:1384
+#: ldmain.c:1331 ldmain.c:1333 ldmain.c:1335 ldmain.c:1343 ldmain.c:1386
 msgid "warning: "
 msgstr ""
 
-#: ldmain.c:1474
+#: ldmain.c:1476
 msgid "%X%P: %C: undefined reference to `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1477
+#: ldmain.c:1479
 msgid "%P: %C: warning: undefined reference to `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1483
+#: ldmain.c:1485
 msgid "%X%P: %D: more undefined references to `%pT' follow\n"
 msgstr ""
 
-#: ldmain.c:1486
+#: ldmain.c:1488
 msgid "%P: %D: warning: more undefined references to `%pT' follow\n"
 msgstr ""
 
-#: ldmain.c:1497
+#: ldmain.c:1499
 msgid "%X%P: %pB: undefined reference to `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1500
+#: ldmain.c:1502
 msgid "%P: %pB: warning: undefined reference to `%pT'\n"
 msgstr ""
 
-#: ldmain.c:1506
+#: ldmain.c:1508
 msgid "%X%P: %pB: more undefined references to `%pT' follow\n"
 msgstr ""
 
-#: ldmain.c:1509
+#: ldmain.c:1511
 msgid "%P: %pB: warning: more undefined references to `%pT' follow\n"
 msgstr ""
 
-#: ldmain.c:1546
+#: ldmain.c:1548
 msgid " additional relocation overflows omitted from the output\n"
 msgstr ""
 
-#: ldmain.c:1559
+#: ldmain.c:1561
 #, c-format
 msgid " relocation truncated to fit: %s against undefined symbol `%pT'"
 msgstr ""
 
-#: ldmain.c:1565
+#: ldmain.c:1567
 #, c-format
 msgid ""
 " relocation truncated to fit: %s against symbol `%pT' defined in %pA section "
 "in %pB"
 msgstr ""
 
-#: ldmain.c:1578
+#: ldmain.c:1580
 #, c-format
 msgid " relocation truncated to fit: %s against `%pT'"
 msgstr ""
 
-#: ldmain.c:1594
+#: ldmain.c:1596
 msgid "%X%H: dangerous relocation: %s\n"
 msgstr ""
 
-#: ldmain.c:1608
+#: ldmain.c:1610
 msgid "%X%H: reloc refers to symbol `%pT' which is not being output\n"
 msgstr ""
 
-#: ldmain.c:1642
+#: ldmain.c:1644
 msgid "%P: %pB: reference to %s\n"
 msgstr ""
 
-#: ldmain.c:1644
+#: ldmain.c:1646
 msgid "%P: %pB: definition of %s\n"
 msgstr ""
 
@@ -1177,8 +1177,8 @@ msgid "Specify target for following input files"
 msgstr ""
 
 #: lexsup.c:113 lexsup.c:119 lexsup.c:176 lexsup.c:180 lexsup.c:216
-#: lexsup.c:229 lexsup.c:231 lexsup.c:442 lexsup.c:511 lexsup.c:524
-#: lexsup.c:528
+#: lexsup.c:229 lexsup.c:231 lexsup.c:446 lexsup.c:515 lexsup.c:528
+#: lexsup.c:532
 msgid "FILE"
 msgstr ""
 
@@ -1198,8 +1198,8 @@ msgstr ""
 msgid "Force group members out of groups"
 msgstr ""
 
-#: lexsup.c:124 lexsup.c:488 lexsup.c:490 lexsup.c:492 lexsup.c:494
-#: lexsup.c:496 lexsup.c:498
+#: lexsup.c:124 lexsup.c:492 lexsup.c:494 lexsup.c:496 lexsup.c:498
+#: lexsup.c:500 lexsup.c:502
 msgid "ADDRESS"
 msgstr ""
 
@@ -1410,7 +1410,7 @@ msgid "Read default linker script"
 msgstr ""
 
 #: lexsup.c:235 lexsup.c:238 lexsup.c:256 lexsup.c:347 lexsup.c:371
-#: lexsup.c:481 lexsup.c:514 lexsup.c:526 lexsup.c:564 lexsup.c:567
+#: lexsup.c:485 lexsup.c:518 lexsup.c:530 lexsup.c:568 lexsup.c:571
 msgid "SYMBOL"
 msgstr ""
 
@@ -1458,7 +1458,7 @@ msgstr ""
 msgid "Trace mentions of SYMBOL"
 msgstr ""
 
-#: lexsup.c:258 lexsup.c:444 lexsup.c:446
+#: lexsup.c:258 lexsup.c:448 lexsup.c:450
 msgid "PATH"
 msgstr ""
 
@@ -1708,127 +1708,131 @@ msgstr ""
 msgid "Reduce memory overheads, possibly taking much longer"
 msgstr ""
 
-#: lexsup.c:437
+#: lexsup.c:438
+msgid "Set the maximum cache size to SIZE bytes"
+msgstr ""
+
+#: lexsup.c:441
 msgid "Reduce code size by using target specific optimizations"
 msgstr ""
 
-#: lexsup.c:439
+#: lexsup.c:443
 msgid "Do not use relaxation techniques to reduce code size"
 msgstr ""
 
-#: lexsup.c:442
+#: lexsup.c:446
 msgid "Keep only symbols listed in FILE"
 msgstr ""
 
-#: lexsup.c:444
+#: lexsup.c:448
 msgid "Set runtime shared library search path"
 msgstr ""
 
-#: lexsup.c:446
+#: lexsup.c:450
 msgid "Set link time shared library search path"
 msgstr ""
 
-#: lexsup.c:449
+#: lexsup.c:453
 msgid "Create a shared library"
 msgstr ""
 
-#: lexsup.c:453
+#: lexsup.c:457
 msgid "Create a position independent executable"
 msgstr ""
 
-#: lexsup.c:457
+#: lexsup.c:461
 msgid "Create a position dependent executable (default)"
 msgstr ""
 
-#: lexsup.c:459
+#: lexsup.c:463
 msgid "[=ascending|descending]"
 msgstr ""
 
-#: lexsup.c:460
+#: lexsup.c:464
 msgid "Sort common symbols by alignment [in specified order]"
 msgstr ""
 
-#: lexsup.c:465
+#: lexsup.c:469
 msgid "name|alignment"
 msgstr ""
 
-#: lexsup.c:466
+#: lexsup.c:470
 msgid "Sort sections by name or maximum alignment"
 msgstr ""
 
-#: lexsup.c:468
+#: lexsup.c:472
 msgid "COUNT"
 msgstr ""
 
-#: lexsup.c:468
+#: lexsup.c:472
 msgid "How many tags to reserve in .dynamic section"
 msgstr ""
 
-#: lexsup.c:471
+#: lexsup.c:475
 msgid "[=SIZE]"
 msgstr ""
 
-#: lexsup.c:471
+#: lexsup.c:475
 msgid "Split output sections every SIZE octets"
 msgstr ""
 
-#: lexsup.c:474
+#: lexsup.c:478
 msgid "[=COUNT]"
 msgstr ""
 
-#: lexsup.c:474
+#: lexsup.c:478
 msgid "Split output sections every COUNT relocs"
 msgstr ""
 
-#: lexsup.c:477
+#: lexsup.c:481
 msgid "Print memory usage statistics"
 msgstr ""
 
-#: lexsup.c:479
+#: lexsup.c:483
 msgid "Display target specific options"
 msgstr ""
 
-#: lexsup.c:481
+#: lexsup.c:485
 msgid "Do task level linking"
 msgstr ""
 
-#: lexsup.c:483
+#: lexsup.c:487
 msgid "Use same format as native linker"
 msgstr ""
 
-#: lexsup.c:485
+#: lexsup.c:489
 msgid "SECTION=ADDRESS"
 msgstr ""
 
-#: lexsup.c:485
+#: lexsup.c:489
 msgid "Set address of named section"
 msgstr ""
 
-#: lexsup.c:488
+#: lexsup.c:492
 msgid "Set address of .bss section"
 msgstr ""
 
-#: lexsup.c:490
+#: lexsup.c:494
 msgid "Set address of .data section"
 msgstr ""
 
-#: lexsup.c:492
+#: lexsup.c:496
 msgid "Set address of .text section"
 msgstr ""
 
-#: lexsup.c:494
+#: lexsup.c:498
 msgid "Set address of text segment"
 msgstr ""
 
-#: lexsup.c:496
+#: lexsup.c:500
 msgid "Set address of rodata segment"
 msgstr ""
 
-#: lexsup.c:498
+#: lexsup.c:502
 msgid "Set address of ldata segment"
 msgstr ""
 
-#: lexsup.c:501
+#: lexsup.c:505
 msgid ""
 "How to handle unresolved symbols.  <method> is:\n"
 "                                ignore-all, report-all, ignore-in-object-"
@@ -1836,176 +1840,176 @@ msgid ""
 "                                ignore-in-shared-libs"
 msgstr ""
 
-#: lexsup.c:506
+#: lexsup.c:510
 msgid "[=NUMBER]"
 msgstr ""
 
-#: lexsup.c:507
+#: lexsup.c:511
 msgid "Output lots of information during link"
 msgstr ""
 
-#: lexsup.c:511
+#: lexsup.c:515
 msgid "Read version information script"
 msgstr ""
 
-#: lexsup.c:514
+#: lexsup.c:518
 msgid ""
 "Take export symbols list from .exports, using\n"
 "                                SYMBOL as the version."
 msgstr ""
 
-#: lexsup.c:518
+#: lexsup.c:522
 msgid "Add data symbols to dynamic list"
 msgstr ""
 
-#: lexsup.c:520
+#: lexsup.c:524
 msgid "Use C++ operator new/delete dynamic list"
 msgstr ""
 
-#: lexsup.c:522
+#: lexsup.c:526
 msgid "Use C++ typeinfo dynamic list"
 msgstr ""
 
-#: lexsup.c:524
+#: lexsup.c:528
 msgid "Read dynamic list"
 msgstr ""
 
-#: lexsup.c:526
+#: lexsup.c:530
 msgid "Export the specified symbol"
 msgstr ""
 
-#: lexsup.c:528
+#: lexsup.c:532
 msgid "Read export dynamic symbol list"
 msgstr ""
 
-#: lexsup.c:530
+#: lexsup.c:534
 msgid "Warn about duplicate common symbols"
 msgstr ""
 
-#: lexsup.c:532
+#: lexsup.c:536
 msgid "Warn if global constructors/destructors are seen"
 msgstr ""
 
-#: lexsup.c:535
+#: lexsup.c:539
 msgid "Warn if the multiple GP values are used"
 msgstr ""
 
-#: lexsup.c:537
+#: lexsup.c:541
 msgid "Warn only once per undefined symbol"
 msgstr ""
 
-#: lexsup.c:539
+#: lexsup.c:543
 msgid "Warn if start of section changes due to alignment"
 msgstr ""
 
-#: lexsup.c:544
+#: lexsup.c:548
 msgid "Warn if output has DT_TEXTREL (default)"
 msgstr ""
 
-#: lexsup.c:546
+#: lexsup.c:550
 msgid "Warn if output has DT_TEXTREL"
 msgstr ""
 
-#: lexsup.c:552
+#: lexsup.c:556
 msgid "Warn if an object has alternate ELF machine code"
 msgstr ""
 
-#: lexsup.c:556
+#: lexsup.c:560
 msgid "Report unresolved symbols as warnings"
 msgstr ""
 
-#: lexsup.c:559
+#: lexsup.c:563
 msgid "Report unresolved symbols as errors"
 msgstr ""
 
-#: lexsup.c:561
+#: lexsup.c:565
 msgid "Include all objects from following archives"
 msgstr ""
 
-#: lexsup.c:564
+#: lexsup.c:568
 msgid "Use wrapper functions for SYMBOL"
 msgstr ""
 
-#: lexsup.c:568
+#: lexsup.c:572
 msgid "Unresolved SYMBOL will not cause an error or warning"
 msgstr ""
 
-#: lexsup.c:570
+#: lexsup.c:574
 msgid "Push state of flags governing input file handling"
 msgstr ""
 
-#: lexsup.c:573
+#: lexsup.c:577
 msgid "Pop state of flags governing input file handling"
 msgstr ""
 
-#: lexsup.c:576
+#: lexsup.c:580
 msgid "Report target memory usage"
 msgstr ""
 
-#: lexsup.c:578
+#: lexsup.c:582
 msgid "=MODE"
 msgstr ""
 
-#: lexsup.c:578
+#: lexsup.c:582
 msgid "Control how orphan sections are handled."
 msgstr ""
 
-#: lexsup.c:581
+#: lexsup.c:585
 msgid "Show discarded sections in map file output (default)"
 msgstr ""
 
-#: lexsup.c:584
+#: lexsup.c:588
 msgid "Do not show discarded sections in map file output"
 msgstr ""
 
-#: lexsup.c:587
+#: lexsup.c:591
 msgid "Emit names and types of static variables in CTF"
 msgstr ""
 
-#: lexsup.c:590
+#: lexsup.c:594
 msgid "Do not emit names and types of static variables in CTF"
 msgstr ""
 
-#: lexsup.c:594
+#: lexsup.c:598
 msgid ""
 "How to share CTF types between translation units.\n"
 "                                <method> is: share-unconflicted (default),\n"
 "                                             share-duplicated"
 msgstr ""
 
-#: lexsup.c:758
+#: lexsup.c:762
 msgid "%F%P: Error: unable to disambiguate: %s (did you mean -%s ?)\n"
 msgstr ""
 
-#: lexsup.c:761
+#: lexsup.c:765
 msgid "%P: Warning: grouped short command line options are deprecated: %s\n"
 msgstr ""
 
-#: lexsup.c:788
+#: lexsup.c:792
 msgid "%P: %s: missing argument\n"
 msgstr ""
 
-#: lexsup.c:793
+#: lexsup.c:797
 msgid "%P: unrecognized option '%s'\n"
 msgstr ""
 
-#: lexsup.c:798
+#: lexsup.c:802
 msgid "%F%P: use the --help option for usage information\n"
 msgstr ""
 
-#: lexsup.c:817
+#: lexsup.c:821
 msgid "%F%P: unrecognized -a option `%s'\n"
 msgstr ""
 
-#: lexsup.c:830
+#: lexsup.c:834
 msgid "%F%P: unrecognized -assert option `%s'\n"
 msgstr ""
 
-#: lexsup.c:874
+#: lexsup.c:878
 msgid "%F%P: unknown demangling style `%s'\n"
 msgstr ""
 
-#: lexsup.c:950 lexsup.c:1424 eaarch64cloudabi.c:816 eaarch64cloudabib.c:816
+#: lexsup.c:954 lexsup.c:1428 eaarch64cloudabi.c:816 eaarch64cloudabib.c:816
 #: eaarch64elf.c:811 eaarch64elf32.c:811 eaarch64elf32b.c:811
 #: eaarch64elfb.c:811 eaarch64fbsd.c:816 eaarch64fbsdb.c:816
 #: eaarch64linux.c:816 eaarch64linux32.c:816 eaarch64linux32b.c:816
@@ -2016,17 +2020,17 @@ msgstr ""
 #: earmelfb_fbsd.c:1077 earmelfb_fuchsia.c:1082 earmelfb_linux.c:1082
 #: earmelfb_linux_eabi.c:1082 earmelfb_linux_fdpiceabi.c:1082
 #: earmelfb_nacl.c:1082 earmelfb_nbsd.c:1077 earmnto.c:1052 ecskyelf.c:539
-#: ecskyelf_linux.c:706 eelf32metag.c:703 eelf64lppc.c:1180
-#: eelf64lppc_fbsd.c:1180 eelf64ppc.c:1180 eelf64ppc_fbsd.c:1180 ehppaelf.c:559
+#: ecskyelf_linux.c:706 eelf32metag.c:703 eelf64lppc.c:1169
+#: eelf64lppc_fbsd.c:1169 eelf64ppc.c:1169 eelf64ppc_fbsd.c:1169 ehppaelf.c:559
 #: ehppalinux.c:741 ehppanbsd.c:741 ehppaobsd.c:741
 msgid "%F%P: invalid number `%s'\n"
 msgstr ""
 
-#: lexsup.c:1046
+#: lexsup.c:1050
 msgid "%F%P: bad --unresolved-symbols option: %s\n"
 msgstr ""
 
-#: lexsup.c:1123
+#: lexsup.c:1127
 msgid "%F%P: bad -plugin-opt option\n"
 msgstr ""
 
@@ -2038,159 +2042,163 @@ msgstr ""
 #. an error message here.  We cannot just make this a warning,
 #. increment optind, and continue because getopt is too confused
 #. and will seg-fault the next time around.
-#: lexsup.c:1140
+#: lexsup.c:1144
 msgid "%F%P: unrecognised option: %s\n"
 msgstr ""
 
-#: lexsup.c:1143 lexsup.c:1253 lexsup.c:1274 lexsup.c:1393
+#: lexsup.c:1147 lexsup.c:1257 lexsup.c:1278 lexsup.c:1397
 msgid "%F%P: -r and %s may not be used together\n"
 msgstr ""
 
-#: lexsup.c:1265
+#: lexsup.c:1269
 msgid "%F%P: -shared not supported\n"
 msgstr ""
 
-#: lexsup.c:1279
+#: lexsup.c:1283
 msgid "%F%P: -pie not supported\n"
 msgstr ""
 
-#: lexsup.c:1285
+#: lexsup.c:1289
 msgid "%P: SONAME must not be empty string; keeping previous one\n"
 msgstr ""
 
-#: lexsup.c:1291
+#: lexsup.c:1295
 msgid "descending"
 msgstr ""
 
-#: lexsup.c:1293
+#: lexsup.c:1297
 msgid "ascending"
 msgstr ""
 
-#: lexsup.c:1296
+#: lexsup.c:1300
 msgid "%F%P: invalid common section sorting option: %s\n"
 msgstr ""
 
-#: lexsup.c:1300
+#: lexsup.c:1304
 msgid "name"
 msgstr ""
 
-#: lexsup.c:1302
+#: lexsup.c:1306
 msgid "alignment"
 msgstr ""
 
-#: lexsup.c:1305
+#: lexsup.c:1309
 msgid "%F%P: invalid section sorting option: %s\n"
 msgstr ""
 
-#: lexsup.c:1342
+#: lexsup.c:1346
 msgid "%F%P: invalid argument to option \"--section-start\"\n"
 msgstr ""
 
-#: lexsup.c:1349
+#: lexsup.c:1353
 msgid "%F%P: missing argument(s) to option \"--section-start\"\n"
 msgstr ""
 
-#: lexsup.c:1614
+#: lexsup.c:1618
 msgid "%F%P: group ended before it began (--help for usage)\n"
 msgstr ""
 
-#: lexsup.c:1642
+#: lexsup.c:1643
+msgid "%F%P: invalid cache memory size: %s\n"
+msgstr ""
+
+#: lexsup.c:1657
 msgid "%X%P: --hash-size needs a numeric argument\n"
 msgstr ""
 
-#: lexsup.c:1654
+#: lexsup.c:1669
 msgid "%F%P: no state pushed before popping\n"
 msgstr ""
 
-#: lexsup.c:1677
+#: lexsup.c:1692
 msgid "%F%P: invalid argument to option \"--orphan-handling\"\n"
 msgstr ""
 
-#: lexsup.c:1707
+#: lexsup.c:1722
 msgid "%F%P: bad --ctf-share-types option: %s\n"
 msgstr ""
 
-#: lexsup.c:1725
+#: lexsup.c:1740
 msgid "%P: no file/directory name provided for map output; ignored\n"
 msgstr ""
 
-#: lexsup.c:1753
+#: lexsup.c:1768
 msgid "%P: cannot stat linker map file: %E\n"
 msgstr ""
 
-#: lexsup.c:1765
+#: lexsup.c:1780
 msgid "%P: linker map file is not a regular file\n"
 msgstr ""
 
 #. If the asprintf failed then something is probably very
 #. wrong.  Better to halt now rather than continue on
 #. into more problems.
-#: lexsup.c:1776
+#: lexsup.c:1791
 msgid "%P%F: cannot create name for linker map file: %E\n"
 msgstr ""
 
-#: lexsup.c:1787
+#: lexsup.c:1802
 msgid "%P: SONAME must not be empty string; ignored\n"
 msgstr ""
 
-#: lexsup.c:1793
+#: lexsup.c:1808
 msgid "%P: missing --end-group; added as last command line option\n"
 msgstr ""
 
-#: lexsup.c:1901
+#: lexsup.c:1916
 msgid "%F%P: -F may not be used without -shared\n"
 msgstr ""
 
-#: lexsup.c:1903
+#: lexsup.c:1918
 msgid "%F%P: -f may not be used without -shared\n"
 msgstr ""
 
-#: lexsup.c:1944 lexsup.c:1957
+#: lexsup.c:1959 lexsup.c:1972
 msgid "%F%P: invalid hex number `%s'\n"
 msgstr ""
 
-#: lexsup.c:1987
+#: lexsup.c:2002
 #, c-format
 msgid "  --audit=AUDITLIB            Specify a library to use for auditing\n"
 msgstr ""
 
-#: lexsup.c:1989
+#: lexsup.c:2004
 #, c-format
 msgid "  -Bgroup                     Selects group name lookup rules for DSO\n"
 msgstr ""
 
-#: lexsup.c:1991
+#: lexsup.c:2006
 #, c-format
 msgid "  --disable-new-dtags         Disable new dynamic tags\n"
 msgstr ""
 
-#: lexsup.c:1993
+#: lexsup.c:2008
 #, c-format
 msgid "  --enable-new-dtags          Enable new dynamic tags\n"
 msgstr ""
 
-#: lexsup.c:1995
+#: lexsup.c:2010
 #, c-format
 msgid "  --eh-frame-hdr              Create .eh_frame_hdr section\n"
 msgstr ""
 
-#: lexsup.c:1997
+#: lexsup.c:2012
 #, c-format
 msgid "  --no-eh-frame-hdr           Do not create .eh_frame_hdr section\n"
 msgstr ""
 
-#: lexsup.c:1999
+#: lexsup.c:2014
 #, c-format
 msgid "  --exclude-libs=LIBS         Make all symbols in LIBS hidden\n"
 msgstr ""
 
-#: lexsup.c:2001
+#: lexsup.c:2016
 #, c-format
 msgid ""
 "  --hash-style=STYLE          Set hash style to sysv/gnu/both.  Default: "
 msgstr ""
 
-#: lexsup.c:2020
+#: lexsup.c:2035
 #, c-format
 msgid ""
 "  -P AUDITLIB, --depaudit=AUDITLIB\n"
@@ -2198,20 +2206,20 @@ msgid ""
 "dependencies\n"
 msgstr ""
 
-#: lexsup.c:2023
+#: lexsup.c:2038
 #, c-format
 msgid ""
 "  -z combreloc                Merge dynamic relocs into one section and "
 "sort\n"
 msgstr ""
 
-#: lexsup.c:2025
+#: lexsup.c:2040
 #, c-format
 msgid ""
 "  -z nocombreloc              Don't merge dynamic relocs into one section\n"
 msgstr ""
 
-#: lexsup.c:2027
+#: lexsup.c:2042
 #, c-format
 msgid ""
 "  -z global                   Make symbols in DSO available for "
@@ -2219,273 +2227,273 @@ msgid ""
 "                                loaded objects\n"
 msgstr ""
 
-#: lexsup.c:2030
+#: lexsup.c:2045
 #, c-format
 msgid ""
 "  -z initfirst                Mark DSO to be initialized first at runtime\n"
 msgstr ""
 
-#: lexsup.c:2032
+#: lexsup.c:2047
 #, c-format
 msgid ""
 "  -z interpose                Mark object to interpose all DSOs but "
 "executable\n"
 msgstr ""
 
-#: lexsup.c:2034
+#: lexsup.c:2049
 #, c-format
 msgid ""
 "  -z unique                   Mark DSO to be loaded at most once by default, "
 "and only in the main namespace\n"
 msgstr ""
 
-#: lexsup.c:2036
+#: lexsup.c:2051
 #, c-format
 msgid ""
 "  -z nounique                 Don't mark DSO as a loadable at most once\n"
 msgstr ""
 
-#: lexsup.c:2038
+#: lexsup.c:2053
 #, c-format
 msgid ""
 "  -z lazy                     Mark object lazy runtime binding (default)\n"
 msgstr ""
 
-#: lexsup.c:2040
+#: lexsup.c:2055
 #, c-format
 msgid "  -z loadfltr                 Mark object requiring immediate process\n"
 msgstr ""
 
-#: lexsup.c:2042
+#: lexsup.c:2057
 #, c-format
 msgid "  -z nocopyreloc              Don't create copy relocs\n"
 msgstr ""
 
-#: lexsup.c:2044
+#: lexsup.c:2059
 #, c-format
 msgid ""
 "  -z nodefaultlib             Mark object not to use default search paths\n"
 msgstr ""
 
-#: lexsup.c:2046
+#: lexsup.c:2061
 #, c-format
 msgid "  -z nodelete                 Mark DSO non-deletable at runtime\n"
 msgstr ""
 
-#: lexsup.c:2048
+#: lexsup.c:2063
 #, c-format
 msgid "  -z nodlopen                 Mark DSO not available to dlopen\n"
 msgstr ""
 
-#: lexsup.c:2050
+#: lexsup.c:2065
 #, c-format
 msgid "  -z nodump                   Mark DSO not available to dldump\n"
 msgstr ""
 
-#: lexsup.c:2052
+#: lexsup.c:2067
 #, c-format
 msgid "  -z now                      Mark object non-lazy runtime binding\n"
 msgstr ""
 
-#: lexsup.c:2054
+#: lexsup.c:2069
 #, c-format
 msgid ""
 "  -z origin                   Mark object requiring immediate $ORIGIN\n"
 "                                processing at runtime\n"
 msgstr ""
 
-#: lexsup.c:2058
+#: lexsup.c:2073
 #, c-format
 msgid "  -z relro                    Create RELRO program header (default)\n"
 msgstr ""
 
-#: lexsup.c:2060
+#: lexsup.c:2075
 #, c-format
 msgid "  -z norelro                  Don't create RELRO program header\n"
 msgstr ""
 
-#: lexsup.c:2063
+#: lexsup.c:2078
 #, c-format
 msgid "  -z relro                    Create RELRO program header\n"
 msgstr ""
 
-#: lexsup.c:2065
+#: lexsup.c:2080
 #, c-format
 msgid ""
 "  -z norelro                  Don't create RELRO program header (default)\n"
 msgstr ""
 
-#: lexsup.c:2069
+#: lexsup.c:2084
 #, c-format
 msgid ""
 "  -z separate-code            Create separate code program header (default)\n"
 msgstr ""
 
-#: lexsup.c:2071
+#: lexsup.c:2086
 #, c-format
 msgid ""
 "  -z noseparate-code          Don't create separate code program header\n"
 msgstr ""
 
-#: lexsup.c:2074
+#: lexsup.c:2089
 #, c-format
 msgid "  -z separate-code            Create separate code program header\n"
 msgstr ""
 
-#: lexsup.c:2076
+#: lexsup.c:2091
 #, c-format
 msgid ""
 "  -z noseparate-code          Don't create separate code program header "
 "(default)\n"
 msgstr ""
 
-#: lexsup.c:2079
+#: lexsup.c:2094
 #, c-format
 msgid ""
 "  -z common                   Generate common symbols with STT_COMMON type\n"
 msgstr ""
 
-#: lexsup.c:2081
+#: lexsup.c:2096
 #, c-format
 msgid ""
 "  -z nocommon                 Generate common symbols with STT_OBJECT type\n"
 msgstr ""
 
-#: lexsup.c:2084
+#: lexsup.c:2099
 #, c-format
 msgid ""
 "  -z text                     Treat DT_TEXTREL in output as error (default)\n"
 msgstr ""
 
-#: lexsup.c:2087
+#: lexsup.c:2102
 #, c-format
 msgid "  -z text                     Treat DT_TEXTREL in output as error\n"
 msgstr ""
 
-#: lexsup.c:2091
+#: lexsup.c:2106
 #, c-format
 msgid ""
 "  -z notext                   Don't treat DT_TEXTREL in output as error "
 "(default)\n"
 msgstr ""
 
-#: lexsup.c:2093
+#: lexsup.c:2108
 #, c-format
 msgid ""
 "  -z textoff                  Don't treat DT_TEXTREL in output as error "
 "(default)\n"
 msgstr ""
 
-#: lexsup.c:2098
+#: lexsup.c:2113
 #, c-format
 msgid ""
 "  -z notext                   Don't treat DT_TEXTREL in output as error\n"
 msgstr ""
 
-#: lexsup.c:2100
+#: lexsup.c:2115
 #, c-format
 msgid ""
 "  -z textoff                  Don't treat DT_TEXTREL in output as error\n"
 msgstr ""
 
-#: lexsup.c:2108
+#: lexsup.c:2123
 #, c-format
 msgid "  --build-id[=STYLE]          Generate build ID note\n"
 msgstr ""
 
-#: lexsup.c:2110
+#: lexsup.c:2125
 #, c-format
 msgid ""
 "  --compress-debug-sections=[none|zlib|zlib-gnu|zlib-gabi]\n"
 "                              Compress DWARF debug sections using zlib\n"
 msgstr ""
 
-#: lexsup.c:2114
+#: lexsup.c:2129
 #, c-format
 msgid "                                Default: zlib-gabi\n"
 msgstr ""
 
-#: lexsup.c:2117
+#: lexsup.c:2132
 #, c-format
 msgid "                                Default: none\n"
 msgstr ""
 
-#: lexsup.c:2120
+#: lexsup.c:2135
 #, c-format
 msgid "  -z common-page-size=SIZE    Set common page size to SIZE\n"
 msgstr ""
 
-#: lexsup.c:2122
+#: lexsup.c:2137
 #, c-format
 msgid "  -z max-page-size=SIZE       Set maximum page size to SIZE\n"
 msgstr ""
 
-#: lexsup.c:2124
+#: lexsup.c:2139
 #, c-format
 msgid ""
 "  -z defs                     Report unresolved symbols in object files\n"
 msgstr ""
 
-#: lexsup.c:2126
+#: lexsup.c:2141
 #, c-format
 msgid ""
 "  -z undefs                   Ignore unresolved symbols in object files\n"
 msgstr ""
 
-#: lexsup.c:2128
+#: lexsup.c:2143
 #, c-format
 msgid "  -z muldefs                  Allow multiple definitions\n"
 msgstr ""
 
-#: lexsup.c:2130
+#: lexsup.c:2145
 #, c-format
 msgid "  -z stack-size=SIZE          Set size of stack segment\n"
 msgstr ""
 
-#: lexsup.c:2132
+#: lexsup.c:2147
 #, c-format
 msgid ""
 "  -z execstack                Mark executable as requiring executable stack\n"
 msgstr ""
 
-#: lexsup.c:2134
+#: lexsup.c:2149
 #, c-format
 msgid ""
 "  -z noexecstack              Mark executable as not requiring executable "
 "stack\n"
 msgstr ""
 
-#: lexsup.c:2136
+#: lexsup.c:2151
 #, c-format
 msgid "  -z unique-symbol            Avoid duplicated local symbol names\n"
 msgstr ""
 
-#: lexsup.c:2138
+#: lexsup.c:2153
 #, c-format
 msgid ""
 "  -z nounique-symbol          Keep duplicated local symbol names (default)\n"
 msgstr ""
 
-#: lexsup.c:2140
+#: lexsup.c:2155
 #, c-format
 msgid ""
 "  -z globalaudit              Mark executable requiring global auditing\n"
 msgstr ""
 
-#: lexsup.c:2142
+#: lexsup.c:2157
 #, c-format
 msgid ""
 "  -z start-stop-gc            Enable garbage collection on __start/__stop\n"
 msgstr ""
 
-#: lexsup.c:2144
+#: lexsup.c:2159
 #, c-format
 msgid ""
 "  -z nostart-stop-gc          Don't garbage collect __start/__stop "
 "(default)\n"
 msgstr ""
 
-#: lexsup.c:2146
+#: lexsup.c:2161
 #, c-format
 msgid ""
 "  -z start-stop-visibility=V  Set visibility of built-in __start/__stop "
@@ -2493,13 +2501,13 @@ msgid ""
 "                                to DEFAULT, PROTECTED, HIDDEN or INTERNAL\n"
 msgstr ""
 
-#: lexsup.c:2154
+#: lexsup.c:2169
 #, c-format
 msgid ""
 "  --ld-generated-unwind-info  Generate exception handling info for PLT\n"
 msgstr ""
 
-#: lexsup.c:2156
+#: lexsup.c:2171
 #, c-format
 msgid ""
 "  --no-ld-generated-unwind-info\n"
@@ -2507,49 +2515,49 @@ msgid ""
 "PLT\n"
 msgstr ""
 
-#: lexsup.c:2166
+#: lexsup.c:2181
 #, c-format
 msgid "ELF emulations:\n"
 msgstr ""
 
-#: lexsup.c:2184
+#: lexsup.c:2199
 #, c-format
 msgid "Usage: %s [options] file...\n"
 msgstr ""
 
-#: lexsup.c:2186
+#: lexsup.c:2201
 #, c-format
 msgid "Options:\n"
 msgstr ""
 
-#: lexsup.c:2264
+#: lexsup.c:2279
 #, c-format
 msgid "  @FILE"
 msgstr ""
 
-#: lexsup.c:2267
+#: lexsup.c:2282
 #, c-format
 msgid "Read options from FILE\n"
 msgstr ""
 
 #. Note: Various tools (such as libtool) depend upon the
 #. format of the listings below - do not change them.
-#: lexsup.c:2272
+#: lexsup.c:2287
 #, c-format
 msgid "%s: supported targets:"
 msgstr ""
 
-#: lexsup.c:2280
+#: lexsup.c:2295
 #, c-format
 msgid "%s: supported emulations: "
 msgstr ""
 
-#: lexsup.c:2285
+#: lexsup.c:2300
 #, c-format
 msgid "%s: emulation specific options:\n"
 msgstr ""
 
-#: lexsup.c:2292
+#: lexsup.c:2307
 #, c-format
 msgid "Report bugs to %s\n"
 msgstr ""
@@ -2717,83 +2725,83 @@ msgstr ""
 msgid "%X%P: error: can't use long section names on this arch\n"
 msgstr ""
 
-#: plugin.c:233 plugin.c:279
+#: plugin.c:236 plugin.c:282
 msgid "<no plugin>"
 msgstr ""
 
-#: plugin.c:248 plugin.c:1100
+#: plugin.c:251 plugin.c:1111
 msgid "%F%P: %s: error loading plugin: %s\n"
 msgstr ""
 
-#: plugin.c:255
+#: plugin.c:258
 msgid "%P: %s: duplicated plugin\n"
 msgstr ""
 
-#: plugin.c:341
+#: plugin.c:344
 msgid "%F%P: could not create dummy IR bfd: %E\n"
 msgstr ""
 
-#: plugin.c:422
+#: plugin.c:425
 msgid "%F%P: %s: non-ELF symbol in ELF BFD!\n"
 msgstr ""
 
-#: plugin.c:433
+#: plugin.c:436
 msgid "%F%P: unknown ELF symbol visibility: %d!\n"
 msgstr ""
 
-#: plugin.c:542
+#: plugin.c:545
 msgid "%F%P: unsupported input file size: %s (%ld bytes)\n"
 msgstr ""
 
-#: plugin.c:679
+#: plugin.c:690
 #, c-format
 msgid "unknown LTO kind value %x"
 msgstr ""
 
-#: plugin.c:705
+#: plugin.c:716
 #, c-format
 msgid "unknown LTO resolution value %x"
 msgstr ""
 
-#: plugin.c:725
+#: plugin.c:736
 #, c-format
 msgid "unknown LTO visibility value %x"
 msgstr ""
 
 #. We should not have a new, indirect or warning symbol here.
-#: plugin.c:805
+#: plugin.c:816
 msgid "%F%P: %s: plugin symbol table corrupt (sym type %d)\n"
 msgstr ""
 
-#: plugin.c:867
+#: plugin.c:878
 msgid "%P: %pB: symbol `%s' definition: %s, visibility: %s, resolution: %s\n"
 msgstr ""
 
-#: plugin.c:944
+#: plugin.c:955
 msgid "%P: warning: "
 msgstr ""
 
-#: plugin.c:955
+#: plugin.c:966
 msgid "%P: error: "
 msgstr ""
 
-#: plugin.c:1107
+#: plugin.c:1118
 msgid "%F%P: %s: plugin error: %d\n"
 msgstr ""
 
-#: plugin.c:1162
+#: plugin.c:1173
 msgid "%F%P: plugin_strdup failed to allocate memory: %s\n"
 msgstr ""
 
-#: plugin.c:1199
+#: plugin.c:1210
 msgid "%F%P: plugin failed to allocate memory for input: %s\n"
 msgstr ""
 
-#: plugin.c:1226
+#: plugin.c:1238
 msgid "%F%P: %s: plugin reported error claiming file\n"
 msgstr ""
 
-#: plugin.c:1337
+#: plugin.c:1349
 msgid "%P: %s: error in plugin cleanup: %d (ignored)\n"
 msgstr ""
 
@@ -2843,7 +2851,7 @@ msgstr ""
 #: eavrxmega1.c:299 eavrxmega2.c:299 eavrxmega3.c:299 eavrxmega4.c:299
 #: eavrxmega5.c:299 eavrxmega6.c:299 eavrxmega7.c:299 ecriself.c:96
 #: ecrislinux.c:97 ed10velf.c:96 eelf32_sparc.c:97 eelf32_sparc_sol2.c:229
-#: eelf32_sparc_vxworks.c:126 eelf32_spu.c:766 eelf32_tic6x_be.c:181
+#: eelf32_sparc_vxworks.c:126 eelf32_spu.c:630 eelf32_tic6x_be.c:181
 #: eelf32_tic6x_elf_be.c:181 eelf32_tic6x_elf_le.c:181 eelf32_tic6x_le.c:181
 #: eelf32_tic6x_linux_be.c:181 eelf32_tic6x_linux_le.c:181 eelf32_x86_64.c:121
 #: eelf32am33lin.c:96 eelf32b4300.c:293 eelf32bfin.c:106 eelf32bfinfd.c:106
@@ -2854,17 +2862,17 @@ msgstr ""
 #: eelf32ebmip.c:293 eelf32ebmipvxworks.c:322 eelf32elmip.c:293
 #: eelf32elmipvxworks.c:322 eelf32epiphany.c:96 eelf32epiphany_4x4.c:98
 #: eelf32frvfd.c:96 eelf32ip2k.c:96 eelf32l4300.c:293 eelf32lm32.c:96
-#: eelf32lm32fd.c:96 eelf32lmip.c:293 eelf32lppc.c:317 eelf32lppclinux.c:317
-#: eelf32lppcnto.c:317 eelf32lppcsim.c:317 eelf32lr5900.c:293
+#: eelf32lm32fd.c:96 eelf32lmip.c:293 eelf32lppc.c:305 eelf32lppclinux.c:305
+#: eelf32lppcnto.c:305 eelf32lppcsim.c:305 eelf32lr5900.c:293
 #: eelf32lr5900n32.c:292 eelf32lriscv.c:89 eelf32lriscv_ilp32.c:89
 #: eelf32lriscv_ilp32f.c:89 eelf32lsmip.c:293 eelf32ltsmip.c:293
 #: eelf32ltsmip_fbsd.c:293 eelf32ltsmipn32.c:293 eelf32ltsmipn32_fbsd.c:293
 #: eelf32m32c.c:107 eelf32mb_linux.c:97 eelf32mbel_linux.c:97 eelf32mcore.c:96
 #: eelf32mep.c:96 eelf32metag.c:256 eelf32microblaze.c:96
 #: eelf32microblazeel.c:96 eelf32mipswindiss.c:292 eelf32moxie.c:96
-#: eelf32or1k.c:97 eelf32or1k_linux.c:97 eelf32ppc.c:317 eelf32ppc_fbsd.c:317
-#: eelf32ppclinux.c:317 eelf32ppcnto.c:317 eelf32ppcsim.c:317
-#: eelf32ppcvxworks.c:291 eelf32ppcwindiss.c:317 eelf32rl78.c:96 eelf32rx.c:112
+#: eelf32or1k.c:97 eelf32or1k_linux.c:97 eelf32ppc.c:305 eelf32ppc_fbsd.c:305
+#: eelf32ppclinux.c:305 eelf32ppcnto.c:305 eelf32ppcsim.c:305
+#: eelf32ppcvxworks.c:279 eelf32ppcwindiss.c:305 eelf32rl78.c:96 eelf32rx.c:112
 #: eelf32rx_linux.c:109 eelf32tilegx.c:97 eelf32tilegx_be.c:97
 #: eelf32tilepro.c:97 eelf32vax.c:96 eelf32visium.c:96 eelf32xc16x.c:96
 #: eelf32xc16xl.c:96 eelf32xc16xs.c:96 eelf32xstormy16.c:107
@@ -2874,9 +2882,9 @@ msgstr ""
 #: eelf64alpha.c:180 eelf64alpha_fbsd.c:180 eelf64alpha_nbsd.c:180
 #: eelf64bmip.c:307 eelf64bpf.c:96 eelf64briscv.c:89 eelf64briscv_lp64.c:89
 #: eelf64briscv_lp64f.c:89 eelf64btsmip.c:293 eelf64btsmip_fbsd.c:293
-#: eelf64hppa.c:96 eelf64lppc.c:592 eelf64lppc_fbsd.c:592 eelf64lriscv.c:89
-#: eelf64lriscv_lp64.c:89 eelf64lriscv_lp64f.c:89 eelf64ltsmip.c:293
-#: eelf64ltsmip_fbsd.c:293 eelf64mmix.c:207 eelf64ppc.c:592
+#: eelf64hppa.c:96 eelf64loongarch.c:88 eelf64lppc.c:592 eelf64lppc_fbsd.c:592
+#: eelf64lriscv.c:89 eelf64lriscv_lp64.c:89 eelf64lriscv_lp64f.c:89
+#: eelf64ltsmip.c:293 eelf64ltsmip_fbsd.c:293 eelf64mmix.c:207 eelf64ppc.c:592
 #: eelf64ppc_fbsd.c:592 eelf64rdos.c:112 eelf64tilegx.c:97 eelf64tilegx_be.c:97
 #: eelf_i386.c:121 eelf_i386_be.c:120 eelf_i386_fbsd.c:121 eelf_i386_ldso.c:121
 #: eelf_i386_sol2.c:253 eelf_i386_vxworks.c:150 eelf_iamcu.c:121
@@ -3008,11 +3016,11 @@ msgstr ""
 #: eelf32briscv.c:128 eelf32briscv_ilp32.c:128 eelf32briscv_ilp32f.c:128
 #: eelf32lriscv.c:128 eelf32lriscv_ilp32.c:128 eelf32lriscv_ilp32f.c:128
 #: eelf64briscv.c:128 eelf64briscv_lp64.c:128 eelf64briscv_lp64f.c:128
-#: eelf64lriscv.c:128 eelf64lriscv_lp64.c:128 eelf64lriscv_lp64f.c:128
-#: ei386pe.c:1426 ei386pe_posix.c:1426 emcorepe.c:1426 ends32belf.c:74
-#: ends32belf16m.c:74 ends32belf_linux.c:74 ends32elf.c:74 ends32elf16m.c:74
-#: ends32elf_linux.c:74 escore3_elf.c:75 escore7_elf.c:75 eshpe.c:1426
-#: ev850.c:91 ev850_rh850.c:91
+#: eelf64loongarch.c:106 eelf64lriscv.c:128 eelf64lriscv_lp64.c:128
+#: eelf64lriscv_lp64f.c:128 ei386pe.c:1426 ei386pe_posix.c:1426 emcorepe.c:1426
+#: ends32belf.c:74 ends32belf16m.c:74 ends32belf_linux.c:74 ends32elf.c:74
+#: ends32elf16m.c:74 ends32elf_linux.c:74 escore3_elf.c:75 escore7_elf.c:75
+#: eshpe.c:1426 ev850.c:91 ev850_rh850.c:91
 msgid "%F%P: error: cannot change output format whilst linking %s binaries\n"
 msgstr ""
 
@@ -3033,9 +3041,9 @@ msgstr ""
 #: eavrxmega5.c:409 eavrxmega6.c:409 eavrxmega7.c:409 ecriself.c:201
 #: ecrislinux.c:233 ecskyelf.c:445 ecskyelf_linux.c:502 ed10velf.c:186
 #: eelf32_sparc.c:258 eelf32_sparc_sol2.c:390 eelf32_sparc_vxworks.c:295
-#: eelf32_spu.c:919 eelf32_tic6x_be.c:369 eelf32_tic6x_elf_be.c:369
+#: eelf32_spu.c:783 eelf32_tic6x_be.c:369 eelf32_tic6x_elf_be.c:369
 #: eelf32_tic6x_elf_le.c:369 eelf32_tic6x_le.c:369 eelf32_tic6x_linux_be.c:369
-#: eelf32_tic6x_linux_le.c:369 eelf32_x86_64.c:5327 eelf32am33lin.c:232
+#: eelf32_tic6x_linux_le.c:369 eelf32_x86_64.c:292 eelf32am33lin.c:232
 #: eelf32b4300.c:473 eelf32bfin.c:250 eelf32bfinfd.c:275 eelf32bmip.c:473
 #: eelf32bmipn32.c:487 eelf32briscv.c:330 eelf32briscv_ilp32.c:330
 #: eelf32briscv_ilp32f.c:330 eelf32bsmip.c:487 eelf32btsmip.c:473
@@ -3044,17 +3052,17 @@ msgstr ""
 #: eelf32elmip.c:473 eelf32elmipvxworks.c:508 eelf32epiphany.c:201
 #: eelf32epiphany_4x4.c:188 eelf32frvfd.c:257 eelf32ip2k.c:201
 #: eelf32l4300.c:473 eelf32lm32.c:201 eelf32lm32fd.c:257 eelf32lmip.c:473
-#: eelf32lppc.c:521 eelf32lppclinux.c:521 eelf32lppcnto.c:521
-#: eelf32lppcsim.c:521 eelf32lr5900.c:442 eelf32lr5900n32.c:441
+#: eelf32lppc.c:509 eelf32lppclinux.c:509 eelf32lppcnto.c:509
+#: eelf32lppcsim.c:509 eelf32lr5900.c:442 eelf32lr5900n32.c:441
 #: eelf32lriscv.c:330 eelf32lriscv_ilp32.c:330 eelf32lriscv_ilp32f.c:330
 #: eelf32lsmip.c:473 eelf32ltsmip.c:473 eelf32ltsmip_fbsd.c:473
 #: eelf32ltsmipn32.c:473 eelf32ltsmipn32_fbsd.c:473 eelf32m32c.c:212
 #: eelf32mb_linux.c:258 eelf32mbel_linux.c:258 eelf32mcore.c:207
 #: eelf32mep.c:186 eelf32metag.c:507 eelf32microblaze.c:186
 #: eelf32microblazeel.c:186 eelf32mipswindiss.c:416 eelf32moxie.c:201
-#: eelf32or1k.c:202 eelf32or1k_linux.c:258 eelf32ppc.c:521 eelf32ppc_fbsd.c:521
-#: eelf32ppclinux.c:521 eelf32ppcnto.c:521 eelf32ppcsim.c:521
-#: eelf32ppcvxworks.c:495 eelf32ppcwindiss.c:521 eelf32rl78.c:201
+#: eelf32or1k.c:202 eelf32or1k_linux.c:258 eelf32ppc.c:509 eelf32ppc_fbsd.c:509
+#: eelf32ppclinux.c:509 eelf32ppcnto.c:509 eelf32ppcsim.c:509
+#: eelf32ppcvxworks.c:483 eelf32ppcwindiss.c:509 eelf32rl78.c:201
 #: eelf32rx.c:229 eelf32rx_linux.c:214 eelf32tilegx.c:258 eelf32tilegx_be.c:258
 #: eelf32tilepro.c:258 eelf32vax.c:232 eelf32visium.c:186 eelf32xc16x.c:186
 #: eelf32xc16xl.c:186 eelf32xc16xs.c:186 eelf32xstormy16.c:197
@@ -3064,15 +3072,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:351 eelf64alpha_nbsd.c:351 eelf64bmip.c:487
 #: eelf64bpf.c:186 eelf64briscv.c:330 eelf64briscv_lp64.c:330
 #: eelf64briscv_lp64f.c:330 eelf64btsmip.c:473 eelf64btsmip_fbsd.c:473
-#: eelf64hppa.c:202 eelf64lppc.c:970 eelf64lppc_fbsd.c:970 eelf64lriscv.c:330
-#: eelf64lriscv_lp64.c:330 eelf64lriscv_lp64f.c:330 eelf64ltsmip.c:473
-#: eelf64ltsmip_fbsd.c:473 eelf64mmix.c:343 eelf64ppc.c:970
-#: eelf64ppc_fbsd.c:970 eelf64rdos.c:283 eelf64tilegx.c:258
-#: eelf64tilegx_be.c:258 eelf_i386.c:4949 eelf_i386_be.c:256
+#: eelf64hppa.c:202 eelf64loongarch.c:5387 eelf64lppc.c:959
+#: eelf64lppc_fbsd.c:959 eelf64lriscv.c:330 eelf64lriscv_lp64.c:330
+#: eelf64lriscv_lp64f.c:330 eelf64ltsmip.c:473 eelf64ltsmip_fbsd.c:473
+#: eelf64mmix.c:343 eelf64ppc.c:959 eelf64ppc_fbsd.c:959 eelf64rdos.c:283
+#: eelf64tilegx.c:258 eelf64tilegx_be.c:258 eelf_i386.c:292 eelf_i386_be.c:256
 #: eelf_i386_fbsd.c:292 eelf_i386_ldso.c:267 eelf_i386_sol2.c:424
-#: eelf_i386_vxworks.c:319 eelf_iamcu.c:292 eelf_k1om.c:5283
-#: eelf_k1om_fbsd.c:292 eelf_l1om.c:5283 eelf_l1om_fbsd.c:292 eelf_s390.c:258
-#: eelf_x86_64.c:5327 eelf_x86_64_cloudabi.c:292 eelf_x86_64_fbsd.c:292
+#: eelf_i386_vxworks.c:319 eelf_iamcu.c:292 eelf_k1om.c:292
+#: eelf_k1om_fbsd.c:292 eelf_l1om.c:292 eelf_l1om_fbsd.c:292 eelf_s390.c:258
+#: eelf_x86_64.c:292 eelf_x86_64_cloudabi.c:292 eelf_x86_64_fbsd.c:292
 #: eelf_x86_64_sol2.c:424 eh8300elf.c:201 eh8300elf_linux.c:201
 #: eh8300helf.c:201 eh8300helf_linux.c:201 eh8300hnelf.c:201 eh8300self.c:201
 #: eh8300self_linux.c:201 eh8300snelf.c:201 eh8300sxelf.c:201
@@ -3105,21 +3113,21 @@ msgstr ""
 #: earmnto.c:838 ecrislinux.c:284 ecskyelf_linux.c:553 eelf32_sparc.c:309
 #: eelf32_sparc_sol2.c:441 eelf32_sparc_vxworks.c:346 eelf32_tic6x_be.c:420
 #: eelf32_tic6x_elf_be.c:420 eelf32_tic6x_elf_le.c:420 eelf32_tic6x_le.c:420
-#: eelf32_tic6x_linux_be.c:420 eelf32_tic6x_linux_le.c:420 eelf32_x86_64.c:5378
+#: eelf32_tic6x_linux_be.c:420 eelf32_tic6x_linux_le.c:420 eelf32_x86_64.c:343
 #: eelf32am33lin.c:283 eelf32b4300.c:524 eelf32bfin.c:301 eelf32bfinfd.c:326
 #: eelf32bmip.c:524 eelf32bmipn32.c:538 eelf32briscv.c:381
 #: eelf32briscv_ilp32.c:381 eelf32briscv_ilp32f.c:381 eelf32bsmip.c:538
 #: eelf32btsmip.c:524 eelf32btsmip_fbsd.c:524 eelf32btsmipn32.c:524
 #: eelf32btsmipn32_fbsd.c:524 eelf32ebmip.c:524 eelf32ebmipvxworks.c:559
 #: eelf32elmip.c:524 eelf32elmipvxworks.c:559 eelf32frvfd.c:308
-#: eelf32l4300.c:524 eelf32lm32fd.c:308 eelf32lmip.c:524 eelf32lppc.c:572
-#: eelf32lppclinux.c:572 eelf32lppcnto.c:572 eelf32lppcsim.c:572
+#: eelf32l4300.c:524 eelf32lm32fd.c:308 eelf32lmip.c:524 eelf32lppc.c:560
+#: eelf32lppclinux.c:560 eelf32lppcnto.c:560 eelf32lppcsim.c:560
 #: eelf32lriscv.c:381 eelf32lriscv_ilp32.c:381 eelf32lriscv_ilp32f.c:381
 #: eelf32lsmip.c:524 eelf32ltsmip.c:524 eelf32ltsmip_fbsd.c:524
 #: eelf32ltsmipn32.c:524 eelf32ltsmipn32_fbsd.c:524 eelf32mb_linux.c:309
 #: eelf32mbel_linux.c:309 eelf32metag.c:558 eelf32or1k_linux.c:309
-#: eelf32ppc.c:572 eelf32ppc_fbsd.c:572 eelf32ppclinux.c:572 eelf32ppcnto.c:572
-#: eelf32ppcsim.c:572 eelf32ppcvxworks.c:546 eelf32ppcwindiss.c:572
+#: eelf32ppc.c:560 eelf32ppc_fbsd.c:560 eelf32ppclinux.c:560 eelf32ppcnto.c:560
+#: eelf32ppcsim.c:560 eelf32ppcvxworks.c:534 eelf32ppcwindiss.c:560
 #: eelf32tilegx.c:309 eelf32tilegx_be.c:309 eelf32tilepro.c:309 eelf32vax.c:283
 #: eelf32xtensa.c:2230 eelf64_aix.c:283 eelf64_ia64.c:340
 #: eelf64_ia64_fbsd.c:340 eelf64_s390.c:379 eelf64_sparc.c:309
@@ -3127,15 +3135,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:402 eelf64alpha_nbsd.c:402 eelf64bmip.c:538
 #: eelf64briscv.c:381 eelf64briscv_lp64.c:381 eelf64briscv_lp64f.c:381
 #: eelf64btsmip.c:524 eelf64btsmip_fbsd.c:524 eelf64hppa.c:253
-#: eelf64lppc.c:1021 eelf64lppc_fbsd.c:1021 eelf64lriscv.c:381
-#: eelf64lriscv_lp64.c:381 eelf64lriscv_lp64f.c:381 eelf64ltsmip.c:524
-#: eelf64ltsmip_fbsd.c:524 eelf64mmix.c:394 eelf64ppc.c:1021
-#: eelf64ppc_fbsd.c:1021 eelf64rdos.c:334 eelf64tilegx.c:309
-#: eelf64tilegx_be.c:309 eelf_i386.c:5000 eelf_i386_be.c:307
+#: eelf64loongarch.c:5438 eelf64lppc.c:1010 eelf64lppc_fbsd.c:1010
+#: eelf64lriscv.c:381 eelf64lriscv_lp64.c:381 eelf64lriscv_lp64f.c:381
+#: eelf64ltsmip.c:524 eelf64ltsmip_fbsd.c:524 eelf64mmix.c:394 eelf64ppc.c:1010
+#: eelf64ppc_fbsd.c:1010 eelf64rdos.c:334 eelf64tilegx.c:309
+#: eelf64tilegx_be.c:309 eelf_i386.c:343 eelf_i386_be.c:307
 #: eelf_i386_fbsd.c:343 eelf_i386_ldso.c:318 eelf_i386_sol2.c:475
-#: eelf_i386_vxworks.c:370 eelf_iamcu.c:343 eelf_k1om.c:5334
-#: eelf_k1om_fbsd.c:343 eelf_l1om.c:5334 eelf_l1om_fbsd.c:343 eelf_s390.c:309
-#: eelf_x86_64.c:5378 eelf_x86_64_cloudabi.c:343 eelf_x86_64_fbsd.c:343
+#: eelf_i386_vxworks.c:370 eelf_iamcu.c:343 eelf_k1om.c:343
+#: eelf_k1om_fbsd.c:343 eelf_l1om.c:343 eelf_l1om_fbsd.c:343 eelf_s390.c:309
+#: eelf_x86_64.c:343 eelf_x86_64_cloudabi.c:343 eelf_x86_64_fbsd.c:343
 #: eelf_x86_64_sol2.c:475 ehppa64linux.c:283 ehppalinux.c:592 ehppanbsd.c:592
 #: ehppaobsd.c:592 ei386lynx.c:298 ei386moss.c:298 ei386nto.c:298
 #: em32relf_linux.c:308 em32rlelf_linux.c:308 em68kelf.c:466 em68kelfnbsd.c:466
@@ -3165,9 +3173,9 @@ msgstr ""
 #: eavrxmega5.c:426 eavrxmega6.c:426 eavrxmega7.c:426 ecriself.c:218
 #: ecrislinux.c:301 ecskyelf.c:462 ecskyelf_linux.c:570 ed10velf.c:203
 #: eelf32_sparc.c:326 eelf32_sparc_sol2.c:458 eelf32_sparc_vxworks.c:363
-#: eelf32_spu.c:936 eelf32_tic6x_be.c:437 eelf32_tic6x_elf_be.c:437
+#: eelf32_spu.c:800 eelf32_tic6x_be.c:437 eelf32_tic6x_elf_be.c:437
 #: eelf32_tic6x_elf_le.c:437 eelf32_tic6x_le.c:437 eelf32_tic6x_linux_be.c:437
-#: eelf32_tic6x_linux_le.c:437 eelf32_x86_64.c:5395 eelf32am33lin.c:300
+#: eelf32_tic6x_linux_le.c:437 eelf32_x86_64.c:360 eelf32am33lin.c:300
 #: eelf32b4300.c:541 eelf32bfin.c:318 eelf32bfinfd.c:343 eelf32bmip.c:541
 #: eelf32bmipn32.c:555 eelf32briscv.c:398 eelf32briscv_ilp32.c:398
 #: eelf32briscv_ilp32f.c:398 eelf32bsmip.c:555 eelf32btsmip.c:541
@@ -3176,17 +3184,17 @@ msgstr ""
 #: eelf32elmip.c:541 eelf32elmipvxworks.c:576 eelf32epiphany.c:218
 #: eelf32epiphany_4x4.c:205 eelf32frvfd.c:325 eelf32ip2k.c:218
 #: eelf32l4300.c:541 eelf32lm32.c:218 eelf32lm32fd.c:325 eelf32lmip.c:541
-#: eelf32lppc.c:589 eelf32lppclinux.c:589 eelf32lppcnto.c:589
-#: eelf32lppcsim.c:589 eelf32lr5900.c:459 eelf32lr5900n32.c:458
+#: eelf32lppc.c:577 eelf32lppclinux.c:577 eelf32lppcnto.c:577
+#: eelf32lppcsim.c:577 eelf32lr5900.c:459 eelf32lr5900n32.c:458
 #: eelf32lriscv.c:398 eelf32lriscv_ilp32.c:398 eelf32lriscv_ilp32f.c:398
 #: eelf32lsmip.c:541 eelf32ltsmip.c:541 eelf32ltsmip_fbsd.c:541
 #: eelf32ltsmipn32.c:541 eelf32ltsmipn32_fbsd.c:541 eelf32m32c.c:229
 #: eelf32mb_linux.c:326 eelf32mbel_linux.c:326 eelf32mcore.c:224
 #: eelf32mep.c:203 eelf32metag.c:575 eelf32microblaze.c:203
 #: eelf32microblazeel.c:203 eelf32mipswindiss.c:433 eelf32moxie.c:218
-#: eelf32or1k.c:219 eelf32or1k_linux.c:326 eelf32ppc.c:589 eelf32ppc_fbsd.c:589
-#: eelf32ppclinux.c:589 eelf32ppcnto.c:589 eelf32ppcsim.c:589
-#: eelf32ppcvxworks.c:563 eelf32ppcwindiss.c:589 eelf32rl78.c:218
+#: eelf32or1k.c:219 eelf32or1k_linux.c:326 eelf32ppc.c:577 eelf32ppc_fbsd.c:577
+#: eelf32ppclinux.c:577 eelf32ppcnto.c:577 eelf32ppcsim.c:577
+#: eelf32ppcvxworks.c:551 eelf32ppcwindiss.c:577 eelf32rl78.c:218
 #: eelf32rx.c:246 eelf32rx_linux.c:231 eelf32tilegx.c:326 eelf32tilegx_be.c:326
 #: eelf32tilepro.c:326 eelf32vax.c:300 eelf32visium.c:203 eelf32xc16x.c:203
 #: eelf32xc16xl.c:203 eelf32xc16xs.c:203 eelf32xstormy16.c:214
@@ -3196,15 +3204,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:419 eelf64alpha_nbsd.c:419 eelf64bmip.c:555
 #: eelf64bpf.c:203 eelf64briscv.c:398 eelf64briscv_lp64.c:398
 #: eelf64briscv_lp64f.c:398 eelf64btsmip.c:541 eelf64btsmip_fbsd.c:541
-#: eelf64hppa.c:270 eelf64lppc.c:1038 eelf64lppc_fbsd.c:1038 eelf64lriscv.c:398
-#: eelf64lriscv_lp64.c:398 eelf64lriscv_lp64f.c:398 eelf64ltsmip.c:541
-#: eelf64ltsmip_fbsd.c:541 eelf64mmix.c:411 eelf64ppc.c:1038
-#: eelf64ppc_fbsd.c:1038 eelf64rdos.c:351 eelf64tilegx.c:326
-#: eelf64tilegx_be.c:326 eelf_i386.c:5017 eelf_i386_be.c:324
+#: eelf64hppa.c:270 eelf64loongarch.c:5455 eelf64lppc.c:1027
+#: eelf64lppc_fbsd.c:1027 eelf64lriscv.c:398 eelf64lriscv_lp64.c:398
+#: eelf64lriscv_lp64f.c:398 eelf64ltsmip.c:541 eelf64ltsmip_fbsd.c:541
+#: eelf64mmix.c:411 eelf64ppc.c:1027 eelf64ppc_fbsd.c:1027 eelf64rdos.c:351
+#: eelf64tilegx.c:326 eelf64tilegx_be.c:326 eelf_i386.c:360 eelf_i386_be.c:324
 #: eelf_i386_fbsd.c:360 eelf_i386_ldso.c:335 eelf_i386_sol2.c:492
-#: eelf_i386_vxworks.c:387 eelf_iamcu.c:360 eelf_k1om.c:5351
-#: eelf_k1om_fbsd.c:360 eelf_l1om.c:5351 eelf_l1om_fbsd.c:360 eelf_s390.c:326
-#: eelf_x86_64.c:5395 eelf_x86_64_cloudabi.c:360 eelf_x86_64_fbsd.c:360
+#: eelf_i386_vxworks.c:387 eelf_iamcu.c:360 eelf_k1om.c:360
+#: eelf_k1om_fbsd.c:360 eelf_l1om.c:360 eelf_l1om_fbsd.c:360 eelf_s390.c:326
+#: eelf_x86_64.c:360 eelf_x86_64_cloudabi.c:360 eelf_x86_64_fbsd.c:360
 #: eelf_x86_64_sol2.c:492 eh8300elf.c:218 eh8300elf_linux.c:218
 #: eh8300helf.c:218 eh8300helf_linux.c:218 eh8300hnelf.c:218 eh8300self.c:218
 #: eh8300self_linux.c:218 eh8300snelf.c:218 eh8300sxelf.c:218
@@ -3240,9 +3248,9 @@ msgstr ""
 #: eavrxmega5.c:435 eavrxmega6.c:435 eavrxmega7.c:435 ecriself.c:227
 #: ecrislinux.c:310 ecskyelf.c:471 ecskyelf_linux.c:579 ed10velf.c:212
 #: eelf32_sparc.c:335 eelf32_sparc_sol2.c:467 eelf32_sparc_vxworks.c:372
-#: eelf32_spu.c:945 eelf32_tic6x_be.c:446 eelf32_tic6x_elf_be.c:446
+#: eelf32_spu.c:809 eelf32_tic6x_be.c:446 eelf32_tic6x_elf_be.c:446
 #: eelf32_tic6x_elf_le.c:446 eelf32_tic6x_le.c:446 eelf32_tic6x_linux_be.c:446
-#: eelf32_tic6x_linux_le.c:446 eelf32_x86_64.c:5404 eelf32am33lin.c:309
+#: eelf32_tic6x_linux_le.c:446 eelf32_x86_64.c:369 eelf32am33lin.c:309
 #: eelf32b4300.c:550 eelf32bfin.c:327 eelf32bfinfd.c:352 eelf32bmip.c:550
 #: eelf32bmipn32.c:564 eelf32briscv.c:407 eelf32briscv_ilp32.c:407
 #: eelf32briscv_ilp32f.c:407 eelf32bsmip.c:564 eelf32btsmip.c:550
@@ -3251,17 +3259,17 @@ msgstr ""
 #: eelf32elmip.c:550 eelf32elmipvxworks.c:585 eelf32epiphany.c:227
 #: eelf32epiphany_4x4.c:214 eelf32frvfd.c:334 eelf32ip2k.c:227
 #: eelf32l4300.c:550 eelf32lm32.c:227 eelf32lm32fd.c:334 eelf32lmip.c:550
-#: eelf32lppc.c:598 eelf32lppclinux.c:598 eelf32lppcnto.c:598
-#: eelf32lppcsim.c:598 eelf32lr5900.c:468 eelf32lr5900n32.c:467
+#: eelf32lppc.c:586 eelf32lppclinux.c:586 eelf32lppcnto.c:586
+#: eelf32lppcsim.c:586 eelf32lr5900.c:468 eelf32lr5900n32.c:467
 #: eelf32lriscv.c:407 eelf32lriscv_ilp32.c:407 eelf32lriscv_ilp32f.c:407
 #: eelf32lsmip.c:550 eelf32ltsmip.c:550 eelf32ltsmip_fbsd.c:550
 #: eelf32ltsmipn32.c:550 eelf32ltsmipn32_fbsd.c:550 eelf32m32c.c:238
 #: eelf32mb_linux.c:335 eelf32mbel_linux.c:335 eelf32mcore.c:233
 #: eelf32mep.c:212 eelf32metag.c:584 eelf32microblaze.c:212
 #: eelf32microblazeel.c:212 eelf32mipswindiss.c:442 eelf32moxie.c:227
-#: eelf32or1k.c:228 eelf32or1k_linux.c:335 eelf32ppc.c:598 eelf32ppc_fbsd.c:598
-#: eelf32ppclinux.c:598 eelf32ppcnto.c:598 eelf32ppcsim.c:598
-#: eelf32ppcvxworks.c:572 eelf32ppcwindiss.c:598 eelf32rl78.c:227
+#: eelf32or1k.c:228 eelf32or1k_linux.c:335 eelf32ppc.c:586 eelf32ppc_fbsd.c:586
+#: eelf32ppclinux.c:586 eelf32ppcnto.c:586 eelf32ppcsim.c:586
+#: eelf32ppcvxworks.c:560 eelf32ppcwindiss.c:586 eelf32rl78.c:227
 #: eelf32rx.c:255 eelf32rx_linux.c:240 eelf32tilegx.c:335 eelf32tilegx_be.c:335
 #: eelf32tilepro.c:335 eelf32vax.c:309 eelf32visium.c:212 eelf32xc16x.c:212
 #: eelf32xc16xl.c:212 eelf32xc16xs.c:212 eelf32xstormy16.c:223
@@ -3271,15 +3279,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:428 eelf64alpha_nbsd.c:428 eelf64bmip.c:564
 #: eelf64bpf.c:212 eelf64briscv.c:407 eelf64briscv_lp64.c:407
 #: eelf64briscv_lp64f.c:407 eelf64btsmip.c:550 eelf64btsmip_fbsd.c:550
-#: eelf64hppa.c:279 eelf64lppc.c:1047 eelf64lppc_fbsd.c:1047 eelf64lriscv.c:407
-#: eelf64lriscv_lp64.c:407 eelf64lriscv_lp64f.c:407 eelf64ltsmip.c:550
-#: eelf64ltsmip_fbsd.c:550 eelf64mmix.c:420 eelf64ppc.c:1047
-#: eelf64ppc_fbsd.c:1047 eelf64rdos.c:360 eelf64tilegx.c:335
-#: eelf64tilegx_be.c:335 eelf_i386.c:5026 eelf_i386_be.c:333
+#: eelf64hppa.c:279 eelf64loongarch.c:5464 eelf64lppc.c:1036
+#: eelf64lppc_fbsd.c:1036 eelf64lriscv.c:407 eelf64lriscv_lp64.c:407
+#: eelf64lriscv_lp64f.c:407 eelf64ltsmip.c:550 eelf64ltsmip_fbsd.c:550
+#: eelf64mmix.c:420 eelf64ppc.c:1036 eelf64ppc_fbsd.c:1036 eelf64rdos.c:360
+#: eelf64tilegx.c:335 eelf64tilegx_be.c:335 eelf_i386.c:369 eelf_i386_be.c:333
 #: eelf_i386_fbsd.c:369 eelf_i386_ldso.c:344 eelf_i386_sol2.c:501
-#: eelf_i386_vxworks.c:396 eelf_iamcu.c:369 eelf_k1om.c:5360
-#: eelf_k1om_fbsd.c:369 eelf_l1om.c:5360 eelf_l1om_fbsd.c:369 eelf_s390.c:335
-#: eelf_x86_64.c:5404 eelf_x86_64_cloudabi.c:369 eelf_x86_64_fbsd.c:369
+#: eelf_i386_vxworks.c:396 eelf_iamcu.c:369 eelf_k1om.c:369
+#: eelf_k1om_fbsd.c:369 eelf_l1om.c:369 eelf_l1om_fbsd.c:369 eelf_s390.c:335
+#: eelf_x86_64.c:369 eelf_x86_64_cloudabi.c:369 eelf_x86_64_fbsd.c:369
 #: eelf_x86_64_sol2.c:501 eh8300elf.c:227 eh8300elf_linux.c:227
 #: eh8300helf.c:227 eh8300helf_linux.c:227 eh8300hnelf.c:227 eh8300self.c:227
 #: eh8300self_linux.c:227 eh8300snelf.c:227 eh8300sxelf.c:227
@@ -3315,9 +3323,9 @@ msgstr ""
 #: eavrxmega5.c:443 eavrxmega6.c:443 eavrxmega7.c:443 ecriself.c:235
 #: ecrislinux.c:318 ecskyelf.c:479 ecskyelf_linux.c:587 ed10velf.c:220
 #: eelf32_sparc.c:343 eelf32_sparc_sol2.c:475 eelf32_sparc_vxworks.c:380
-#: eelf32_spu.c:953 eelf32_tic6x_be.c:454 eelf32_tic6x_elf_be.c:454
+#: eelf32_spu.c:817 eelf32_tic6x_be.c:454 eelf32_tic6x_elf_be.c:454
 #: eelf32_tic6x_elf_le.c:454 eelf32_tic6x_le.c:454 eelf32_tic6x_linux_be.c:454
-#: eelf32_tic6x_linux_le.c:454 eelf32_x86_64.c:5412 eelf32am33lin.c:317
+#: eelf32_tic6x_linux_le.c:454 eelf32_x86_64.c:377 eelf32am33lin.c:317
 #: eelf32b4300.c:558 eelf32bfin.c:335 eelf32bfinfd.c:360 eelf32bmip.c:558
 #: eelf32bmipn32.c:572 eelf32briscv.c:415 eelf32briscv_ilp32.c:415
 #: eelf32briscv_ilp32f.c:415 eelf32bsmip.c:572 eelf32btsmip.c:558
@@ -3326,17 +3334,17 @@ msgstr ""
 #: eelf32elmip.c:558 eelf32elmipvxworks.c:593 eelf32epiphany.c:235
 #: eelf32epiphany_4x4.c:222 eelf32frvfd.c:342 eelf32ip2k.c:235
 #: eelf32l4300.c:558 eelf32lm32.c:235 eelf32lm32fd.c:342 eelf32lmip.c:558
-#: eelf32lppc.c:606 eelf32lppclinux.c:606 eelf32lppcnto.c:606
-#: eelf32lppcsim.c:606 eelf32lr5900.c:476 eelf32lr5900n32.c:475
+#: eelf32lppc.c:594 eelf32lppclinux.c:594 eelf32lppcnto.c:594
+#: eelf32lppcsim.c:594 eelf32lr5900.c:476 eelf32lr5900n32.c:475
 #: eelf32lriscv.c:415 eelf32lriscv_ilp32.c:415 eelf32lriscv_ilp32f.c:415
 #: eelf32lsmip.c:558 eelf32ltsmip.c:558 eelf32ltsmip_fbsd.c:558
 #: eelf32ltsmipn32.c:558 eelf32ltsmipn32_fbsd.c:558 eelf32m32c.c:246
 #: eelf32mb_linux.c:343 eelf32mbel_linux.c:343 eelf32mcore.c:241
 #: eelf32mep.c:220 eelf32metag.c:592 eelf32microblaze.c:220
 #: eelf32microblazeel.c:220 eelf32mipswindiss.c:450 eelf32moxie.c:235
-#: eelf32or1k.c:236 eelf32or1k_linux.c:343 eelf32ppc.c:606 eelf32ppc_fbsd.c:606
-#: eelf32ppclinux.c:606 eelf32ppcnto.c:606 eelf32ppcsim.c:606
-#: eelf32ppcvxworks.c:580 eelf32ppcwindiss.c:606 eelf32rl78.c:235
+#: eelf32or1k.c:236 eelf32or1k_linux.c:343 eelf32ppc.c:594 eelf32ppc_fbsd.c:594
+#: eelf32ppclinux.c:594 eelf32ppcnto.c:594 eelf32ppcsim.c:594
+#: eelf32ppcvxworks.c:568 eelf32ppcwindiss.c:594 eelf32rl78.c:235
 #: eelf32rx.c:263 eelf32rx_linux.c:248 eelf32tilegx.c:343 eelf32tilegx_be.c:343
 #: eelf32tilepro.c:343 eelf32vax.c:317 eelf32visium.c:220 eelf32xc16x.c:220
 #: eelf32xc16xl.c:220 eelf32xc16xs.c:220 eelf32xstormy16.c:231
@@ -3346,15 +3354,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:436 eelf64alpha_nbsd.c:436 eelf64bmip.c:572
 #: eelf64bpf.c:220 eelf64briscv.c:415 eelf64briscv_lp64.c:415
 #: eelf64briscv_lp64f.c:415 eelf64btsmip.c:558 eelf64btsmip_fbsd.c:558
-#: eelf64hppa.c:287 eelf64lppc.c:1055 eelf64lppc_fbsd.c:1055 eelf64lriscv.c:415
-#: eelf64lriscv_lp64.c:415 eelf64lriscv_lp64f.c:415 eelf64ltsmip.c:558
-#: eelf64ltsmip_fbsd.c:558 eelf64mmix.c:428 eelf64ppc.c:1055
-#: eelf64ppc_fbsd.c:1055 eelf64rdos.c:368 eelf64tilegx.c:343
-#: eelf64tilegx_be.c:343 eelf_i386.c:5034 eelf_i386_be.c:341
+#: eelf64hppa.c:287 eelf64loongarch.c:5472 eelf64lppc.c:1044
+#: eelf64lppc_fbsd.c:1044 eelf64lriscv.c:415 eelf64lriscv_lp64.c:415
+#: eelf64lriscv_lp64f.c:415 eelf64ltsmip.c:558 eelf64ltsmip_fbsd.c:558
+#: eelf64mmix.c:428 eelf64ppc.c:1044 eelf64ppc_fbsd.c:1044 eelf64rdos.c:368
+#: eelf64tilegx.c:343 eelf64tilegx_be.c:343 eelf_i386.c:377 eelf_i386_be.c:341
 #: eelf_i386_fbsd.c:377 eelf_i386_ldso.c:352 eelf_i386_sol2.c:509
-#: eelf_i386_vxworks.c:404 eelf_iamcu.c:377 eelf_k1om.c:5368
-#: eelf_k1om_fbsd.c:377 eelf_l1om.c:5368 eelf_l1om_fbsd.c:377 eelf_s390.c:343
-#: eelf_x86_64.c:5412 eelf_x86_64_cloudabi.c:377 eelf_x86_64_fbsd.c:377
+#: eelf_i386_vxworks.c:404 eelf_iamcu.c:377 eelf_k1om.c:377
+#: eelf_k1om_fbsd.c:377 eelf_l1om.c:377 eelf_l1om_fbsd.c:377 eelf_s390.c:343
+#: eelf_x86_64.c:377 eelf_x86_64_cloudabi.c:377 eelf_x86_64_fbsd.c:377
 #: eelf_x86_64_sol2.c:509 eh8300elf.c:235 eh8300elf_linux.c:235
 #: eh8300helf.c:235 eh8300helf_linux.c:235 eh8300hnelf.c:235 eh8300self.c:235
 #: eh8300self_linux.c:235 eh8300snelf.c:235 eh8300sxelf.c:235
@@ -3390,9 +3398,9 @@ msgstr ""
 #: eavrxmega5.c:482 eavrxmega6.c:482 eavrxmega7.c:482 ecriself.c:274
 #: ecrislinux.c:357 ecskyelf.c:518 ecskyelf_linux.c:626 ed10velf.c:259
 #: eelf32_sparc.c:382 eelf32_sparc_sol2.c:514 eelf32_sparc_vxworks.c:419
-#: eelf32_spu.c:992 eelf32_tic6x_be.c:493 eelf32_tic6x_elf_be.c:493
+#: eelf32_spu.c:856 eelf32_tic6x_be.c:493 eelf32_tic6x_elf_be.c:493
 #: eelf32_tic6x_elf_le.c:493 eelf32_tic6x_le.c:493 eelf32_tic6x_linux_be.c:493
-#: eelf32_tic6x_linux_le.c:493 eelf32_x86_64.c:5451 eelf32am33lin.c:356
+#: eelf32_tic6x_linux_le.c:493 eelf32_x86_64.c:416 eelf32am33lin.c:356
 #: eelf32b4300.c:597 eelf32bfin.c:374 eelf32bfinfd.c:399 eelf32bmip.c:597
 #: eelf32bmipn32.c:611 eelf32briscv.c:454 eelf32briscv_ilp32.c:454
 #: eelf32briscv_ilp32f.c:454 eelf32bsmip.c:611 eelf32btsmip.c:597
@@ -3401,17 +3409,17 @@ msgstr ""
 #: eelf32elmip.c:597 eelf32elmipvxworks.c:632 eelf32epiphany.c:274
 #: eelf32epiphany_4x4.c:261 eelf32frvfd.c:381 eelf32ip2k.c:274
 #: eelf32l4300.c:597 eelf32lm32.c:274 eelf32lm32fd.c:381 eelf32lmip.c:597
-#: eelf32lppc.c:645 eelf32lppclinux.c:645 eelf32lppcnto.c:645
-#: eelf32lppcsim.c:645 eelf32lr5900.c:515 eelf32lr5900n32.c:514
+#: eelf32lppc.c:633 eelf32lppclinux.c:633 eelf32lppcnto.c:633
+#: eelf32lppcsim.c:633 eelf32lr5900.c:515 eelf32lr5900n32.c:514
 #: eelf32lriscv.c:454 eelf32lriscv_ilp32.c:454 eelf32lriscv_ilp32f.c:454
 #: eelf32lsmip.c:597 eelf32ltsmip.c:597 eelf32ltsmip_fbsd.c:597
 #: eelf32ltsmipn32.c:597 eelf32ltsmipn32_fbsd.c:597 eelf32m32c.c:285
 #: eelf32mb_linux.c:382 eelf32mbel_linux.c:382 eelf32mcore.c:280
 #: eelf32mep.c:259 eelf32metag.c:631 eelf32microblaze.c:259
 #: eelf32microblazeel.c:259 eelf32mipswindiss.c:489 eelf32moxie.c:274
-#: eelf32or1k.c:275 eelf32or1k_linux.c:382 eelf32ppc.c:645 eelf32ppc_fbsd.c:645
-#: eelf32ppclinux.c:645 eelf32ppcnto.c:645 eelf32ppcsim.c:645
-#: eelf32ppcvxworks.c:619 eelf32ppcwindiss.c:645 eelf32rl78.c:274
+#: eelf32or1k.c:275 eelf32or1k_linux.c:382 eelf32ppc.c:633 eelf32ppc_fbsd.c:633
+#: eelf32ppclinux.c:633 eelf32ppcnto.c:633 eelf32ppcsim.c:633
+#: eelf32ppcvxworks.c:607 eelf32ppcwindiss.c:633 eelf32rl78.c:274
 #: eelf32rx.c:302 eelf32rx_linux.c:287 eelf32tilegx.c:382 eelf32tilegx_be.c:382
 #: eelf32tilepro.c:382 eelf32vax.c:356 eelf32visium.c:259 eelf32xc16x.c:259
 #: eelf32xc16xl.c:259 eelf32xc16xs.c:259 eelf32xstormy16.c:270
@@ -3421,15 +3429,15 @@ msgstr ""
 #: eelf64alpha_fbsd.c:475 eelf64alpha_nbsd.c:475 eelf64bmip.c:611
 #: eelf64bpf.c:259 eelf64briscv.c:454 eelf64briscv_lp64.c:454
 #: eelf64briscv_lp64f.c:454 eelf64btsmip.c:597 eelf64btsmip_fbsd.c:597
-#: eelf64hppa.c:326 eelf64lppc.c:1094 eelf64lppc_fbsd.c:1094 eelf64lriscv.c:454
-#: eelf64lriscv_lp64.c:454 eelf64lriscv_lp64f.c:454 eelf64ltsmip.c:597
-#: eelf64ltsmip_fbsd.c:597 eelf64mmix.c:467 eelf64ppc.c:1094
-#: eelf64ppc_fbsd.c:1094 eelf64rdos.c:407 eelf64tilegx.c:382
-#: eelf64tilegx_be.c:382 eelf_i386.c:5073 eelf_i386_be.c:380
+#: eelf64hppa.c:326 eelf64loongarch.c:5511 eelf64lppc.c:1083
+#: eelf64lppc_fbsd.c:1083 eelf64lriscv.c:454 eelf64lriscv_lp64.c:454
+#: eelf64lriscv_lp64f.c:454 eelf64ltsmip.c:597 eelf64ltsmip_fbsd.c:597
+#: eelf64mmix.c:467 eelf64ppc.c:1083 eelf64ppc_fbsd.c:1083 eelf64rdos.c:407
+#: eelf64tilegx.c:382 eelf64tilegx_be.c:382 eelf_i386.c:416 eelf_i386_be.c:380
 #: eelf_i386_fbsd.c:416 eelf_i386_ldso.c:391 eelf_i386_sol2.c:548
-#: eelf_i386_vxworks.c:443 eelf_iamcu.c:416 eelf_k1om.c:5407
-#: eelf_k1om_fbsd.c:416 eelf_l1om.c:5407 eelf_l1om_fbsd.c:416 eelf_s390.c:382
-#: eelf_x86_64.c:5451 eelf_x86_64_cloudabi.c:416 eelf_x86_64_fbsd.c:416
+#: eelf_i386_vxworks.c:443 eelf_iamcu.c:416 eelf_k1om.c:416
+#: eelf_k1om_fbsd.c:416 eelf_l1om.c:416 eelf_l1om_fbsd.c:416 eelf_s390.c:382
+#: eelf_x86_64.c:416 eelf_x86_64_cloudabi.c:416 eelf_x86_64_fbsd.c:416
 #: eelf_x86_64_sol2.c:548 eh8300elf.c:274 eh8300elf_linux.c:274
 #: eh8300helf.c:274 eh8300helf_linux.c:274 eh8300hnelf.c:274 eh8300self.c:274
 #: eh8300self_linux.c:274 eh8300snelf.c:274 eh8300sxelf.c:274
@@ -3467,10 +3475,10 @@ msgstr ""
 #: eavrxmega2.c:487 eavrxmega3.c:487 eavrxmega4.c:487 eavrxmega5.c:487
 #: eavrxmega6.c:487 eavrxmega7.c:487 ecriself.c:279 ecrislinux.c:421
 #: ecskyelf.c:523 ecskyelf_linux.c:690 ed10velf.c:264 eelf32_sparc.c:446
-#: eelf32_sparc_sol2.c:578 eelf32_sparc_vxworks.c:483 eelf32_spu.c:997
+#: eelf32_sparc_sol2.c:578 eelf32_sparc_vxworks.c:483 eelf32_spu.c:861
 #: eelf32_tic6x_be.c:553 eelf32_tic6x_elf_be.c:553 eelf32_tic6x_elf_le.c:553
 #: eelf32_tic6x_le.c:553 eelf32_tic6x_linux_be.c:553
-#: eelf32_tic6x_linux_le.c:553 eelf32_x86_64.c:5598 eelf32am33lin.c:416
+#: eelf32_tic6x_linux_le.c:553 eelf32_x86_64.c:567 eelf32am33lin.c:416
 #: eelf32b4300.c:661 eelf32bfin.c:434 eelf32bfinfd.c:459 eelf32bmip.c:661
 #: eelf32bmipn32.c:675 eelf32briscv.c:518 eelf32briscv_ilp32.c:518
 #: eelf32briscv_ilp32f.c:518 eelf32bsmip.c:675 eelf32btsmip.c:661
@@ -3479,17 +3487,17 @@ msgstr ""
 #: eelf32elmip.c:661 eelf32elmipvxworks.c:696 eelf32epiphany.c:279
 #: eelf32epiphany_4x4.c:266 eelf32frvfd.c:441 eelf32ip2k.c:279
 #: eelf32l4300.c:661 eelf32lm32.c:279 eelf32lm32fd.c:441 eelf32lmip.c:661
-#: eelf32lppc.c:715 eelf32lppclinux.c:715 eelf32lppcnto.c:715
-#: eelf32lppcsim.c:715 eelf32lr5900.c:520 eelf32lr5900n32.c:519
+#: eelf32lppc.c:703 eelf32lppclinux.c:703 eelf32lppcnto.c:703
+#: eelf32lppcsim.c:703 eelf32lr5900.c:520 eelf32lr5900n32.c:519
 #: eelf32lriscv.c:518 eelf32lriscv_ilp32.c:518 eelf32lriscv_ilp32f.c:518
 #: eelf32lsmip.c:661 eelf32ltsmip.c:661 eelf32ltsmip_fbsd.c:661
 #: eelf32ltsmipn32.c:661 eelf32ltsmipn32_fbsd.c:661 eelf32m32c.c:290
 #: eelf32mb_linux.c:446 eelf32mbel_linux.c:446 eelf32mcore.c:285
 #: eelf32mep.c:264 eelf32metag.c:695 eelf32microblaze.c:264
 #: eelf32microblazeel.c:264 eelf32mipswindiss.c:494 eelf32moxie.c:279
-#: eelf32or1k.c:280 eelf32or1k_linux.c:446 eelf32ppc.c:715 eelf32ppc_fbsd.c:715
-#: eelf32ppclinux.c:715 eelf32ppcnto.c:715 eelf32ppcsim.c:715
-#: eelf32ppcvxworks.c:689 eelf32ppcwindiss.c:715 eelf32rl78.c:279
+#: eelf32or1k.c:280 eelf32or1k_linux.c:446 eelf32ppc.c:703 eelf32ppc_fbsd.c:703
+#: eelf32ppclinux.c:703 eelf32ppcnto.c:703 eelf32ppcsim.c:703
+#: eelf32ppcvxworks.c:677 eelf32ppcwindiss.c:703 eelf32rl78.c:279
 #: eelf32rx.c:307 eelf32rx_linux.c:292 eelf32tilegx.c:446 eelf32tilegx_be.c:446
 #: eelf32tilepro.c:446 eelf32vax.c:416 eelf32visium.c:264 eelf32xc16x.c:264
 #: eelf32xc16xl.c:264 eelf32xc16xs.c:264 eelf32xstormy16.c:275
@@ -3499,16 +3507,16 @@ msgstr ""
 #: eelf64alpha_fbsd.c:539 eelf64alpha_nbsd.c:539 eelf64bmip.c:675
 #: eelf64bpf.c:264 eelf64briscv.c:518 eelf64briscv_lp64.c:518
 #: eelf64briscv_lp64f.c:518 eelf64btsmip.c:661 eelf64btsmip_fbsd.c:661
-#: eelf64hppa.c:386 eelf64lppc.c:1164 eelf64lppc_fbsd.c:1164 eelf64lriscv.c:518
-#: eelf64lriscv_lp64.c:518 eelf64lriscv_lp64f.c:518 eelf64ltsmip.c:661
-#: eelf64ltsmip_fbsd.c:661 eelf64mmix.c:527 eelf64ppc.c:1164
-#: eelf64ppc_fbsd.c:1164 eelf64rdos.c:471 eelf64tilegx.c:446
-#: eelf64tilegx_be.c:446 eelf_i386.c:5217 eelf_i386_be.c:483
-#: eelf_i386_fbsd.c:560 eelf_i386_ldso.c:498 eelf_i386_sol2.c:655
-#: eelf_i386_vxworks.c:550 eelf_iamcu.c:523 eelf_k1om.c:5514
-#: eelf_k1om_fbsd.c:523 eelf_l1om.c:5514 eelf_l1om_fbsd.c:523 eelf_s390.c:446
-#: eelf_x86_64.c:5651 eelf_x86_64_cloudabi.c:616 eelf_x86_64_fbsd.c:616
-#: eelf_x86_64_sol2.c:748 eh8300elf.c:279 eh8300elf_linux.c:279
+#: eelf64hppa.c:386 eelf64loongarch.c:5575 eelf64lppc.c:1153
+#: eelf64lppc_fbsd.c:1153 eelf64lriscv.c:518 eelf64lriscv_lp64.c:518
+#: eelf64lriscv_lp64f.c:518 eelf64ltsmip.c:661 eelf64ltsmip_fbsd.c:661
+#: eelf64mmix.c:527 eelf64ppc.c:1153 eelf64ppc_fbsd.c:1153 eelf64rdos.c:471
+#: eelf64tilegx.c:446 eelf64tilegx_be.c:446 eelf_i386.c:564 eelf_i386_be.c:487
+#: eelf_i386_fbsd.c:564 eelf_i386_ldso.c:502 eelf_i386_sol2.c:659
+#: eelf_i386_vxworks.c:554 eelf_iamcu.c:527 eelf_k1om.c:527
+#: eelf_k1om_fbsd.c:527 eelf_l1om.c:527 eelf_l1om_fbsd.c:527 eelf_s390.c:446
+#: eelf_x86_64.c:617 eelf_x86_64_cloudabi.c:617 eelf_x86_64_fbsd.c:617
+#: eelf_x86_64_sol2.c:749 eh8300elf.c:279 eh8300elf_linux.c:279
 #: eh8300helf.c:279 eh8300helf_linux.c:279 eh8300hnelf.c:279 eh8300self.c:279
 #: eh8300self_linux.c:279 eh8300snelf.c:279 eh8300sxelf.c:279
 #: eh8300sxelf_linux.c:279 eh8300sxnelf.c:279 ehppa64linux.c:416 ehppaelf.c:547
@@ -4559,19 +4567,19 @@ msgid ""
 msgstr ""
 
 #: earmelf_vxworks.c:600 eelf32_sparc_vxworks.c:71 eelf32ebmipvxworks.c:267
-#: eelf32elmipvxworks.c:267 eelf32ppcvxworks.c:236 eelf_i386_vxworks.c:95
+#: eelf32elmipvxworks.c:267 eelf32ppcvxworks.c:224 eelf_i386_vxworks.c:95
 #: eshelf_vxworks.c:71 eshlelf_vxworks.c:71
 msgid "%X%P: cannot create dynamic sections %E\n"
 msgstr ""
 
 #: earmelf_vxworks.c:606 eelf32_sparc_vxworks.c:77 eelf32ebmipvxworks.c:273
-#: eelf32elmipvxworks.c:273 eelf32ppcvxworks.c:242 eelf_i386_vxworks.c:101
+#: eelf32elmipvxworks.c:273 eelf32ppcvxworks.c:230 eelf_i386_vxworks.c:101
 #: eshelf_vxworks.c:77 eshlelf_vxworks.c:77
 msgid "%X%P: dynamic sections created in non-dynamic link\n"
 msgstr ""
 
 #: earmelf_vxworks.c:1197 eelf32_sparc_vxworks.c:500 eelf32ebmipvxworks.c:758
-#: eelf32elmipvxworks.c:758 eelf32ppcvxworks.c:823 eelf_i386_vxworks.c:577
+#: eelf32elmipvxworks.c:758 eelf32ppcvxworks.c:811 eelf_i386_vxworks.c:585
 #: eshelf_vxworks.c:470 eshlelf_vxworks.c:470
 #, c-format
 msgid "  --force-dynamic             Always create dynamic sections\n"
@@ -4716,123 +4724,118 @@ msgstr ""
 msgid "%P: --auto-overlay ignored with zero local store range\n"
 msgstr ""
 
-#: eelf32_spu.c:675
-#, c-format
-msgid "running: %s \"%s\" \"%s\" \"%s\" \"%s\"\n"
-msgstr ""
-
-#: eelf32_spu.c:1030
+#: eelf32_spu.c:894
 msgid "%F%P: invalid --local-store address range `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1066
+#: eelf32_spu.c:930
 msgid "%F%P: invalid --num-lines/--num-regions `%u'\n"
 msgstr ""
 
-#: eelf32_spu.c:1071
+#: eelf32_spu.c:935
 msgid "%F%P: invalid --line-size/--region-size `%u'\n"
 msgstr ""
 
-#: eelf32_spu.c:1092
+#: eelf32_spu.c:956
 msgid "%F%P: invalid --num-lines/--num-regions `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1105
+#: eelf32_spu.c:969
 msgid "%F%P: invalid --line-size/--region-size `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1114
+#: eelf32_spu.c:978
 msgid "%F%P: invalid --fixed-space value `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1123
+#: eelf32_spu.c:987
 msgid "%F%P: invalid --reserved-space value `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1132
+#: eelf32_spu.c:996
 msgid "%F%P: invalid --extra-stack-space value `%s'\n"
 msgstr ""
 
-#: eelf32_spu.c:1169
+#: eelf32_spu.c:1033
 #, c-format
 msgid "  --plugin                    Make SPU plugin\n"
 msgstr ""
 
-#: eelf32_spu.c:1171
+#: eelf32_spu.c:1035
 #, c-format
 msgid "  --no-overlays               No overlay handling\n"
 msgstr ""
 
-#: eelf32_spu.c:1173
+#: eelf32_spu.c:1037
 #, c-format
 msgid ""
 "  --compact-stubs             Use smaller and possibly slower call stubs\n"
 msgstr ""
 
-#: eelf32_spu.c:1175
+#: eelf32_spu.c:1039
 #, c-format
 msgid "  --emit-stub-syms            Add symbols on overlay call stubs\n"
 msgstr ""
 
-#: eelf32_spu.c:1177
+#: eelf32_spu.c:1041
 #, c-format
 msgid ""
 "  --extra-overlay-stubs       Add stubs on all calls out of overlay regions\n"
 msgstr ""
 
-#: eelf32_spu.c:1179
+#: eelf32_spu.c:1043
 #, c-format
 msgid "  --local-store=lo:hi         Valid address range\n"
 msgstr ""
 
-#: eelf32_spu.c:1181
+#: eelf32_spu.c:1045
 #, c-format
 msgid "  --stack-analysis            Estimate maximum stack requirement\n"
 msgstr ""
 
-#: eelf32_spu.c:1183
+#: eelf32_spu.c:1047
 #, c-format
 msgid ""
 "  --emit-stack-syms           Add sym giving stack needed for each func\n"
 msgstr ""
 
-#: eelf32_spu.c:1185
+#: eelf32_spu.c:1049
 #, c-format
 msgid ""
 "  --auto-overlay [=filename]  Create an overlay script in filename if\n"
 "                                executable does not fit in local store\n"
 msgstr ""
 
-#: eelf32_spu.c:1188
+#: eelf32_spu.c:1052
 #, c-format
 msgid "  --auto-relink               Rerun linker using auto-overlay script\n"
 msgstr ""
 
-#: eelf32_spu.c:1190
+#: eelf32_spu.c:1054
 #, c-format
 msgid ""
 "  --overlay-rodata            Place read-only data with associated function\n"
 "                                code in overlays\n"
 msgstr ""
 
-#: eelf32_spu.c:1193
+#: eelf32_spu.c:1057
 #, c-format
 msgid "  --num-regions               Number of overlay buffers (default 1)\n"
 msgstr ""
 
-#: eelf32_spu.c:1195
+#: eelf32_spu.c:1059
 #, c-format
 msgid ""
 "  --region-size               Size of overlay buffers (default 0, auto)\n"
 msgstr ""
 
-#: eelf32_spu.c:1197
+#: eelf32_spu.c:1061
 #, c-format
 msgid ""
 "  --fixed-space=bytes         Local store for non-overlay code and data\n"
 msgstr ""
 
-#: eelf32_spu.c:1199
+#: eelf32_spu.c:1063
 #, c-format
 msgid ""
 "  --reserved-space=bytes      Local store for stack and heap.  If not "
@@ -4841,7 +4844,7 @@ msgid ""
 "heap\n"
 msgstr ""
 
-#: eelf32_spu.c:1202
+#: eelf32_spu.c:1066
 #, c-format
 msgid ""
 "  --extra-stack-space=bytes   Space for negative sp access (default 2000) "
@@ -4849,28 +4852,28 @@ msgid ""
 "                                --reserved-space not given\n"
 msgstr ""
 
-#: eelf32_spu.c:1205
+#: eelf32_spu.c:1069
 #, c-format
 msgid "  --soft-icache               Generate software icache overlays\n"
 msgstr ""
 
-#: eelf32_spu.c:1207
+#: eelf32_spu.c:1071
 #, c-format
 msgid ""
 "  --num-lines                 Number of soft-icache lines (default 32)\n"
 msgstr ""
 
-#: eelf32_spu.c:1209
+#: eelf32_spu.c:1073
 #, c-format
 msgid "  --line-size                 Size of soft-icache lines (default 1k)\n"
 msgstr ""
 
-#: eelf32_spu.c:1211
+#: eelf32_spu.c:1075
 #, c-format
 msgid "  --non-ia-text               Allow non-icache code in icache lines\n"
 msgstr ""
 
-#: eelf32_spu.c:1213
+#: eelf32_spu.c:1077
 #, c-format
 msgid "  --lrlive-analysis           Scan function prologue for lr liveness\n"
 msgstr ""
@@ -4923,130 +4926,136 @@ msgstr ""
 msgid "                          Disable merging exidx entries\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5543 eelf_i386.c:5162 eelf_i386_be.c:465
-#: eelf_i386_fbsd.c:505 eelf_i386_ldso.c:480 eelf_i386_sol2.c:637
-#: eelf_i386_vxworks.c:532 eelf_iamcu.c:505 eelf_k1om.c:5496
-#: eelf_k1om_fbsd.c:505 eelf_l1om.c:5496 eelf_l1om_fbsd.c:505
-#: eelf_x86_64.c:5543 eelf_x86_64_cloudabi.c:508 eelf_x86_64_fbsd.c:508
-#: eelf_x86_64_sol2.c:640
+#: eelf32_x86_64.c:512 eelf_i386.c:509 eelf_i386_be.c:469 eelf_i386_fbsd.c:509
+#: eelf_i386_ldso.c:484 eelf_i386_sol2.c:641 eelf_i386_vxworks.c:536
+#: eelf_iamcu.c:509 eelf_k1om.c:509 eelf_k1om_fbsd.c:509 eelf_l1om.c:509
+#: eelf_l1om_fbsd.c:509 eelf_x86_64.c:512 eelf_x86_64_cloudabi.c:512
+#: eelf_x86_64_fbsd.c:512 eelf_x86_64_sol2.c:644
 msgid "%F%P: invalid number for -z call-nop=prefix-: %s\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5552 eelf_i386.c:5171 eelf_i386_be.c:474
-#: eelf_i386_fbsd.c:514 eelf_i386_ldso.c:489 eelf_i386_sol2.c:646
-#: eelf_i386_vxworks.c:541 eelf_iamcu.c:514 eelf_k1om.c:5505
-#: eelf_k1om_fbsd.c:514 eelf_l1om.c:5505 eelf_l1om_fbsd.c:514
-#: eelf_x86_64.c:5552 eelf_x86_64_cloudabi.c:517 eelf_x86_64_fbsd.c:517
-#: eelf_x86_64_sol2.c:649
+#: eelf32_x86_64.c:521 eelf_i386.c:518 eelf_i386_be.c:478 eelf_i386_fbsd.c:518
+#: eelf_i386_ldso.c:493 eelf_i386_sol2.c:650 eelf_i386_vxworks.c:545
+#: eelf_iamcu.c:518 eelf_k1om.c:518 eelf_k1om_fbsd.c:518 eelf_l1om.c:518
+#: eelf_l1om_fbsd.c:518 eelf_x86_64.c:521 eelf_x86_64_cloudabi.c:521
+#: eelf_x86_64_fbsd.c:521 eelf_x86_64_sol2.c:653
 msgid "%F%P: invalid number for -z call-nop=suffix-: %s\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5557 eelf_i386.c:5176 eelf_i386_be.c:479
-#: eelf_i386_fbsd.c:519 eelf_i386_ldso.c:494 eelf_i386_sol2.c:651
-#: eelf_i386_vxworks.c:546 eelf_iamcu.c:519 eelf_k1om.c:5510
-#: eelf_k1om_fbsd.c:519 eelf_l1om.c:5510 eelf_l1om_fbsd.c:519
-#: eelf_x86_64.c:5557 eelf_x86_64_cloudabi.c:522 eelf_x86_64_fbsd.c:522
-#: eelf_x86_64_sol2.c:654
+#: eelf32_x86_64.c:526 eelf_i386.c:523 eelf_i386_be.c:483 eelf_i386_fbsd.c:523
+#: eelf_i386_ldso.c:498 eelf_i386_sol2.c:655 eelf_i386_vxworks.c:550
+#: eelf_iamcu.c:523 eelf_k1om.c:523 eelf_k1om_fbsd.c:523 eelf_l1om.c:523
+#: eelf_l1om_fbsd.c:523 eelf_x86_64.c:526 eelf_x86_64_cloudabi.c:526
+#: eelf_x86_64_fbsd.c:526 eelf_x86_64_sol2.c:658
 msgid "%F%P: unsupported option: -z %s\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5579 eelf_i386.c:5198 eelf_i386_fbsd.c:541
-#: eelf_x86_64.c:5579 eelf_x86_64_cloudabi.c:544 eelf_x86_64_fbsd.c:544
-#: eelf_x86_64_sol2.c:676
+#: eelf32_x86_64.c:548 eelf_i386.c:545 eelf_i386_fbsd.c:545 eelf_x86_64.c:548
+#: eelf_x86_64_cloudabi.c:548 eelf_x86_64_fbsd.c:548 eelf_x86_64_sol2.c:680
 msgid "%F%P: invalid option for -z cet-report=: %s\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5593 eelf_i386.c:5212 eelf_i386_fbsd.c:555
-#: eelf_x86_64.c:5593 eelf_x86_64_cloudabi.c:558 eelf_x86_64_fbsd.c:558
-#: eelf_x86_64_sol2.c:690
+#: eelf32_x86_64.c:562 eelf_i386.c:559 eelf_i386_fbsd.c:559 eelf_x86_64.c:562
+#: eelf_x86_64_cloudabi.c:562 eelf_x86_64_fbsd.c:562 eelf_x86_64_sol2.c:694
 msgid "%F%P: invalid x86-64 ISA level: %s\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5630 eelf_i386.c:5249 eelf_i386_be.c:495
-#: eelf_i386_fbsd.c:592 eelf_i386_ldso.c:519 eelf_i386_sol2.c:676
-#: eelf_i386_vxworks.c:567 eelf_iamcu.c:544 eelf_k1om.c:5535
-#: eelf_k1om_fbsd.c:544 eelf_l1om.c:5535 eelf_l1om_fbsd.c:544
-#: eelf_x86_64.c:5683 eelf_x86_64_cloudabi.c:648 eelf_x86_64_fbsd.c:648
-#: eelf_x86_64_sol2.c:780
+#: eelf32_x86_64.c:599 eelf_i386.c:596 eelf_i386_be.c:499 eelf_i386_fbsd.c:596
+#: eelf_i386_ldso.c:523 eelf_i386_sol2.c:680 eelf_i386_vxworks.c:571
+#: eelf_iamcu.c:548 eelf_k1om.c:548 eelf_k1om_fbsd.c:548 eelf_l1om.c:548
+#: eelf_l1om_fbsd.c:548 eelf_x86_64.c:649 eelf_x86_64_cloudabi.c:649
+#: eelf_x86_64_fbsd.c:649 eelf_x86_64_sol2.c:781
 #, c-format
 msgid ""
 "  -z noextern-protected-data  Do not treat protected data symbol as "
 "external\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5633 eelf32lppc.c:815 eelf32lppclinux.c:815
-#: eelf32lppcnto.c:815 eelf32lppcsim.c:815 eelf32ppc.c:815 eelf32ppc_fbsd.c:815
-#: eelf32ppclinux.c:815 eelf32ppcnto.c:815 eelf32ppcsim.c:815
-#: eelf32ppcvxworks.c:793 eelf32ppcwindiss.c:815 eelf64lppc.c:1339
-#: eelf64lppc_fbsd.c:1339 eelf64ppc.c:1339 eelf64ppc_fbsd.c:1339
-#: eelf_i386.c:5252 eelf_i386_be.c:498 eelf_i386_fbsd.c:595
-#: eelf_i386_ldso.c:522 eelf_i386_sol2.c:679 eelf_i386_vxworks.c:570
-#: eelf_iamcu.c:547 eelf_k1om.c:5538 eelf_k1om_fbsd.c:547 eelf_l1om.c:5538
-#: eelf_l1om_fbsd.c:547 eelf_x86_64.c:5686 eelf_x86_64_cloudabi.c:651
+#: eelf32_x86_64.c:601 eelf_i386.c:598 eelf_i386_be.c:501 eelf_i386_fbsd.c:598
+#: eelf_i386_ldso.c:525 eelf_i386_sol2.c:682 eelf_i386_vxworks.c:573
+#: eelf_iamcu.c:550 eelf_k1om.c:550 eelf_k1om_fbsd.c:550 eelf_l1om.c:550
+#: eelf_l1om_fbsd.c:550 eelf_x86_64.c:651 eelf_x86_64_cloudabi.c:651
 #: eelf_x86_64_fbsd.c:651 eelf_x86_64_sol2.c:783
+#, c-format
+msgid "  -z indirect-extern-access   Enable indirect external access\n"
+msgstr ""
+
+#: eelf32_x86_64.c:603 eelf_i386.c:600 eelf_i386_be.c:503 eelf_i386_fbsd.c:600
+#: eelf_i386_ldso.c:527 eelf_i386_sol2.c:684 eelf_i386_vxworks.c:575
+#: eelf_iamcu.c:552 eelf_k1om.c:552 eelf_k1om_fbsd.c:552 eelf_l1om.c:552
+#: eelf_l1om_fbsd.c:552 eelf_x86_64.c:653 eelf_x86_64_cloudabi.c:653
+#: eelf_x86_64_fbsd.c:653 eelf_x86_64_sol2.c:785
+#, c-format
+msgid ""
+"  -z noindirect-extern-access Disable indirect external access (default)\n"
+msgstr ""
+
+#: eelf32_x86_64.c:606 eelf32lppc.c:803 eelf32lppclinux.c:803
+#: eelf32lppcnto.c:803 eelf32lppcsim.c:803 eelf32ppc.c:803 eelf32ppc_fbsd.c:803
+#: eelf32ppclinux.c:803 eelf32ppcnto.c:803 eelf32ppcsim.c:803
+#: eelf32ppcvxworks.c:781 eelf32ppcwindiss.c:803 eelf64lppc.c:1328
+#: eelf64lppc_fbsd.c:1328 eelf64ppc.c:1328 eelf64ppc_fbsd.c:1328
+#: eelf_i386.c:603 eelf_i386_be.c:506 eelf_i386_fbsd.c:603 eelf_i386_ldso.c:530
+#: eelf_i386_sol2.c:687 eelf_i386_vxworks.c:578 eelf_iamcu.c:555
+#: eelf_k1om.c:555 eelf_k1om_fbsd.c:555 eelf_l1om.c:555 eelf_l1om_fbsd.c:555
+#: eelf_x86_64.c:656 eelf_x86_64_cloudabi.c:656 eelf_x86_64_fbsd.c:656
+#: eelf_x86_64_sol2.c:788
 #, c-format
 msgid ""
 "  -z dynamic-undefined-weak   Make undefined weak symbols dynamic\n"
 "  -z nodynamic-undefined-weak Do not make undefined weak symbols dynamic\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5637 eelf_x86_64.c:5690 eelf_x86_64_cloudabi.c:655
-#: eelf_x86_64_fbsd.c:655 eelf_x86_64_sol2.c:787
+#: eelf32_x86_64.c:610 eelf_x86_64.c:660 eelf_x86_64_cloudabi.c:660
+#: eelf_x86_64_fbsd.c:660 eelf_x86_64_sol2.c:792
 #, c-format
 msgid "  -z noreloc-overflow         Disable relocation overflow check\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5640 eelf_i386.c:5256 eelf_i386_be.c:502
-#: eelf_i386_fbsd.c:599 eelf_i386_ldso.c:526 eelf_i386_sol2.c:683
-#: eelf_i386_vxworks.c:574 eelf_iamcu.c:551 eelf_k1om.c:5542
-#: eelf_k1om_fbsd.c:551 eelf_l1om.c:5542 eelf_l1om_fbsd.c:551
-#: eelf_x86_64.c:5693 eelf_x86_64_cloudabi.c:658 eelf_x86_64_fbsd.c:658
-#: eelf_x86_64_sol2.c:790
+#: eelf32_x86_64.c:613 eelf_i386.c:607 eelf_i386_be.c:510 eelf_i386_fbsd.c:607
+#: eelf_i386_ldso.c:534 eelf_i386_sol2.c:691 eelf_i386_vxworks.c:582
+#: eelf_iamcu.c:559 eelf_k1om.c:559 eelf_k1om_fbsd.c:559 eelf_l1om.c:559
+#: eelf_l1om_fbsd.c:559 eelf_x86_64.c:663 eelf_x86_64_cloudabi.c:663
+#: eelf_x86_64_fbsd.c:663 eelf_x86_64_sol2.c:795
 #, c-format
 msgid "  -z call-nop=PADDING         Use PADDING as 1-byte NOP for branch\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5643 eelf_i386.c:5259 eelf_i386_fbsd.c:602
-#: eelf_x86_64.c:5696 eelf_x86_64_cloudabi.c:661 eelf_x86_64_fbsd.c:661
-#: eelf_x86_64_sol2.c:793
+#: eelf32_x86_64.c:616 eelf_i386.c:610 eelf_i386_fbsd.c:610 eelf_x86_64.c:666
+#: eelf_x86_64_cloudabi.c:666 eelf_x86_64_fbsd.c:666 eelf_x86_64_sol2.c:798
 #, c-format
 msgid "  -z ibtplt                   Generate IBT-enabled PLT entries\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5645 eelf_i386.c:5261 eelf_i386_fbsd.c:604
-#: eelf_x86_64.c:5698 eelf_x86_64_cloudabi.c:663 eelf_x86_64_fbsd.c:663
-#: eelf_x86_64_sol2.c:795
+#: eelf32_x86_64.c:618 eelf_i386.c:612 eelf_i386_fbsd.c:612 eelf_x86_64.c:668
+#: eelf_x86_64_cloudabi.c:668 eelf_x86_64_fbsd.c:668 eelf_x86_64_sol2.c:800
 #, c-format
 msgid "  -z ibt                      Generate GNU_PROPERTY_X86_FEATURE_1_IBT\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5647 eelf_i386.c:5263 eelf_i386_fbsd.c:606
-#: eelf_x86_64.c:5700 eelf_x86_64_cloudabi.c:665 eelf_x86_64_fbsd.c:665
-#: eelf_x86_64_sol2.c:797
+#: eelf32_x86_64.c:620 eelf_i386.c:614 eelf_i386_fbsd.c:614 eelf_x86_64.c:670
+#: eelf_x86_64_cloudabi.c:670 eelf_x86_64_fbsd.c:670 eelf_x86_64_sol2.c:802
 #, c-format
 msgid ""
 "  -z shstk                    Generate GNU_PROPERTY_X86_FEATURE_1_SHSTK\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5649 eelf_i386.c:5265 eelf_i386_fbsd.c:608
-#: eelf_x86_64.c:5702 eelf_x86_64_cloudabi.c:667 eelf_x86_64_fbsd.c:667
-#: eelf_x86_64_sol2.c:799
+#: eelf32_x86_64.c:622 eelf_i386.c:616 eelf_i386_fbsd.c:616 eelf_x86_64.c:672
+#: eelf_x86_64_cloudabi.c:672 eelf_x86_64_fbsd.c:672 eelf_x86_64_sol2.c:804
 #, c-format
 msgid ""
 "  -z cet-report=[none|warning|error] (default: none)\n"
 "                              Report missing IBT and SHSTK properties\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5653 eelf_i386.c:5269 eelf_i386_fbsd.c:612
-#: eelf_x86_64.c:5706 eelf_x86_64_cloudabi.c:671 eelf_x86_64_fbsd.c:671
-#: eelf_x86_64_sol2.c:803
+#: eelf32_x86_64.c:626 eelf_i386.c:620 eelf_i386_fbsd.c:620 eelf_x86_64.c:676
+#: eelf_x86_64_cloudabi.c:676 eelf_x86_64_fbsd.c:676 eelf_x86_64_sol2.c:808
 #, c-format
 msgid "  -z report-relative-reloc    Report relative relocations\n"
 msgstr ""
 
-#: eelf32_x86_64.c:5656 eelf_i386.c:5272 eelf_i386_fbsd.c:615
-#: eelf_x86_64.c:5709 eelf_x86_64_cloudabi.c:674 eelf_x86_64_fbsd.c:674
-#: eelf_x86_64_sol2.c:806
+#: eelf32_x86_64.c:629 eelf_i386.c:623 eelf_i386_fbsd.c:623 eelf_x86_64.c:679
+#: eelf_x86_64_cloudabi.c:679 eelf_x86_64_fbsd.c:679 eelf_x86_64_sol2.c:811
 #, c-format
 msgid ""
 "  -z x86-64-{baseline|v[234]} Mark x86-64-{baseline|v[234]} ISA level as "
@@ -5200,63 +5209,98 @@ msgstr ""
 msgid "%X%P: ppc_finish_symbols problem %E\n"
 msgstr ""
 
-#: eelf32lppc.c:756 eelf32lppclinux.c:756 eelf32lppcnto.c:756
-#: eelf32lppcsim.c:756 eelf32ppc.c:756 eelf32ppc_fbsd.c:756
-#: eelf32ppclinux.c:756 eelf32ppcnto.c:756 eelf32ppcsim.c:756
-#: eelf32ppcvxworks.c:730 eelf32ppcwindiss.c:756 eelf64lppc.c:1206
-#: eelf64lppc_fbsd.c:1206 eelf64ppc.c:1206 eelf64ppc_fbsd.c:1206
+#: eelf32lppc.c:744 eelf32lppclinux.c:744 eelf32lppcnto.c:744
+#: eelf32lppcsim.c:744 eelf32ppc.c:744 eelf32ppc_fbsd.c:744
+#: eelf32ppclinux.c:744 eelf32ppcnto.c:744 eelf32ppcsim.c:744
+#: eelf32ppcvxworks.c:718 eelf32ppcwindiss.c:744 eelf64lppc.c:1195
+#: eelf64lppc_fbsd.c:1195 eelf64ppc.c:1195 eelf64ppc_fbsd.c:1195
 msgid "%F%P: invalid --plt-align `%s'\n"
 msgstr ""
 
-#: eelf32lppc.c:789 eelf32lppclinux.c:789 eelf32lppcnto.c:789
-#: eelf32lppcsim.c:789 eelf32ppc.c:789 eelf32ppc_fbsd.c:789
-#: eelf32ppclinux.c:789 eelf32ppcnto.c:789 eelf32ppcsim.c:789
-#: eelf32ppcvxworks.c:763 eelf32ppcwindiss.c:789
+#: eelf32lppc.c:777 eelf32lppclinux.c:777 eelf32lppcnto.c:777
+#: eelf32lppcsim.c:777 eelf32ppc.c:777 eelf32ppc_fbsd.c:777
+#: eelf32ppclinux.c:777 eelf32ppcnto.c:777 eelf32ppcsim.c:777
+#: eelf32ppcvxworks.c:751 eelf32ppcwindiss.c:777
 msgid "%F%P: invalid pagesize `%s'\n"
+msgstr ""
+
+#: eelf32lppc.c:807 eelf32lppclinux.c:807 eelf32lppcnto.c:807
+#: eelf32lppcsim.c:807 eelf32ppc.c:807 eelf32ppc_fbsd.c:807
+#: eelf32ppclinux.c:807 eelf32ppcnto.c:807 eelf32ppcsim.c:807
+#: eelf32ppcvxworks.c:785 eelf32ppcwindiss.c:807 eelf64lppc.c:1375
+#: eelf64lppc_fbsd.c:1375 eelf64ppc.c:1375 eelf64ppc_fbsd.c:1375
+#, c-format
+msgid "  --emit-stub-syms            Label linker stubs with a symbol\n"
+msgstr ""
+
+#: eelf32lppc.c:810 eelf32lppclinux.c:810 eelf32lppcnto.c:810
+#: eelf32lppcsim.c:810 eelf32ppc.c:810 eelf32ppc_fbsd.c:810
+#: eelf32ppclinux.c:810 eelf32ppcnto.c:810 eelf32ppcsim.c:810
+#: eelf32ppcvxworks.c:788 eelf32ppcwindiss.c:810 eelf64lppc.c:1378
+#: eelf64lppc_fbsd.c:1378 eelf64ppc.c:1378 eelf64ppc_fbsd.c:1378
+#, c-format
+msgid "  --no-emit-stub-syms         Don't label linker stubs with a symbol\n"
+msgstr ""
+
+#: eelf32lppc.c:813 eelf32lppclinux.c:813 eelf32lppcnto.c:813
+#: eelf32lppcsim.c:813 eelf32ppc.c:813 eelf32ppc_fbsd.c:813
+#: eelf32ppclinux.c:813 eelf32ppcnto.c:813 eelf32ppcsim.c:813
+#: eelf32ppcvxworks.c:791 eelf32ppcwindiss.c:813 eelf64lppc.c:1398
+#: eelf64lppc_fbsd.c:1398 eelf64ppc.c:1398 eelf64ppc_fbsd.c:1398
+#, c-format
+msgid "  --no-tls-optimize           Don't try to optimize TLS accesses\n"
+msgstr ""
+
+#: eelf32lppc.c:816 eelf32lppclinux.c:816 eelf32lppcnto.c:816
+#: eelf32lppcsim.c:816 eelf32ppc.c:816 eelf32ppc_fbsd.c:816
+#: eelf32ppclinux.c:816 eelf32ppcnto.c:816 eelf32ppcsim.c:816
+#: eelf32ppcvxworks.c:794 eelf32ppcwindiss.c:816 eelf64lppc.c:1404
+#: eelf64lppc_fbsd.c:1404 eelf64ppc.c:1404 eelf64ppc_fbsd.c:1404
+#, c-format
+msgid "  --no-tls-get-addr-optimize  Don't use a special __tls_get_addr call\n"
 msgstr ""
 
 #: eelf32lppc.c:819 eelf32lppclinux.c:819 eelf32lppcnto.c:819
 #: eelf32lppcsim.c:819 eelf32ppc.c:819 eelf32ppc_fbsd.c:819
 #: eelf32ppclinux.c:819 eelf32ppcnto.c:819 eelf32ppcsim.c:819
-#: eelf32ppcvxworks.c:797 eelf32ppcwindiss.c:819 eelf64lppc.c:1386
-#: eelf64lppc_fbsd.c:1386 eelf64ppc.c:1386 eelf64ppc_fbsd.c:1386
+#: eelf32ppcwindiss.c:819
 #, c-format
-msgid "  --emit-stub-syms            Label linker stubs with a symbol\n"
+msgid "  --secure-plt                Use new-style PLT if possible\n"
 msgstr ""
 
 #: eelf32lppc.c:822 eelf32lppclinux.c:822 eelf32lppcnto.c:822
 #: eelf32lppcsim.c:822 eelf32ppc.c:822 eelf32ppc_fbsd.c:822
 #: eelf32ppclinux.c:822 eelf32ppcnto.c:822 eelf32ppcsim.c:822
-#: eelf32ppcvxworks.c:800 eelf32ppcwindiss.c:822 eelf64lppc.c:1389
-#: eelf64lppc_fbsd.c:1389 eelf64ppc.c:1389 eelf64ppc_fbsd.c:1389
+#: eelf32ppcwindiss.c:822
 #, c-format
-msgid "  --no-emit-stub-syms         Don't label linker stubs with a symbol\n"
+msgid "  --bss-plt                   Force old-style BSS PLT\n"
 msgstr ""
 
 #: eelf32lppc.c:825 eelf32lppclinux.c:825 eelf32lppcnto.c:825
 #: eelf32lppcsim.c:825 eelf32ppc.c:825 eelf32ppc_fbsd.c:825
 #: eelf32ppclinux.c:825 eelf32ppcnto.c:825 eelf32ppcsim.c:825
-#: eelf32ppcvxworks.c:803 eelf32ppcwindiss.c:825 eelf64lppc.c:1409
-#: eelf64lppc_fbsd.c:1409 eelf64ppc.c:1409 eelf64ppc_fbsd.c:1409
+#: eelf32ppcwindiss.c:825
 #, c-format
-msgid "  --no-tls-optimize           Don't try to optimize TLS accesses\n"
+msgid "  --plt-align                 Align PLT call stubs to fit cache lines\n"
 msgstr ""
 
 #: eelf32lppc.c:828 eelf32lppclinux.c:828 eelf32lppcnto.c:828
 #: eelf32lppcsim.c:828 eelf32ppc.c:828 eelf32ppc_fbsd.c:828
 #: eelf32ppclinux.c:828 eelf32ppcnto.c:828 eelf32ppcsim.c:828
-#: eelf32ppcvxworks.c:806 eelf32ppcwindiss.c:828 eelf64lppc.c:1415
-#: eelf64lppc_fbsd.c:1415 eelf64ppc.c:1415 eelf64ppc_fbsd.c:1415
+#: eelf32ppcwindiss.c:828 eelf64lppc.c:1357 eelf64lppc_fbsd.c:1357
+#: eelf64ppc.c:1357 eelf64ppc_fbsd.c:1357
 #, c-format
-msgid "  --no-tls-get-addr-optimize  Don't use a special __tls_get_addr call\n"
+msgid "  --no-plt-align              Dont't align individual PLT call stubs\n"
 msgstr ""
 
 #: eelf32lppc.c:831 eelf32lppclinux.c:831 eelf32lppcnto.c:831
 #: eelf32lppcsim.c:831 eelf32ppc.c:831 eelf32ppc_fbsd.c:831
 #: eelf32ppclinux.c:831 eelf32ppcnto.c:831 eelf32ppcsim.c:831
-#: eelf32ppcwindiss.c:831
+#: eelf32ppcwindiss.c:831 eelf64lppc.c:1416 eelf64lppc_fbsd.c:1416
+#: eelf64ppc.c:1416 eelf64ppc_fbsd.c:1416
 #, c-format
-msgid "  --secure-plt                Use new-style PLT if possible\n"
+msgid ""
+"  --no-inline-optimize        Don't convert inline PLT to direct calls\n"
 msgstr ""
 
 #: eelf32lppc.c:834 eelf32lppclinux.c:834 eelf32lppcnto.c:834
@@ -5264,74 +5308,39 @@ msgstr ""
 #: eelf32ppclinux.c:834 eelf32ppcnto.c:834 eelf32ppcsim.c:834
 #: eelf32ppcwindiss.c:834
 #, c-format
-msgid "  --bss-plt                   Force old-style BSS PLT\n"
+msgid "  --sdata-got                 Force GOT location just before .sdata\n"
 msgstr ""
 
 #: eelf32lppc.c:837 eelf32lppclinux.c:837 eelf32lppcnto.c:837
 #: eelf32lppcsim.c:837 eelf32ppc.c:837 eelf32ppc_fbsd.c:837
 #: eelf32ppclinux.c:837 eelf32ppcnto.c:837 eelf32ppcsim.c:837
-#: eelf32ppcwindiss.c:837
-#, c-format
-msgid "  --plt-align                 Align PLT call stubs to fit cache lines\n"
-msgstr ""
-
-#: eelf32lppc.c:840 eelf32lppclinux.c:840 eelf32lppcnto.c:840
-#: eelf32lppcsim.c:840 eelf32ppc.c:840 eelf32ppc_fbsd.c:840
-#: eelf32ppclinux.c:840 eelf32ppcnto.c:840 eelf32ppcsim.c:840
-#: eelf32ppcwindiss.c:840 eelf64lppc.c:1368 eelf64lppc_fbsd.c:1368
-#: eelf64ppc.c:1368 eelf64ppc_fbsd.c:1368
-#, c-format
-msgid "  --no-plt-align              Dont't align individual PLT call stubs\n"
-msgstr ""
-
-#: eelf32lppc.c:843 eelf32lppclinux.c:843 eelf32lppcnto.c:843
-#: eelf32lppcsim.c:843 eelf32ppc.c:843 eelf32ppc_fbsd.c:843
-#: eelf32ppclinux.c:843 eelf32ppcnto.c:843 eelf32ppcsim.c:843
-#: eelf32ppcwindiss.c:843 eelf64lppc.c:1427 eelf64lppc_fbsd.c:1427
-#: eelf64ppc.c:1427 eelf64ppc_fbsd.c:1427
-#, c-format
-msgid ""
-"  --no-inline-optimize        Don't convert inline PLT to direct calls\n"
-msgstr ""
-
-#: eelf32lppc.c:846 eelf32lppclinux.c:846 eelf32lppcnto.c:846
-#: eelf32lppcsim.c:846 eelf32ppc.c:846 eelf32ppc_fbsd.c:846
-#: eelf32ppclinux.c:846 eelf32ppcnto.c:846 eelf32ppcsim.c:846
-#: eelf32ppcwindiss.c:846
-#, c-format
-msgid "  --sdata-got                 Force GOT location just before .sdata\n"
-msgstr ""
-
-#: eelf32lppc.c:849 eelf32lppclinux.c:849 eelf32lppcnto.c:849
-#: eelf32lppcsim.c:849 eelf32ppc.c:849 eelf32ppc_fbsd.c:849
-#: eelf32ppclinux.c:849 eelf32ppcnto.c:849 eelf32ppcsim.c:849
-#: eelf32ppcvxworks.c:809 eelf32ppcwindiss.c:849
+#: eelf32ppcvxworks.c:797 eelf32ppcwindiss.c:837
 #, c-format
 msgid ""
 "  --ppc476-workaround [=pagesize]\n"
 "                              Avoid a cache bug on ppc476\n"
 msgstr ""
 
-#: eelf32lppc.c:853 eelf32lppclinux.c:853 eelf32lppcnto.c:853
-#: eelf32lppcsim.c:853 eelf32ppc.c:853 eelf32ppc_fbsd.c:853
-#: eelf32ppclinux.c:853 eelf32ppcnto.c:853 eelf32ppcsim.c:853
-#: eelf32ppcvxworks.c:813 eelf32ppcwindiss.c:853
+#: eelf32lppc.c:841 eelf32lppclinux.c:841 eelf32lppcnto.c:841
+#: eelf32lppcsim.c:841 eelf32ppc.c:841 eelf32ppc_fbsd.c:841
+#: eelf32ppclinux.c:841 eelf32ppcnto.c:841 eelf32ppcsim.c:841
+#: eelf32ppcvxworks.c:801 eelf32ppcwindiss.c:841
 #, c-format
 msgid "  --no-ppc476-workaround      Disable workaround\n"
 msgstr ""
 
-#: eelf32lppc.c:856 eelf32lppclinux.c:856 eelf32lppcnto.c:856
-#: eelf32lppcsim.c:856 eelf32ppc.c:856 eelf32ppc_fbsd.c:856
-#: eelf32ppclinux.c:856 eelf32ppcnto.c:856 eelf32ppcsim.c:856
-#: eelf32ppcvxworks.c:816 eelf32ppcwindiss.c:856
+#: eelf32lppc.c:844 eelf32lppclinux.c:844 eelf32lppcnto.c:844
+#: eelf32lppcsim.c:844 eelf32ppc.c:844 eelf32ppc_fbsd.c:844
+#: eelf32ppclinux.c:844 eelf32ppcnto.c:844 eelf32ppcsim.c:844
+#: eelf32ppcvxworks.c:804 eelf32ppcwindiss.c:844
 #, c-format
 msgid "  --no-pic-fixup              Don't edit non-pic to pic\n"
 msgstr ""
 
-#: eelf32lppc.c:859 eelf32lppclinux.c:859 eelf32lppcnto.c:859
-#: eelf32lppcsim.c:859 eelf32ppc.c:859 eelf32ppc_fbsd.c:859
-#: eelf32ppclinux.c:859 eelf32ppcnto.c:859 eelf32ppcsim.c:859
-#: eelf32ppcvxworks.c:819 eelf32ppcwindiss.c:859
+#: eelf32lppc.c:847 eelf32lppclinux.c:847 eelf32lppcnto.c:847
+#: eelf32lppcsim.c:847 eelf32ppc.c:847 eelf32ppc_fbsd.c:847
+#: eelf32ppclinux.c:847 eelf32ppcnto.c:847 eelf32ppcsim.c:847
+#: eelf32ppcvxworks.c:807 eelf32ppcwindiss.c:847
 #, c-format
 msgid ""
 "  --vle-reloc-fixup           Correct old object file 16A/16D relocation\n"
@@ -5343,8 +5352,8 @@ msgid ""
 "  --base_file <basefile>      Generate a base file for relocatable DLLs\n"
 msgstr ""
 
-#: eelf32metag.c:717 eelf64lppc.c:1343 eelf64lppc_fbsd.c:1343 eelf64ppc.c:1343
-#: eelf64ppc_fbsd.c:1343 ehppaelf.c:577 ehppalinux.c:759 ehppanbsd.c:759
+#: eelf32metag.c:717 eelf64lppc.c:1332 eelf64lppc_fbsd.c:1332 eelf64ppc.c:1332
+#: eelf64ppc_fbsd.c:1332 ehppaelf.c:577 ehppalinux.c:759 ehppanbsd.c:759
 #: ehppaobsd.c:759
 #, c-format
 msgid ""
@@ -5517,76 +5526,76 @@ msgstr ""
 msgid "%P: .init/.fini fragments use differing TOC pointers\n"
 msgstr ""
 
-#: eelf64lppc.c:1235 eelf64lppc_fbsd.c:1235 eelf64ppc.c:1235
-#: eelf64ppc_fbsd.c:1235
+#: eelf64lppc.c:1224 eelf64lppc_fbsd.c:1224 eelf64ppc.c:1224
+#: eelf64ppc_fbsd.c:1224
 msgid "%F%P: invalid --power10-stubs argument `%s'\n"
 msgstr ""
 
-#: eelf64lppc.c:1353 eelf64ppc.c:1353
+#: eelf64lppc.c:1342 eelf64ppc.c:1342
 #, c-format
 msgid ""
 "  --plt-static-chain          PLT call stubs should load r11 (default)\n"
 msgstr ""
 
-#: eelf64lppc.c:1356 eelf64ppc.c:1356
+#: eelf64lppc.c:1345 eelf64ppc.c:1345
 #, c-format
 msgid "  --no-plt-static-chain       PLT call stubs should not load r11\n"
 msgstr ""
 
-#: eelf64lppc.c:1359 eelf64lppc_fbsd.c:1359 eelf64ppc.c:1359
-#: eelf64ppc_fbsd.c:1359
+#: eelf64lppc.c:1348 eelf64lppc_fbsd.c:1348 eelf64ppc.c:1348
+#: eelf64ppc_fbsd.c:1348
 #, c-format
 msgid "  --plt-thread-safe           PLT call stubs with load-load barrier\n"
 msgstr ""
 
-#: eelf64lppc.c:1362 eelf64lppc_fbsd.c:1362 eelf64ppc.c:1362
-#: eelf64ppc_fbsd.c:1362
+#: eelf64lppc.c:1351 eelf64lppc_fbsd.c:1351 eelf64ppc.c:1351
+#: eelf64ppc_fbsd.c:1351
 #, c-format
 msgid "  --no-plt-thread-safe        PLT call stubs without barrier\n"
 msgstr ""
 
-#: eelf64lppc.c:1365 eelf64lppc_fbsd.c:1365 eelf64ppc.c:1365
-#: eelf64ppc_fbsd.c:1365
+#: eelf64lppc.c:1354 eelf64lppc_fbsd.c:1354 eelf64ppc.c:1354
+#: eelf64ppc_fbsd.c:1354
 #, c-format
 msgid "  --plt-align [=<align>]      Align PLT call stubs to fit cache lines\n"
 msgstr ""
 
-#: eelf64lppc.c:1371 eelf64lppc_fbsd.c:1371 eelf64ppc.c:1371
-#: eelf64ppc_fbsd.c:1371
+#: eelf64lppc.c:1360 eelf64lppc_fbsd.c:1360 eelf64ppc.c:1360
+#: eelf64ppc_fbsd.c:1360
 #, c-format
 msgid ""
 "  --plt-localentry            Optimize calls to ELFv2 localentry:0 "
 "functions\n"
 msgstr ""
 
-#: eelf64lppc.c:1374 eelf64lppc_fbsd.c:1374 eelf64ppc.c:1374
-#: eelf64ppc_fbsd.c:1374
+#: eelf64lppc.c:1363 eelf64lppc_fbsd.c:1363 eelf64ppc.c:1363
+#: eelf64ppc_fbsd.c:1363
 #, c-format
 msgid "  --no-plt-localentry         Don't optimize ELFv2 calls\n"
 msgstr ""
 
-#: eelf64lppc.c:1377 eelf64lppc_fbsd.c:1377 eelf64ppc.c:1377
-#: eelf64ppc_fbsd.c:1377
+#: eelf64lppc.c:1366 eelf64lppc_fbsd.c:1366 eelf64ppc.c:1366
+#: eelf64ppc_fbsd.c:1366
 #, c-format
 msgid ""
 "  --power10-stubs [=auto]     Use Power10 PLT call stubs (default auto)\n"
 msgstr ""
 
-#: eelf64lppc.c:1380 eelf64lppc_fbsd.c:1380 eelf64ppc.c:1380
-#: eelf64ppc_fbsd.c:1380
+#: eelf64lppc.c:1369 eelf64lppc_fbsd.c:1369 eelf64ppc.c:1369
+#: eelf64ppc_fbsd.c:1369
 #, c-format
 msgid ""
 "  --no-pcrel-optimize         Don't perform R_PPC64_PCREL_OPT optimization\n"
 msgstr ""
 
-#: eelf64lppc.c:1383 eelf64lppc_fbsd.c:1383 eelf64ppc.c:1383
-#: eelf64ppc_fbsd.c:1383
+#: eelf64lppc.c:1372 eelf64lppc_fbsd.c:1372 eelf64ppc.c:1372
+#: eelf64ppc_fbsd.c:1372
 #, c-format
 msgid "  --no-power10-stubs          Don't use Power10 PLT call stubs\n"
 msgstr ""
 
-#: eelf64lppc.c:1392 eelf64lppc_fbsd.c:1392 eelf64ppc.c:1392
-#: eelf64ppc_fbsd.c:1392
+#: eelf64lppc.c:1381 eelf64lppc_fbsd.c:1381 eelf64ppc.c:1381
+#: eelf64ppc_fbsd.c:1381
 #, c-format
 msgid ""
 "  --dotsyms                   For every version pattern \"foo\" in a "
@@ -5596,15 +5605,15 @@ msgid ""
 "                                descriptor symbols.  Defaults to on.\n"
 msgstr ""
 
-#: eelf64lppc.c:1398 eelf64lppc_fbsd.c:1398 eelf64ppc.c:1398
-#: eelf64ppc_fbsd.c:1398
+#: eelf64lppc.c:1387 eelf64lppc_fbsd.c:1387 eelf64ppc.c:1387
+#: eelf64ppc_fbsd.c:1387
 #, c-format
 msgid ""
 "  --no-dotsyms                Don't do anything special in version scripts\n"
 msgstr ""
 
-#: eelf64lppc.c:1401 eelf64lppc_fbsd.c:1401 eelf64ppc.c:1401
-#: eelf64ppc_fbsd.c:1401
+#: eelf64lppc.c:1390 eelf64lppc_fbsd.c:1390 eelf64ppc.c:1390
+#: eelf64ppc_fbsd.c:1390
 #, c-format
 msgid ""
 "  --save-restore-funcs        Provide register save and restore routines "
@@ -5613,71 +5622,71 @@ msgid ""
 "                                final link, off for ld -r.\n"
 msgstr ""
 
-#: eelf64lppc.c:1406 eelf64lppc_fbsd.c:1406 eelf64ppc.c:1406
-#: eelf64ppc_fbsd.c:1406
+#: eelf64lppc.c:1395 eelf64lppc_fbsd.c:1395 eelf64ppc.c:1395
+#: eelf64ppc_fbsd.c:1395
 #, c-format
 msgid "  --no-save-restore-funcs     Don't provide these routines\n"
 msgstr ""
 
-#: eelf64lppc.c:1412 eelf64lppc_fbsd.c:1412 eelf64ppc.c:1412
-#: eelf64ppc_fbsd.c:1412
+#: eelf64lppc.c:1401 eelf64lppc_fbsd.c:1401 eelf64ppc.c:1401
+#: eelf64ppc_fbsd.c:1401
 #, c-format
 msgid ""
 "  --tls-get-addr-optimize     Force use of special __tls_get_addr call\n"
 msgstr ""
 
-#: eelf64lppc.c:1418 eelf64lppc_fbsd.c:1418 eelf64ppc.c:1418
-#: eelf64ppc_fbsd.c:1418
+#: eelf64lppc.c:1407 eelf64lppc_fbsd.c:1407 eelf64ppc.c:1407
+#: eelf64ppc_fbsd.c:1407
 #, c-format
 msgid "  --tls-get-addr-regsave      Force register save __tls_get_addr stub\n"
 msgstr ""
 
-#: eelf64lppc.c:1421 eelf64lppc_fbsd.c:1421 eelf64ppc.c:1421
-#: eelf64ppc_fbsd.c:1421
+#: eelf64lppc.c:1410 eelf64lppc_fbsd.c:1410 eelf64ppc.c:1410
+#: eelf64ppc_fbsd.c:1410
 #, c-format
 msgid ""
 "  --no-tls-get-addr-regsave   Don't use register save __tls_get_addr stub\n"
 msgstr ""
 
-#: eelf64lppc.c:1424 eelf64lppc_fbsd.c:1424 eelf64ppc.c:1424
-#: eelf64ppc_fbsd.c:1424
+#: eelf64lppc.c:1413 eelf64lppc_fbsd.c:1413 eelf64ppc.c:1413
+#: eelf64ppc_fbsd.c:1413
 #, c-format
 msgid "  --no-opd-optimize           Don't optimize the OPD section\n"
 msgstr ""
 
-#: eelf64lppc.c:1430 eelf64lppc_fbsd.c:1430 eelf64ppc.c:1430
-#: eelf64ppc_fbsd.c:1430
+#: eelf64lppc.c:1419 eelf64lppc_fbsd.c:1419 eelf64ppc.c:1419
+#: eelf64ppc_fbsd.c:1419
 #, c-format
 msgid "  --no-toc-optimize           Don't optimize the TOC section\n"
 msgstr ""
 
-#: eelf64lppc.c:1433 eelf64lppc_fbsd.c:1433 eelf64ppc.c:1433
-#: eelf64ppc_fbsd.c:1433
+#: eelf64lppc.c:1422 eelf64lppc_fbsd.c:1422 eelf64ppc.c:1422
+#: eelf64ppc_fbsd.c:1422
 #, c-format
 msgid ""
 "  --no-multi-toc              Disallow automatic multiple toc sections\n"
 msgstr ""
 
-#: eelf64lppc.c:1436 eelf64lppc_fbsd.c:1436 eelf64ppc.c:1436
-#: eelf64ppc_fbsd.c:1436
+#: eelf64lppc.c:1425 eelf64lppc_fbsd.c:1425 eelf64ppc.c:1425
+#: eelf64ppc_fbsd.c:1425
 #, c-format
 msgid "  --no-toc-sort               Don't sort TOC and GOT sections\n"
 msgstr ""
 
-#: eelf64lppc.c:1439 eelf64lppc_fbsd.c:1439 eelf64ppc.c:1439
-#: eelf64ppc_fbsd.c:1439
+#: eelf64lppc.c:1428 eelf64lppc_fbsd.c:1428 eelf64ppc.c:1428
+#: eelf64ppc_fbsd.c:1428
 #, c-format
 msgid ""
 "  --non-overlapping-opd       Canonicalize .opd, so that there are no\n"
 "                                overlapping .opd entries\n"
 msgstr ""
 
-#: eelf64lppc_fbsd.c:1353 eelf64ppc_fbsd.c:1353
+#: eelf64lppc_fbsd.c:1342 eelf64ppc_fbsd.c:1342
 #, c-format
 msgid "  --plt-static-chain          PLT call stubs should load r111\n"
 msgstr ""
 
-#: eelf64lppc_fbsd.c:1356 eelf64ppc_fbsd.c:1356
+#: eelf64lppc_fbsd.c:1345 eelf64ppc_fbsd.c:1345
 #, c-format
 msgid ""
 "  --no-plt-static-chain       PLT call stubs should not load r11 (default)\n"
@@ -5696,64 +5705,57 @@ msgstr ""
 msgid "%F%P: can't finalize linker-allocated global registers\n"
 msgstr ""
 
-#: eelf_x86_64.c:5608 eelf_x86_64_cloudabi.c:573 eelf_x86_64_fbsd.c:573
-#: eelf_x86_64_sol2.c:705
+#: eelf_x86_64.c:577 eelf_x86_64_cloudabi.c:577 eelf_x86_64_fbsd.c:577
+#: eelf_x86_64_sol2.c:709
 msgid "%F%P: invalid option for -z lam-u48-report=: %s\n"
 msgstr ""
 
-#: eelf_x86_64.c:5622 eelf_x86_64_cloudabi.c:587 eelf_x86_64_fbsd.c:587
-#: eelf_x86_64_sol2.c:719
+#: eelf_x86_64.c:591 eelf_x86_64_cloudabi.c:591 eelf_x86_64_fbsd.c:591
+#: eelf_x86_64_sol2.c:723
 msgid "%F%P: invalid option for -z lam-u57-report=: %s\n"
 msgstr ""
 
-#: eelf_x86_64.c:5643 eelf_x86_64_cloudabi.c:608 eelf_x86_64_fbsd.c:608
-#: eelf_x86_64_sol2.c:740
+#: eelf_x86_64.c:612 eelf_x86_64_cloudabi.c:612 eelf_x86_64_fbsd.c:612
+#: eelf_x86_64_sol2.c:744
 msgid "%F%P: invalid option for -z lam-report=: %s\n"
 msgstr ""
 
-#: eelf_x86_64.c:5712 eelf_x86_64_cloudabi.c:677 eelf_x86_64_fbsd.c:677
-#: eelf_x86_64_sol2.c:809
+#: eelf_x86_64.c:682 eelf_x86_64_cloudabi.c:682 eelf_x86_64_fbsd.c:682
+#: eelf_x86_64_sol2.c:814
 #, c-format
 msgid ""
 "  -z lam-u48                  Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U48\n"
 msgstr ""
 
-#: eelf_x86_64.c:5714 eelf_x86_64_cloudabi.c:679 eelf_x86_64_fbsd.c:679
-#: eelf_x86_64_sol2.c:811
+#: eelf_x86_64.c:684 eelf_x86_64_cloudabi.c:684 eelf_x86_64_fbsd.c:684
+#: eelf_x86_64_sol2.c:816
 #, c-format
 msgid ""
 "  -z lam-u48-report=[none|warning|error] (default: none)\n"
 "                              Report missing LAM_U48 property\n"
 msgstr ""
 
-#: eelf_x86_64.c:5717 eelf_x86_64_cloudabi.c:682 eelf_x86_64_fbsd.c:682
-#: eelf_x86_64_sol2.c:814
+#: eelf_x86_64.c:687 eelf_x86_64_cloudabi.c:687 eelf_x86_64_fbsd.c:687
+#: eelf_x86_64_sol2.c:819
 #, c-format
 msgid ""
 "  -z lam-u57                  Generate GNU_PROPERTY_X86_FEATURE_1_LAM_U57\n"
 msgstr ""
 
-#: eelf_x86_64.c:5719 eelf_x86_64_cloudabi.c:684 eelf_x86_64_fbsd.c:684
-#: eelf_x86_64_sol2.c:816
+#: eelf_x86_64.c:689 eelf_x86_64_cloudabi.c:689 eelf_x86_64_fbsd.c:689
+#: eelf_x86_64_sol2.c:821
 #, c-format
 msgid ""
 "  -z lam-u57-report=[none|warning|error] (default: none)\n"
 "                              Report missing LAM_U57 property\n"
 msgstr ""
 
-#: eelf_x86_64.c:5722 eelf_x86_64_cloudabi.c:687 eelf_x86_64_fbsd.c:687
-#: eelf_x86_64_sol2.c:819
+#: eelf_x86_64.c:692 eelf_x86_64_cloudabi.c:692 eelf_x86_64_fbsd.c:692
+#: eelf_x86_64_sol2.c:824
 #, c-format
 msgid ""
 "  -z lam-report=[none|warning|error] (default: none)\n"
 "                              Report missing LAM_U48 and LAM_U57 properties\n"
-msgstr ""
-
-#: eelf_x86_64.c:5726 eelf_x86_64_cloudabi.c:691 eelf_x86_64_fbsd.c:691
-#: eelf_x86_64_sol2.c:823
-#, c-format
-msgid ""
-"  -z bndplt                   Always generate BND prefix in PLT entries\n"
 msgstr ""
 
 #: ehppaelf.c:324 ehppalinux.c:324 ehppanbsd.c:324 ehppaobsd.c:324
