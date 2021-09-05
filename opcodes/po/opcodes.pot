@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: bug-binutils@gnu.org\n"
-"POT-Creation-Date: 2021-07-03 15:03+0100\n"
+"POT-Creation-Date: 2021-09-05 14:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,8 +75,8 @@ msgid ""
 msgstr ""
 
 #: aarch64-dis.c:3610 arc-dis.c:1551 arc-dis.c:1572 arc-dis.c:1575
-#: mips-dis.c:2807 mips-dis.c:2817 mips-dis.c:2820 nfp-dis.c:2981
-#: riscv-dis.c:655
+#: loongarch-dis.c:304 mips-dis.c:2807 mips-dis.c:2817 mips-dis.c:2820
+#: nfp-dis.c:2981 riscv-dis.c:655
 #, c-format
 msgid "\n"
 msgstr ""
@@ -903,12 +903,12 @@ msgstr ""
 msgid "Address 0x%s is out of bounds.\n"
 msgstr ""
 
-#: disassemble.c:848
+#: disassemble.c:857
 #, c-format
 msgid "assertion fail %s:%d"
 msgstr ""
 
-#: disassemble.c:849
+#: disassemble.c:858
 msgid "Please report this bug"
 msgstr ""
 
@@ -1476,6 +1476,21 @@ msgstr ""
 #: lm32-desc.c:1109
 #, c-format
 msgid "internal error: lm32_cgen_cpu_open: no endianness specified"
+msgstr ""
+
+#: loongarch-dis.c:298
+#, c-format
+msgid ""
+"\n"
+"The following LoongArch disassembler options are supported for use\n"
+"with the -M switch (multiple options should be separated by commas):\n"
+msgstr ""
+
+#: loongarch-dis.c:302
+#, c-format
+msgid ""
+"\n"
+"    numeric       Print numeric register names, rather than ABI names.\n"
 msgstr ""
 
 #: m10200-dis.c:151 m10300-dis.c:574
