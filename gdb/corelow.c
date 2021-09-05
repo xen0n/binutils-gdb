@@ -965,7 +965,7 @@ core_target::xfer_partial (enum target_object object, const char *annex,
 	}
       /* FALL THROUGH */
 
-    case TARGET_OBJECT_LARCH:
+    case TARGET_OBJECT_LOONG:
       if (strcmp (annex, "cpucfg") == 0)
 	{
 	  struct bfd_section *section;

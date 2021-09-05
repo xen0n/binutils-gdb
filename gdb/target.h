@@ -137,7 +137,7 @@ enum target_object
 {
   /* LoongArch target specific transfer. See "loongarch-nat.c" "corelow.c"
      and "remote.c".  */
-  TARGET_OBJECT_LARCH,
+  TARGET_OBJECT_LOONG,
   /* AVR target specific transfer.  See "avr-tdep.c" and "remote.c".  */
   TARGET_OBJECT_AVR,
   /* Transfer up-to LEN bytes of memory starting at OFFSET.  */

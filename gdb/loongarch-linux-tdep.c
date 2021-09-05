@@ -263,7 +263,7 @@ loongarch_fill_elf_cpucfgregset (const struct regset *r,
 {
   ULONGEST xfered_len;
   target_xfer_partial (current_inferior ()->top_target (),
-		       /* current_top_target (),*/ TARGET_OBJECT_LARCH,
+		       /* current_top_target (),*/ TARGET_OBJECT_LOONG,
 		       "cpucfg", (gdb_byte *) cpucfgs, NULL, 0, len,
 		       &xfered_len);
   memset ((gdb_byte *) cpucfgs + xfered_len, 0, len - xfered_len);
@@ -515,7 +515,7 @@ loongarch_linux_iterate_over_regset_sections (
       uint32_t t;
       ULONGEST xfered_len;
       if (target_xfer_partial (current_inferior ()->top_target (),
-			       /* current_top_target (),*/ TARGET_OBJECT_LARCH,
+			       /* current_top_target (),*/ TARGET_OBJECT_LOONG,
 			       "cpucfg", (gdb_byte *) &t, NULL, 0, sizeof (t),
 			       &xfered_len) != TARGET_XFER_OK)
 	break;
@@ -603,7 +603,7 @@ loongarch_linux_get_syscall_number (struct gdbarch *gdbarch,
 
   switch (tdep->ef_abi)
     {
-    case EF_LARCH_ABI_LP64:
+    case EF_LOONG_ABI_LP64:
       if (REG_VALID
 	  == regcache_cooked_read_signed (regcache, regs->r + 11, &ret))
 	return ret;
@@ -622,7 +622,7 @@ loongarch_linux_syscall_next_pc (struct frame_info *frame)
 
   switch (tdep->ef_abi)
     {
-    case EF_LARCH_ABI_LP64:
+    case EF_LOONG_ABI_LP64:
       /* If we are about to make a sigreturn syscall, use the unwinder to
 	 decode the signal frame.  */
       if (a7 == 0x8b /* LP64: __NR_rt_sigreturn.  */)
@@ -641,11 +641,11 @@ loongarch_linux_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 
   switch (tdep->ef_abi)
     {
-    case EF_LARCH_ABI_LP32:
+    case EF_LOONG_ABI_LP32:
       set_solib_svr4_fetch_link_map_offsets (
 	gdbarch, svr4_ilp32_fetch_link_map_offsets);
       break;
-    case EF_LARCH_ABI_LP64:
+    case EF_LOONG_ABI_LP64:
       set_solib_svr4_fetch_link_map_offsets (gdbarch,
 					     svr4_lp64_fetch_link_map_offsets);
       tramp_frame_prepend_unwinder (gdbarch,

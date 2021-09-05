@@ -35,7 +35,7 @@ loongarch_cpucfg_may_ptrace (uint64_t rj, int tid)
 {
   char t_buf[rj * 4 + 4];
   struct iovec iovec = { .iov_base = &t_buf, .iov_len = sizeof (t_buf) };
-  if (ptrace (PTRACE_GETREGSET, tid, NT_LARCH_CPUCFG, &iovec) < 0)
+  if (ptrace (PTRACE_GETREGSET, tid, NT_LOONG_CPUCFG, &iovec) < 0)
     ((uint32_t *) t_buf)[rj] = loongarch_cpucfg (rj);
   return ((uint32_t *) t_buf)[rj];
 }
@@ -67,7 +67,7 @@ loongarch_linux_read_description_runtime (int tid)
     {
       loongarch_elf_lbtregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      if (ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LBT, &iovec) == 0)
+      if (ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LBT, &iovec) == 0)
 	lbt = 1;
     }
 
@@ -76,7 +76,7 @@ loongarch_linux_read_description_runtime (int tid)
     {
       loongarch_elf_lsxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      if (ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LSX, &iovec) == 0)
+      if (ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LSX, &iovec) == 0)
 	lsx = 1;
     }
 
@@ -85,7 +85,7 @@ loongarch_linux_read_description_runtime (int tid)
     {
       loongarch_elf_lasxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      if (ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LASX, &iovec) == 0)
+      if (ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LASX, &iovec) == 0)
 	lasx = 1;
     }
 

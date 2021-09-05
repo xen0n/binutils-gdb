@@ -216,7 +216,7 @@ loongarch_linux_nat_target::loongarch_fetch_regs (struct regcache *regcache,
 
       loongarch_elf_lbtregset_t regset = { 0 };
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LBT, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LBT, &iovec));
       loongarch_elf_lbtregset.supply_regset (NULL, regcache, regno, &regset,
 					     sizeof (regset));
     }
@@ -235,7 +235,7 @@ loongarch_linux_nat_target::loongarch_fetch_regs (struct regcache *regcache,
 
       loongarch_elf_lsxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LSX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LSX, &iovec));
       loongarch_elf_lsxregset.supply_regset (NULL, regcache, regno, &regset,
 					     sizeof (regset));
     }
@@ -254,7 +254,7 @@ loongarch_linux_nat_target::loongarch_fetch_regs (struct regcache *regcache,
 
       loongarch_elf_lasxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LASX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LASX, &iovec));
       loongarch_elf_lasxregset.supply_regset (NULL, regcache, regno, &regset,
 					      sizeof (regset));
     }
@@ -331,10 +331,10 @@ loongarch_linux_nat_target::loongarch_store_regs (struct regcache *regcache,
 
       loongarch_elf_lbtregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LBT, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LBT, &iovec));
       loongarch_elf_lbtregset.collect_regset (NULL, regcache, regno, &regset,
 					      sizeof (regset));
-      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LARCH_LBT, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LOONG_LBT, &iovec));
     }
   while (0);
 
@@ -351,10 +351,10 @@ loongarch_linux_nat_target::loongarch_store_regs (struct regcache *regcache,
 
       loongarch_elf_lsxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LSX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LSX, &iovec));
       loongarch_elf_lsxregset.collect_regset (NULL, regcache, regno, &regset,
 					      sizeof (regset));
-      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LARCH_LSX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LOONG_LSX, &iovec));
     }
   while (0);
 
@@ -371,10 +371,10 @@ loongarch_linux_nat_target::loongarch_store_regs (struct regcache *regcache,
 
       loongarch_elf_lasxregset_t regset;
       struct iovec iovec = { .iov_base = &regset, .iov_len = sizeof (regset) };
-      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LARCH_LASX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_GETREGSET, tid, NT_LOONG_LASX, &iovec));
       loongarch_elf_lasxregset.collect_regset (NULL, regcache, regno, &regset,
 					       sizeof (regset));
-      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LARCH_LASX, &iovec));
+      gdb_assert (0 == ptrace (PTRACE_SETREGSET, tid, NT_LOONG_LASX, &iovec));
     }
   while (0);
 }
@@ -405,7 +405,7 @@ loongarch_linux_nat_target::xfer_partial (enum target_object object,
 {
   pid_t pid = inferior_ptid.pid ();
 
-  if (object != TARGET_OBJECT_LARCH)
+  if (object != TARGET_OBJECT_LOONG)
     return linux_nat_trad_target::xfer_partial (
       object, annex, readbuf, writebuf, offset, len, xfered_len);
 
@@ -417,7 +417,7 @@ loongarch_linux_nat_target::xfer_partial (enum target_object object,
 	return TARGET_XFER_E_IO;
       char t_buf[offset + len];
       struct iovec iovec = { .iov_base = &t_buf, .iov_len = sizeof (t_buf) };
-      if (ptrace (PTRACE_GETREGSET, pid, NT_LARCH_CPUCFG, &iovec) < 0)
+      if (ptrace (PTRACE_GETREGSET, pid, NT_LOONG_CPUCFG, &iovec) < 0)
 	{
 	  size_t i;
 	  for (i = offset / 4; i < (offset + len) / 4 + 1; i++)

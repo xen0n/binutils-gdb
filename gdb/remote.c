@@ -11273,7 +11273,7 @@ remote_target::xfer_partial (enum target_object object,
 	return TARGET_XFER_E_IO;
     }
 
-  if (object == TARGET_OBJECT_LARCH)
+  if (object == TARGET_OBJECT_LOONG)
     {
       if (readbuf)
 	return remote_read_qxfer ("loongarch", annex, readbuf, offset, len,

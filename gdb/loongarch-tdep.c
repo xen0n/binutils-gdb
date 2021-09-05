@@ -61,9 +61,9 @@ loongarch_rlen (struct gdbarch *gdbarch)
 {
   switch (gdbarch_tdep (gdbarch)->ef_abi)
     {
-    case EF_LARCH_ABI_LP64:
+    case EF_LOONG_ABI_LP64:
       return 64;
-    case EF_LARCH_ABI_LP32:
+    case EF_LOONG_ABI_LP32:
       return 32;
     default:
       gdb_assert_not_reached ("unknown ABI");
@@ -313,13 +313,13 @@ loongarch_register_name (struct gdbarch *gdbarch, int regnum)
   if (0 <= regs->r && regs->r <= regnum && regnum < regs->r + 32)
     switch (gdbarch_tdep (gdbarch)->ef_abi)
       {
-      case EF_LARCH_ABI_LP64:
+      case EF_LOONG_ABI_LP64:
 	return loongarch_r_lp64_name[regnum - regs->r] + 1;
       }
   else if (0 <= regs->f && regs->f <= regnum && regnum < regs->f + 32)
     switch (gdbarch_tdep (gdbarch)->ef_abi)
       {
-      case EF_LARCH_ABI_LP64:
+      case EF_LOONG_ABI_LP64:
 	return loongarch_f_lp64_name[regnum - regs->f] + 1;
       }
   return tdesc_register_name (gdbarch, regnum);
@@ -1524,25 +1524,25 @@ loongarch_gdbarch_init (struct gdbarch_info info, struct gdbarch_list *arches)
       && bfd_get_flavour (info.abfd) == bfd_target_elf_flavour)
     {
       int e_flags = elf_elfheader (info.abfd)->e_flags;
-      auto e_abi = e_flags & EF_LARCH_ABI;
+      auto e_abi = e_flags & EF_LOONG_ABI;
 
       switch (e_abi)
 	{
-	case EF_LARCH_ABI_LP32:
-	case EF_LARCH_ABI_LP64:
+	case EF_LOONG_ABI_LP32:
+	case EF_LOONG_ABI_LP64:
 	  tdep->ef_abi = e_abi;
 	  break;
 	default:
-	  tdep->ef_abi = EF_LARCH_ABI_LP64;
+	  tdep->ef_abi = EF_LOONG_ABI_LP64;
 	}
     }
   else
-    tdep->ef_abi = EF_LARCH_ABI_LP64;
+    tdep->ef_abi = EF_LOONG_ABI_LP64;
 
   /* Check any target description for validity.  */
   if (!tdesc_has_registers (tdesc))
     tdesc = loongarch_get_base_target_description (
-      tdep->ef_abi == EF_LARCH_ABI_LP32 ? 32 : 64);
+      tdep->ef_abi == EF_LOONG_ABI_LP32 ? 32 : 64);
 
   int valid_p = 1;
   const struct tdesc_feature *feature;
@@ -1649,7 +1649,7 @@ loongarch_gdbarch_init (struct gdbarch_info info, struct gdbarch_list *arches)
   /* Target data types.  */
   switch (tdep->ef_abi)
     {
-    case EF_LARCH_ABI_LP32:
+    case EF_LOONG_ABI_LP32:
       set_gdbarch_short_bit (gdbarch, 16);
       set_gdbarch_int_bit (gdbarch, 32);
       set_gdbarch_long_bit (gdbarch, 32);
@@ -1661,7 +1661,7 @@ loongarch_gdbarch_init (struct gdbarch_info info, struct gdbarch_list *arches)
       set_gdbarch_ptr_bit (gdbarch, 32);
       set_gdbarch_char_signed (gdbarch, 0);
       break;
-    case EF_LARCH_ABI_LP64:
+    case EF_LOONG_ABI_LP64:
       set_gdbarch_short_bit (gdbarch, 16);
       set_gdbarch_int_bit (gdbarch, 32);
       set_gdbarch_long_bit (gdbarch, 64);
@@ -1809,7 +1809,7 @@ info_loongarch (const char *addr_exp, int from_tty)
 	uint32_t val32 = value;
 	ULONGEST xfered_len;
 	target_xfer_partial (current_inferior ()->top_target (),
-			     TARGET_OBJECT_LARCH, "cpucfg", NULL,
+			     TARGET_OBJECT_LOONG, "cpucfg", NULL,
 			     (const gdb_byte *) &val32, addr * 4,
 			     sizeof (val32), &xfered_len);
 	if (0 < xfered_len)
@@ -1822,7 +1822,7 @@ info_loongarch (const char *addr_exp, int from_tty)
 	uint64_t val64 = value;
 	ULONGEST xfered_len;
 	target_xfer_partial (current_inferior ()->top_target (),
-			     TARGET_OBJECT_LARCH, item, NULL,
+			     TARGET_OBJECT_LOONG, item, NULL,
 			     (const gdb_byte *) &val64, addr * 8,
 			     sizeof (val64), &xfered_len);
 	if (0 < xfered_len)
@@ -1835,7 +1835,7 @@ info_loongarch (const char *addr_exp, int from_tty)
       uint32_t val32;
       ULONGEST xfered_len;
       target_xfer_partial (current_inferior ()->top_target (),
-			   TARGET_OBJECT_LARCH, "cpucfg", (gdb_byte *) &val32,
+			   TARGET_OBJECT_LOONG, "cpucfg", (gdb_byte *) &val32,
 			   NULL, addr * 4, sizeof (val32), &xfered_len);
       if (0 < xfered_len)
 	fprintf_unfiltered (gdb_stdout, "return is %x\n", val32);
@@ -1847,7 +1847,7 @@ info_loongarch (const char *addr_exp, int from_tty)
       uint64_t val64;
       ULONGEST xfered_len;
       target_xfer_partial (current_inferior ()->top_target (),
-			   TARGET_OBJECT_LARCH, item, (gdb_byte *) &val64,
+			   TARGET_OBJECT_LOONG, item, (gdb_byte *) &val64,
 			   NULL, addr * 8, sizeof (val64), &xfered_len);
       if (0 < xfered_len)
 	fprintf_unfiltered (gdb_stdout, "return is %llx\n", (long long) val64);
