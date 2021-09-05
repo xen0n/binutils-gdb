@@ -1186,7 +1186,7 @@ void
 md_show_usage (FILE *stream)
 {
   fprintf (stream, _ ("\
-		      LARCH options:\n\
+		      LoongArch options:\n\
 		      "));
 }
 
