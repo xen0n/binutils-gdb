@@ -255,11 +255,11 @@ static struct regset_info loongarch_regsets[] =
     loongarch_fill_gregset, loongarch_store_gregset },
   { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_FPREGSET, 34 * 8, FP_REGS,
     loongarch_fill_fpregset, loongarch_store_fpregset },
-  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LARCH_LBT, 5 * 8, EXTENDED_REGS,
+  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LOONG_LBT, 5 * 8, EXTENDED_REGS,
     loongarch_fill_lbtregset, loongarch_store_lbtregset },
-  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LARCH_LSX, 32 * 16, EXTENDED_REGS,
+  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LOONG_LSX, 32 * 16, EXTENDED_REGS,
     loongarch_fill_lsxregset, loongarch_store_lsxregset },
-  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LARCH_LASX, 32 * 32, EXTENDED_REGS,
+  { PTRACE_GETREGSET, PTRACE_SETREGSET, NT_LOONG_LASX, 32 * 32, EXTENDED_REGS,
     loongarch_fill_lasxregset, loongarch_store_lasxregset },
   NULL_REGSET
 };
