@@ -6267,7 +6267,7 @@ assembler and not (currently) written to any object files.  */
 /* S12Z relocations.  */
   BFD_RELOC_S12Z_OPR,
 
-/* LARCH relocations.  */
+/* LoongArch relocations.  */
   BFD_RELOC_LARCH_TLS_DTPMOD32,
   BFD_RELOC_LARCH_TLS_DTPREL32,
   BFD_RELOC_LARCH_TLS_DTPMOD64,

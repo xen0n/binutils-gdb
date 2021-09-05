@@ -8258,7 +8258,7 @@ ENUMX
 ENUMX
   BFD_RELOC_LARCH_SUB64
 ENUMDOC
-  LARCH relocations.
+  LoongArch relocations.
 
 ENDSENUM
   BFD_RELOC_UNUSED
