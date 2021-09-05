@@ -133,27 +133,27 @@ md_parse_option (int c, const char *arg)
   switch (c)
     {
     case OPTION_SOFT_FLOAT:
-      LARCH_opts.ase_float = 0;
+      LOONG_opts.ase_float = 0;
       break;
     case OPTION_HARD_FLOAT:
-      LARCH_opts.ase_float = 1;
+      LOONG_opts.ase_float = 1;
       break;
     case OPTION_ABI:
       if (strcasecmp (arg, "lp64") == 0)
-	LARCH_opts.abi_is_lp64 = 1;
+	LOONG_opts.abi_is_lp64 = 1;
       else if (strcasecmp (arg, "lp32") == 0)
-	LARCH_opts.abi_is_lp32 = 1;
+	LOONG_opts.abi_is_lp32 = 1;
       else
 	ret = 0;
       break;
     case OPTION_LA_LOCAL_WITH_ABS:
-      LARCH_opts.la_local_with_abs = 1;
+      LOONG_opts.la_local_with_abs = 1;
       break;
     case OPTION_LA_GLOBAL_WITH_PCREL:
-      LARCH_opts.la_global_with_pcrel = 1;
+      LOONG_opts.la_global_with_pcrel = 1;
       break;
     case OPTION_LA_GLOBAL_WITH_ABS:
-      LARCH_opts.la_global_with_abs = 1;
+      LOONG_opts.la_global_with_abs = 1;
       break;
     case OPTION_IGNORE:
       break;
@@ -176,10 +176,10 @@ loongarch_after_parse_args ()
 {
   size_t i;
 
-  LARCH_opts.ase_fix = 1;
-  LARCH_opts.ase_float = 1;
-  LARCH_opts.ase_128vec = 1;
-  LARCH_opts.ase_256vec = 1;
+  LOONG_opts.ase_fix = 1;
+  LOONG_opts.ase_float = 1;
+  LOONG_opts.ase_128vec = 1;
+  LOONG_opts.ase_256vec = 1;
 
   if (!r_htab)
     r_htab = str_htab_create (), str_hash_insert (r_htab, "", 0, 0);
@@ -208,19 +208,19 @@ loongarch_after_parse_args ()
   for (i = 0; i < ARRAY_SIZE (loongarch_x_normal_name); i++)
     str_hash_insert (x_htab, loongarch_x_normal_name[i], (void *) (i + 1), 0);
 
-  if (LARCH_opts.abi_is_lp64 + LARCH_opts.abi_is_lp32 == 0)
+  if (LOONG_opts.abi_is_lp64 + LOONG_opts.abi_is_lp32 == 0)
     {
-      /* as_warn (_("default LARCH ABI is lp64")); */
-      LARCH_opts.abi_is_lp64 = 1;
+      /* as_warn (_("default LOONG ABI is lp64")); */
+      LOONG_opts.abi_is_lp64 = 1;
     }
 
-  if (1 < LARCH_opts.abi_is_lp64 + LARCH_opts.abi_is_lp32)
+  if (1 < LOONG_opts.abi_is_lp64 + LOONG_opts.abi_is_lp32)
     as_fatal (_ ("we can specify only ONE abi"));
 
-  if (LARCH_opts.abi_is_lp64)
+  if (LOONG_opts.abi_is_lp64)
     {
-      LARCH_opts.addrwidth_is_64 = 1;
-      LARCH_opts.rlen_is_64 = 1;
+      LOONG_opts.addrwidth_is_64 = 1;
+      LOONG_opts.rlen_is_64 = 1;
       for (i = 0; i < ARRAY_SIZE (loongarch_r_lp64_name); i++)
 	str_hash_insert (r_htab, loongarch_r_lp64_name[i], (void *) (i + 1),
 			 0);
@@ -235,17 +235,17 @@ loongarch_after_parse_args ()
 			 0);
     }
 
-  if (LARCH_opts.abi_is_lp32)
+  if (LOONG_opts.abi_is_lp32)
     {
-      LARCH_opts.addrwidth_is_32 = 1;
-      LARCH_opts.rlen_is_32 = 1;
+      LOONG_opts.addrwidth_is_32 = 1;
+      LOONG_opts.rlen_is_32 = 1;
     }
 }
 
 const char *
 loongarch_target_format ()
 {
-  return LARCH_opts.addrwidth_is_32 ? "elf32-loongarch" : "elf64-loongarch";
+  return LOONG_opts.addrwidth_is_32 ? "elf32-loongarch" : "elf64-loongarch";
 }
 
 void
@@ -332,8 +332,8 @@ s_dtprel (int bytes)
   p = frag_more (bytes);
   md_number_to_chars (p, 0, bytes);
   fix_new_exp (frag_now, p - frag_now->fr_literal, bytes, &ex, FALSE,
-	       (bytes == 8 ? BFD_RELOC_LARCH_TLS_DTPREL64
-			   : BFD_RELOC_LARCH_TLS_DTPREL32));
+	       (bytes == 8 ? BFD_RELOC_LOONG_TLS_DTPREL64
+			   : BFD_RELOC_LOONG_TLS_DTPREL32));
 
   demand_empty_rest_of_line ();
 }
@@ -478,26 +478,26 @@ loongarch_args_parser_can_match_arg_helper (char esc_ch1, char esc_ch2,
 	  if (esc_ch1 == 'u')
 	    {
 	      if (strncmp (bit_field, "10:12", strlen ("10:12")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_U_10_12;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_U_10_12;
 	    }
 	  else if (esc_ch1 == 's')
 	    {
 	      if (strncmp (bit_field, "10:16<<2", strlen ("10:16<<2")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_10_16_S2;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_10_16_S2;
 	      else if (strncmp (bit_field, "0:5|10:16<<2",
 				strlen ("0:5|10:16<<2")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_0_5_10_16_S2;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_0_5_10_16_S2;
 	      else if (strncmp (bit_field, "0:10|10:16<<2",
 				strlen ("0:10|10:16<<2")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_0_10_10_16_S2;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_0_10_10_16_S2;
 	      else if (strncmp (bit_field, "10:12", strlen ("10:12")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_10_12;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_10_12;
 	      else if (strncmp (bit_field, "5:20", strlen ("5:20")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_5_20;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_5_20;
 	      else if (strncmp (bit_field, "10:16", strlen ("10:16")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_10_16;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_10_16;
 	      else if (strncmp (bit_field, "10:5", strlen ("10:5")) == 0)
-		reloc_type = BFD_RELOC_LARCH_SOP_POP_32_S_10_5;
+		reloc_type = BFD_RELOC_LOONG_SOP_POP_32_S_10_5;
 	    }
 	  if (reloc_type == BFD_RELOC_NONE)
 	    as_fatal (
@@ -652,7 +652,7 @@ check_this_insn_before_appending (struct loongarch_cl_insn *ip)
   int ret = 0;
   if (strcmp (ip->name, "la.abs") == 0)
     {
-      ip->reloc_info[ip->reloc_num].type = BFD_RELOC_LARCH_MARK_LA;
+      ip->reloc_info[ip->reloc_num].type = BFD_RELOC_LOONG_MARK_LA;
       my_getExpression (&ip->reloc_info[ip->reloc_num].value, ip->arg_strs[1]);
       ip->reloc_num++;
     }
@@ -772,7 +772,7 @@ assember_macro_helper (const char *const args[], void *context_ptr)
 	  hi32 = lo32 & 0x80000000 ? 0xffffffff : 0;
 	}
 
-      if (strcmp (insn->name, "li.d") == 0 && LARCH_opts.rlen_is_32)
+      if (strcmp (insn->name, "li.d") == 0 && LOONG_opts.rlen_is_32)
 	as_fatal (_ ("we can't li.d on 32bit-arch"));
 
       snprintf (args_buf, sizeof (args_buf), "0x%x,0x%x,0x%x,0x%x,%s",
@@ -929,21 +929,21 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
   char *buf = fixP->fx_frag->fr_literal + fixP->fx_where;
   switch (fixP->fx_r_type)
     {
-    case BFD_RELOC_LARCH_SOP_PUSH_TLS_TPREL:
-    case BFD_RELOC_LARCH_SOP_PUSH_TLS_GD:
-    case BFD_RELOC_LARCH_SOP_PUSH_TLS_GOT:
+    case BFD_RELOC_LOONG_SOP_PUSH_TLS_TPREL:
+    case BFD_RELOC_LOONG_SOP_PUSH_TLS_GD:
+    case BFD_RELOC_LOONG_SOP_PUSH_TLS_GOT:
       if (fixP->fx_addsy)
 	S_SET_THREAD_LOCAL (fixP->fx_addsy);
       else
 	as_bad_where (fixP->fx_file, fixP->fx_line,
 		      _ ("Relocation against a constant"));
       break;
-    case BFD_RELOC_LARCH_SOP_PUSH_PCREL:
-    case BFD_RELOC_LARCH_SOP_PUSH_PLT_PCREL:
+    case BFD_RELOC_LOONG_SOP_PUSH_PCREL:
+    case BFD_RELOC_LOONG_SOP_PUSH_PLT_PCREL:
       if (fixP->fx_addsy == NULL)
 	as_bad_where (fixP->fx_file, fixP->fx_line,
 		      _ ("Relocation against a constant"));
-      if (fixP->fx_r_type == BFD_RELOC_LARCH_SOP_PUSH_PCREL)
+      if (fixP->fx_r_type == BFD_RELOC_LOONG_SOP_PUSH_PCREL)
 	{
 	  last_reloc_is_sop_push_pcrel_1 = 1;
 	  if (S_GET_SEGMENT (fixP->fx_addsy) == seg)
@@ -954,7 +954,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
 	}
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_10_5:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_10_5:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & ~(uint64_t) 0xf) != 0x0
@@ -965,7 +965,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_U_10_12:
+    case BFD_RELOC_LOONG_SOP_POP_32_U_10_12:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if (stack_top & ~(uint64_t) 0xfff)
@@ -975,7 +975,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_10_12:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_10_12:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & ~(uint64_t) 0x7ff) != 0x0
@@ -986,7 +986,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_10_16:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_10_16:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & ~(uint64_t) 0x7fff) != 0x0
@@ -997,7 +997,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_10_16_S2:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_10_16_S2:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & 0x3) != 0)
@@ -1011,7 +1011,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_0_5_10_16_S2:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_0_5_10_16_S2:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & 0x3) != 0)
@@ -1027,7 +1027,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_5_20:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_5_20:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & ~(uint64_t) 0x7ffff) != 0x0
@@ -1038,7 +1038,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_S_0_10_10_16_S2:
+    case BFD_RELOC_LOONG_SOP_POP_32_S_0_10_10_16_S2:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if ((stack_top & 0x3) != 0)
@@ -1054,7 +1054,7 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
       bfd_putl32 (insn, buf);
       break;
 
-    case BFD_RELOC_LARCH_SOP_POP_32_U:
+    case BFD_RELOC_LOONG_SOP_POP_32_U:
       if (!last_reloc_is_sop_push_pcrel)
 	break;
       if (stack_top & ~(uint64_t) 0xffffffff)
@@ -1078,24 +1078,24 @@ md_apply_fix (fixS *fixP, valueT *valP, segT seg ATTRIBUTE_UNUSED)
 	  switch (fixP->fx_r_type)
 	    {
 	    case BFD_RELOC_64:
-	      fixP->fx_r_type = BFD_RELOC_LARCH_ADD64;
-	      fixP->fx_next->fx_r_type = BFD_RELOC_LARCH_SUB64;
+	      fixP->fx_r_type = BFD_RELOC_LOONG_ADD64;
+	      fixP->fx_next->fx_r_type = BFD_RELOC_LOONG_SUB64;
 	      break;
 	    case BFD_RELOC_32:
-	      fixP->fx_r_type = BFD_RELOC_LARCH_ADD32;
-	      fixP->fx_next->fx_r_type = BFD_RELOC_LARCH_SUB32;
+	      fixP->fx_r_type = BFD_RELOC_LOONG_ADD32;
+	      fixP->fx_next->fx_r_type = BFD_RELOC_LOONG_SUB32;
 	      break;
 	    case BFD_RELOC_24:
-	      fixP->fx_r_type = BFD_RELOC_LARCH_ADD24;
-	      fixP->fx_next->fx_r_type = BFD_RELOC_LARCH_SUB24;
+	      fixP->fx_r_type = BFD_RELOC_LOONG_ADD24;
+	      fixP->fx_next->fx_r_type = BFD_RELOC_LOONG_SUB24;
 	      break;
 	    case BFD_RELOC_16:
-	      fixP->fx_r_type = BFD_RELOC_LARCH_ADD16;
-	      fixP->fx_next->fx_r_type = BFD_RELOC_LARCH_SUB16;
+	      fixP->fx_r_type = BFD_RELOC_LOONG_ADD16;
+	      fixP->fx_next->fx_r_type = BFD_RELOC_LOONG_SUB16;
 	      break;
 	    case BFD_RELOC_8:
-	      fixP->fx_r_type = BFD_RELOC_LARCH_ADD8;
-	      fixP->fx_next->fx_r_type = BFD_RELOC_LARCH_SUB8;
+	      fixP->fx_r_type = BFD_RELOC_LOONG_ADD8;
+	      fixP->fx_next->fx_r_type = BFD_RELOC_LOONG_SUB8;
 	      break;
 	    default:
 	      break;
@@ -1173,7 +1173,7 @@ loongarch_cfi_frame_initial_instructions (void)
 int
 loongarch_dwarf2_addr_size (void)
 {
-  return LARCH_opts.addrwidth_is_32 ? 4 : 8;
+  return LOONG_opts.addrwidth_is_32 ? 4 : 8;
 }
 
 void
@@ -1228,8 +1228,8 @@ loongarch_handle_align (fragS *fragp)
 void
 loongarch_elf_final_processing (void)
 {
-  if (LARCH_opts.abi_is_lp64)
-    elf_elfheader (stdoutput)->e_flags |= EF_LARCH_ABI_LP64;
-  else if (LARCH_opts.abi_is_lp32)
-    elf_elfheader (stdoutput)->e_flags |= EF_LARCH_ABI_LP32;
+  if (LOONG_opts.abi_is_lp64)
+    elf_elfheader (stdoutput)->e_flags |= EF_LOONG_ABI_LP64;
+  else if (LOONG_opts.abi_is_lp32)
+    elf_elfheader (stdoutput)->e_flags |= EF_LOONG_ABI_LP32;
 }

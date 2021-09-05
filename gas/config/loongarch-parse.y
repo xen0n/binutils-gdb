@@ -41,7 +41,7 @@ static expressionS const_0 =
 static int
 is_const (struct reloc_info *info)
 {
-  return info->type == BFD_RELOC_LARCH_SOP_PUSH_ABSOLUTE
+  return info->type == BFD_RELOC_LOONG_SOP_PUSH_ABSOLUTE
 	 && info->value.X_op == O_constant;
 }
 
@@ -80,7 +80,7 @@ emit_const (offsetT imm)
 {
   if (end <= top)
     as_fatal (_("expr too huge"));
-  top->type = BFD_RELOC_LARCH_SOP_PUSH_ABSOLUTE;
+  top->type = BFD_RELOC_LOONG_SOP_PUSH_ABSOLUTE;
   top->value.X_op = O_constant;
   top->value.X_add_number = imm;
   top++;
@@ -129,43 +129,43 @@ reloc (const char *op_c_str, const char *id_c_str, offsetT addend)
   if (strcmp (op_c_str, "abs") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_ABSOLUTE;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_ABSOLUTE;
       top++;
     }
   else if (strcmp (op_c_str, "pcrel") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_PCREL;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_PCREL;
       top++;
     }
   else if (strcmp (op_c_str, "gprel") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_GPREL;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_GPREL;
       top++;
     }
   else if (strcmp (op_c_str, "tprel") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_TLS_TPREL;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_TLS_TPREL;
       top++;
     }
   else if (strcmp (op_c_str, "tlsgot") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_TLS_GOT;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_TLS_GOT;
       top++;
     }
   else if (strcmp (op_c_str, "tlsgd") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_TLS_GD;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_TLS_GD;
       top++;
     }
   else if (strcmp (op_c_str, "plt") == 0)
     {
       top->value = id_sym_expr;
-      top->type = BFD_RELOC_LARCH_SOP_PUSH_PLT_PCREL;
+      top->type = BFD_RELOC_LOONG_SOP_PUSH_PLT_PCREL;
       top++;
     }
   else
@@ -204,7 +204,7 @@ emit_unary (char op)
       switch (op)
 	{
 	case '!':
-	  top->type = BFD_RELOC_LARCH_SOP_NOT;
+	  top->type = BFD_RELOC_LOONG_SOP_NOT;
 	  break;
 	default:
 	  abort ();
@@ -293,19 +293,19 @@ emit_bin (int op)
       switch (op)
 	{
 	case '+':
-	  top->type = BFD_RELOC_LARCH_SOP_ADD;
+	  top->type = BFD_RELOC_LOONG_SOP_ADD;
 	  break;
 	case '-':
-	  top->type = BFD_RELOC_LARCH_SOP_SUB;
+	  top->type = BFD_RELOC_LOONG_SOP_SUB;
 	  break;
 	case LEFT_OP:
-	  top->type = BFD_RELOC_LARCH_SOP_SL;
+	  top->type = BFD_RELOC_LOONG_SOP_SL;
 	  break;
 	case RIGHT_OP:
-	  top->type = BFD_RELOC_LARCH_SOP_SR;
+	  top->type = BFD_RELOC_LOONG_SOP_SR;
 	  break;
 	case '&':
-	  top->type = BFD_RELOC_LARCH_SOP_AND;
+	  top->type = BFD_RELOC_LOONG_SOP_AND;
 	  break;
 	default:
 	  abort ();
@@ -336,7 +336,7 @@ emit_if_else (void)
     {
       if (end <= top)
 	as_fatal (_("expr too huge"));
-      top->type = BFD_RELOC_LARCH_SOP_IF_ELSE;
+      top->type = BFD_RELOC_LOONG_SOP_IF_ELSE;
       top->value = const_0;
       top++;
     }
