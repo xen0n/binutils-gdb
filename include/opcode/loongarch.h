@@ -34,7 +34,7 @@ extern "C"
   {
     const insn_t match;
     const insn_t mask; /* High 1 byte is main opcode and it must be 0xf.  */
-#define LARCH_INSN_OPC(insn) ((insn & 0xf0000000) >> 28)
+#define LOONG_INSN_OPC(insn) ((insn & 0xf0000000) >> 28)
     const char *const name;
 
     /* ACTUAL PARAMETER:
@@ -209,7 +209,7 @@ dec2 : [1-9][0-9]?
 
     int abi_is_lp32;
     int abi_is_lp64;
-  } LARCH_opts;
+  } LOONG_opts;
 
   extern size_t loongarch_insn_length (insn_t insn);
 
