@@ -10678,28 +10678,28 @@ elfcore_grok_note (bfd *abfd, Elf_Internal_Note *note)
       else
 	return true;
 
-    case NT_LARCH_CPUCFG:
+    case NT_LOONG_CPUCFG:
       if (note->namesz == 6
 	  && strcmp (note->namedata, "LINUX") == 0)
 	return elfcore_grok_loongarch_cpucfg (abfd, note);
       else
 	return true;
 
-    case NT_LARCH_LBT:
+    case NT_LOONG_LBT:
       if (note->namesz == 6
 	  && strcmp (note->namedata, "LINUX") == 0)
 	return elfcore_grok_loongarch_lbt (abfd, note);
       else
 	return true;
 
-    case NT_LARCH_LSX:
+    case NT_LOONG_LSX:
       if (note->namesz == 6
 	  && strcmp (note->namedata, "LINUX") == 0)
 	return elfcore_grok_loongarch_lsx (abfd, note);
       else
 	return true;
 
-    case NT_LARCH_LASX:
+    case NT_LOONG_LASX:
       if (note->namesz == 6
 	  && strcmp (note->namedata, "LINUX") == 0)
 	return elfcore_grok_loongarch_lasx (abfd, note);
@@ -12108,7 +12108,7 @@ elfcore_write_loongarch_cpucfg (bfd *abfd,
 {
   char *note_name = "LINUX";
   return elfcore_write_note (abfd, buf, bufsiz,
-			     note_name, NT_LARCH_CPUCFG,
+			     note_name, NT_LOONG_CPUCFG,
 			     loongarch_cpucfg, size);
 }
 
@@ -12121,7 +12121,7 @@ elfcore_write_loongarch_lbt (bfd *abfd,
 {
   char *note_name = "LINUX";
   return elfcore_write_note (abfd, buf, bufsiz,
-			     note_name, NT_LARCH_LBT, loongarch_lbt, size);
+			     note_name, NT_LOONG_LBT, loongarch_lbt, size);
 }
 
 char *
@@ -12133,7 +12133,7 @@ elfcore_write_loongarch_lsx (bfd *abfd,
 {
   char *note_name = "LINUX";
   return elfcore_write_note (abfd, buf, bufsiz,
-			     note_name, NT_LARCH_LSX, loongarch_lsx, size);
+			     note_name, NT_LOONG_LSX, loongarch_lsx, size);
 }
 
 char *
@@ -12145,7 +12145,7 @@ elfcore_write_loongarch_lasx (bfd *abfd,
 {
   char *note_name = "LINUX";
   return elfcore_write_note (abfd, buf, bufsiz,
-			     note_name, NT_LARCH_LASX, loongarch_lasx, size);
+			     note_name, NT_LOONG_LASX, loongarch_lasx, size);
 }
 
 /* Write the buffer of csr values in CSRS (length SIZE) into the note

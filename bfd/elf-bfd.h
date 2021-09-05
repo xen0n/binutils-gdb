@@ -508,7 +508,7 @@ enum elf_target_id
   I386_ELF_DATA,
   IA64_ELF_DATA,
   LM32_ELF_DATA,
-  LARCH_ELF_DATA,
+  LOONG_ELF_DATA,
   M32R_ELF_DATA,
   M68HC11_ELF_DATA,
   M68K_ELF_DATA,
@@ -1594,7 +1594,7 @@ struct elf_backend_data
      Returns the value to be installed in the ST_SHNDX field of the
      emitted symbol.  If not defined, the value is left unchanged.  */
   unsigned int (*symbol_section_index) (bfd *, elf_symbol_type *);
-  
+
   /* Called when a section has extra reloc sections.  */
   bool (*init_secondary_reloc_section) (bfd *, Elf_Internal_Shdr *,
 					const char *, unsigned int);

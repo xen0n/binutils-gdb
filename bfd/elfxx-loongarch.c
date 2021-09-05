@@ -35,12 +35,12 @@
 static reloc_howto_type howto_table[] =
 {
 #define LOONGARCH_HOWTO(r_name)						 \
-  HOWTO (R_LARCH_##r_name, 0, 2, 32, false, 0, complain_overflow_signed, \
-	 bfd_elf_generic_reloc, "R_LARCH_" #r_name, false, 0, 0xffffffff, false)
+  HOWTO (R_LOONG_##r_name, 0, 2, 32, false, 0, complain_overflow_signed, \
+	 bfd_elf_generic_reloc, "R_LOONG_" #r_name, false, 0, 0xffffffff, false)
   LOONGARCH_HOWTO (NONE),
 
   /* 32 bit relocation.  */
-  HOWTO (R_LARCH_32,			/* type */
+  HOWTO (R_LOONG_32,			/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -48,14 +48,14 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_32",			/* name */
+	 "R_LOONG_32",			/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
   /* 64 bit relocation.  */
-  HOWTO (R_LARCH_64,			/* type */
+  HOWTO (R_LOONG_64,			/* type */
 	 0,				/* rightshift */
 	 4,				/* size */
 	 64,				/* bitsize */
@@ -63,13 +63,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_64",			/* name */
+	 "R_LOONG_64",			/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 ALL_ONES,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_RELATIVE,		/* type */
+  HOWTO (R_LOONG_RELATIVE,		/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -77,13 +77,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_RELATIVE",		/* name */
+	 "R_LOONG_RELATIVE",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_COPY,			/* type */
+  HOWTO (R_LOONG_COPY,			/* type */
 	 0,				/* rightshift */
 	 0,				/* this one is variable size */
 	 0,				/* bitsize */
@@ -91,13 +91,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_bitfield,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_COPY",		/* name */
+	 "R_LOONG_COPY",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0,				/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_JUMP_SLOT,		/* type */
+  HOWTO (R_LOONG_JUMP_SLOT,		/* type */
 	 0,				/* rightshift */
 	 4,				/* size */
 	 64,				/* bitsize */
@@ -105,14 +105,14 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_bitfield,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_JUMP_SLOT",		/* name */
+	 "R_LOONG_JUMP_SLOT",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0,				/* dst_mask */
 	 false),			/* pcrel_offset */
 
   /* Dynamic TLS relocations.  */
-  HOWTO (R_LARCH_TLS_DTPMOD32,		/* type */
+  HOWTO (R_LOONG_TLS_DTPMOD32,		/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -120,13 +120,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_DTPMOD32",	/* name */
+	 "R_LOONG_TLS_DTPMOD32",	/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_TLS_DTPMOD64,		/* type */
+  HOWTO (R_LOONG_TLS_DTPMOD64,		/* type */
 	 0,				/* rightshift */
 	 4,				/* size */
 	 64,				/* bitsize */
@@ -134,13 +134,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_DTPMOD64",	/* name */
+	 "R_LOONG_TLS_DTPMOD64",	/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 ALL_ONES,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_TLS_DTPREL32,		/* type */
+  HOWTO (R_LOONG_TLS_DTPREL32,		/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -148,13 +148,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_DTPREL32",	/* name */
+	 "R_LOONG_TLS_DTPREL32",	/* name */
 	 true,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_TLS_DTPREL64,		/* type */
+  HOWTO (R_LOONG_TLS_DTPREL64,		/* type */
 	 0,				/* rightshift */
 	 4,				/* size */
 	 64,				/* bitsize */
@@ -162,13 +162,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_DTPREL64",	/* name */
+	 "R_LOONG_TLS_DTPREL64",	/* name */
 	 true,				/* partial_inplace */
 	 0,				/* src_mask */
 	 ALL_ONES,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_TLS_TPREL32,		/* type */
+  HOWTO (R_LOONG_TLS_TPREL32,		/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -176,13 +176,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_TPREL32",		/* name */
+	 "R_LOONG_TLS_TPREL32",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_TLS_TPREL64,		/* type */
+  HOWTO (R_LOONG_TLS_TPREL64,		/* type */
 	 0,				/* rightshift */
 	 4,				/* size */
 	 64,				/* bitsize */
@@ -190,13 +190,13 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_TLS_TPREL64",		/* name */
+	 "R_LOONG_TLS_TPREL64",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 ALL_ONES,			/* dst_mask */
 	 false),			/* pcrel_offset */
 
-  HOWTO (R_LARCH_IRELATIVE,		/* type */
+  HOWTO (R_LOONG_IRELATIVE,		/* type */
 	 0,				/* rightshift */
 	 2,				/* size */
 	 32,				/* bitsize */
@@ -204,7 +204,7 @@ static reloc_howto_type howto_table[] =
 	 0,				/* bitpos */
 	 complain_overflow_dont,	/* complain_on_overflow */
 	 bfd_elf_generic_reloc,		/* special_function */
-	 "R_LARCH_IRELATIVE",		/* name */
+	 "R_LOONG_IRELATIVE",		/* name */
 	 false,				/* partial_inplace */
 	 0,				/* src_mask */
 	 0xffffffff,			/* dst_mask */
@@ -212,7 +212,7 @@ static reloc_howto_type howto_table[] =
 
   LOONGARCH_HOWTO (MARK_LA),
   LOONGARCH_HOWTO (MARK_PCREL),
-  HOWTO (R_LARCH_SOP_PUSH_PCREL,	      	/* type.  */
+  HOWTO (R_LOONG_SOP_PUSH_PCREL,	      	/* type.  */
 	 2,				   	/* rightshift.  */
 	 2,				   	/* size.  */
 	 32,				  	/* bitsize.  */
@@ -220,7 +220,7 @@ static reloc_howto_type howto_table[] =
 	 0,				   	/* bitpos.  */
 	 complain_overflow_signed,	    	/* complain_on_overflow.  */
 	 bfd_elf_generic_reloc,	       		/* special_function.  */
-	 "R_LARCH_SOP_PUSH_PCREL",	    	/* name.  */
+	 "R_LOONG_SOP_PUSH_PCREL",	    	/* name.  */
 	 false,			       		/* partial_inplace.  */
 	 0x03ffffff,			  	/* src_mask.  */
 	 0x03ffffff,			  	/* dst_mask.  */
@@ -269,13 +269,13 @@ struct elf_reloc_map
 
 static const struct elf_reloc_map larch_reloc_map[] =
 {
-  { BFD_RELOC_NONE, R_LARCH_NONE },
-  { BFD_RELOC_32, R_LARCH_32 },
-  { BFD_RELOC_64, R_LARCH_64 },
+  { BFD_RELOC_NONE, R_LOONG_NONE },
+  { BFD_RELOC_32, R_LOONG_32 },
+  { BFD_RELOC_64, R_LOONG_64 },
 
 #define LOONGARCH_reloc_map(r_name)		   	\
   {						  	\
-    BFD_RELOC_LARCH_##r_name, R_LARCH_##r_name		\
+    BFD_RELOC_LOONG_##r_name, R_LOONG_##r_name		\
   }
   LOONGARCH_reloc_map (TLS_DTPMOD32),
   LOONGARCH_reloc_map (TLS_DTPMOD64),
