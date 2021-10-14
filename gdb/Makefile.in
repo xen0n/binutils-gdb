@@ -745,7 +745,10 @@ ALL_TARGET_OBS = \
 	arch/arm-get-next-pcs.o \
 	arch/arm-linux.o \
 	arch/i386.o \
+	arch/loongarch.o \
+	arch/loongarch-linux-nat.o \
 	arch/ppc-linux-common.o \
+	arch/riscv.o \
 	arm-bsd-tdep.o \
 	arm-fbsd-tdep.o \
 	arm-linux-tdep.o \
@@ -794,6 +797,9 @@ ALL_TARGET_OBS = \
 	linux-record.o \
 	linux-tdep.o \
 	lm32-tdep.o \
+	loongarch-tdep.o \
+	loongarch-linux-tdep.o \
+	loongarch-linux-nat.o \
 	m32c-tdep.o \
 	m32r-linux-tdep.o \
 	m32r-tdep.o \
@@ -1357,6 +1363,8 @@ HFILES_NO_SRCDIR = \
 	linux-record.h \
 	linux-tdep.h \
 	location.h \
+	loongarch-tdep.h \
+	loongarch-linux-tdep.h \
 	m2-lang.h \
 	m32r-tdep.h \
 	m68k-tdep.h \
@@ -1491,6 +1499,8 @@ HFILES_NO_SRCDIR = \
 	arch/arc.h \
 	arch/arm.h \
 	arch/i386.h \
+	arch/loongarch.h \
+	arch/loongarch-linux-nat.h \
 	arch/ppc-linux-common.h \
 	arch/ppc-linux-tdesc.h \
 	arch/riscv.h \
@@ -1536,6 +1546,7 @@ HFILES_NO_SRCDIR = \
 	nat/linux-personality.h \
 	nat/linux-ptrace.h \
 	nat/linux-waitpid.h \
+	nat/loongarch-linux-watch.h \
 	nat/mips-linux-watch.h \
 	nat/ppc-linux.h \
 	nat/x86-cpuid.h \
@@ -2232,6 +2243,9 @@ ALLDEPFILES = \
 	linux-record.c \
 	linux-tdep.c \
 	lm32-tdep.c \
+	loongarch-tdep.c \
+	loongarch-linux-tdep.c \
+	loongarch-linux-nat.c \
 	m32r-linux-nat.c \
 	m32r-linux-tdep.c \
 	m32r-tdep.c \
