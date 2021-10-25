@@ -742,7 +742,6 @@ static struct loongarch_opcode loongarch_jmp_opcodes[] =
   { 0x40000000, 0xfc000000,	"beqz",		"r5:5,sb0:5|10:16<<2",		0,				0, 0, 0 },
   { 0x0,	0x0,		"bnez",		"r,la",				"bnez %1,%%pcrel(%2)",		0, 0, 0 },
   { 0x44000000, 0xfc000000,	"bnez",		"r5:5,sb0:5|10:16<<2",		0,				0, 0, 0 },
-  { 0x0,	0x0,		"jr",		"r",				"jirl $r0,%1,0",		0, 0, 0 },
   { 0x50000000, 0xfc000000,	"b",		"sb0:10|10:16<<2",		0,				0, 0, 0 },
   { 0x0,	0x0,		"b",		"la",				"b %%pcrel(%1)",		0, 0, 0 },
   { 0x4c000000, 0xfc000000,	"jirl",		"r0:5,r5:5,s10:16<<2",		0,				0, 0, 0 },
@@ -774,6 +773,7 @@ static struct loongarch_opcode loongarch_jmp_opcodes[] =
   { 0x0,	0x0,		"bgtz",		"r,la",				"bgt %1,$r0,%%pcrel(%2)",	0, 0, 0 },
   { 0x0,	0x0,		"blez",		"r,la",				"ble %1,$r0,%%pcrel(%2)",	0, 0, 0 },
   { 0x0,	0x0,		"bltz",		"r,la",				"blt %1,$r0,%%pcrel(%2)",	0, 0, 0 },
+  { 0x0,	0x0,		"jr",		"r",				"jirl $r0,%1,0",		0, 0, 0 },
 
   { 0 } /* Terminate the list.  */
 };
