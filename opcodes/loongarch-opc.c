@@ -738,14 +738,6 @@ static struct loongarch_opcode loongarch_float_jmp_opcodes[] =
 static struct loongarch_opcode loongarch_jmp_opcodes[] =
 {
   /* match,	mask,		name,		format,				macro,			include, exclude, pinfo.  */
-  { 0x0,	0x0,		"bltz",		"r,la",				"bltz %1,%%pcrel(%2)",		0, 0, 0 },
-  { 0x60000000, 0xfc00001f,	"bltz",		"r5:5,sb10:16<<2",		0,				0, 0, 0 },
-  { 0x0,	0x0,		"bgtz",		"r,la",				"bgtz %1,%%pcrel(%2)",		0, 0, 0 },
-  { 0x60000000, 0xfc0003e0,	"bgtz",		"r0:5,sb10:16<<2",		0,				0, 0, 0 },
-  { 0x0,	0x0,		"bgez",		"r,la",				"bgez %1,%%pcrel(%2)",		0, 0, 0 },
-  { 0x64000000, 0xfc00001f,	"bgez",		"r5:5,sb10:16<<2",		0,				0, 0, 0 },
-  { 0x0,	0x0,		"blez",		"r,la",				"blez %1,%%pcrel(%2)",		0, 0, 0 },
-  { 0x64000000, 0xfc0003e0,	"blez",		"r0:5,sb10:16<<2",		0,				0, 0, 0 },
   { 0x0,	0x0,		"beqz",		"r,la",				"beqz %1,%%pcrel(%2)",		0, 0, 0 },
   { 0x40000000, 0xfc000000,	"beqz",		"r5:5,sb0:5|10:16<<2",		0,				0, 0, 0 },
   { 0x0,	0x0,		"bnez",		"r,la",				"bnez %1,%%pcrel(%2)",		0, 0, 0 },
@@ -776,6 +768,13 @@ static struct loongarch_opcode loongarch_jmp_opcodes[] =
   { 0x6c000000, 0xfc000000,	"bgeu",		"r5:5,r0:5,sb10:16<<2",		0,				0, 0, 0 },
   { 0x0,	0x0,		"bleu",		"r,r,la",			"bleu %1,%2,%%pcrel(%3)",	0, 0, 0 },
   { 0x6c000000, 0xfc000000,	"bleu",		"r0:5,r5:5,sb10:16<<2",		0,				0, 0, 0 },
+
+  /* Sugars.  */
+  { 0x0,	0x0,		"bgez",		"r,la",				"bge %1,$r0,%%pcrel(%2)",	0, 0, 0 },
+  { 0x0,	0x0,		"bgtz",		"r,la",				"bgt %1,$r0,%%pcrel(%2)",	0, 0, 0 },
+  { 0x0,	0x0,		"blez",		"r,la",				"ble %1,$r0,%%pcrel(%2)",	0, 0, 0 },
+  { 0x0,	0x0,		"bltz",		"r,la",				"blt %1,$r0,%%pcrel(%2)",	0, 0, 0 },
+
   { 0 } /* Terminate the list.  */
 };
 
