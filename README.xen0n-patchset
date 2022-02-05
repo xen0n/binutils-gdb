@@ -1,0 +1,7 @@
+Origin: https://github.com/loongson/binutils-gdb/commits/upstream_v3.1
+Commit: https://github.com/loongson/binutils-gdb/commit/01a910f8b6b3d6855ba802875ceaf5f327fe1328
+Rebased-on: binutils-2_38-branch
+
+Added my jump canonicalization patches and TEXT_START_ADDR patch.
+
+Changed from previous revision of patchset: TEXT_START_ADDR=0x400000 (0x10000 before).
